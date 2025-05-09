@@ -1,0 +1,1283 @@
+<!DOCTYPE html><html><head>
+      <title>20.mar21_Blender</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\nitro_scoop\persist\vscode\data\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* When you rewrite this file, before any kind of styling make sure if the PAGE Margin-top & margin bottom is okay 💁‍♀️ */
+@font-face {
+  font-family: "Bahnschrift REY";
+  src: local("Bahnschrift"), url("https://github.com/flying-whales/flying-whales/raw/20e98b4dd0388a3fafd09acb8b07e5bd3dc701b9/Assets/Fonts/bahnschrift.ttf") format(ttf);
+}
+@font-face {
+  font-family: "AudioLink Mono Bold REY";
+  src: local('AudioLink Mono Bold'), url("https://audiolink.dev/gallery/AudioLinkMono-Regular.ttf") format(ttf);
+}
+@font-face {
+  font-family: "Emoji REY";
+  src: url("https://github.com/KingDragoness/Shopkeepers/raw/952118221585de23b747560b89ee17061e34c0f4/Project%20Shopkeepers%20root/Assets/Resources/Fonts/seguiemj.ttf");
+}
+@font-face {
+  font-family: "REY_FiraSansCondensedLightItalic";
+  src: local('Fira Sans Condensed Light Italic'), url("https://github.com/bBoxType/FiraSans/raw/refs/heads/master/Fira_Sans_4_3/Fonts/Fira_Sans_TTF_4301/Condensed/Italic/FiraSansCondensed-LightItalic.ttf");
+}
+.markdown-preview {
+  padding: 2em calc(40% - 457px + 2em) !important;
+  /**
+    h1 {
+        page-break-before: always;
+    }
+    */
+  font-size: 24px;
+  line-height: 1.15;
+  font-family: 'CMU Serif', 'Bahnschrift', 'Emoji REY', monospace;
+  font-stretch: condensed;
+  font-weight: 400;
+  /** However, background-clip is not supported by princexml */
+}
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6,
+.markdown-preview strong {
+  font-family: 'Quartist' !important;
+}
+.markdown-preview h6 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.markdown-preview .REY_BR_LIST_LVL3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.markdown-preview .REY_BR_LIST2 {
+  margin: 0;
+  margin-bottom: 0.75em;
+}
+.markdown-preview ul > li,
+.markdown-preview ol > li {
+  margin-bottom: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview ul > li ol > li,
+.markdown-preview ol > li ol > li,
+.markdown-preview ul > li ul > li,
+.markdown-preview ol > li ul > li {
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0.25em;
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+  font-weight: 300;
+  font-size: 90%;
+  line-height: 1.15;
+}
+.markdown-preview ul > li ol > li ol > li ol > li,
+.markdown-preview ol > li ol > li ol > li ol > li,
+.markdown-preview ul > li ul > li ol > li ol > li,
+.markdown-preview ol > li ul > li ol > li ol > li,
+.markdown-preview ul > li ol > li ul > li ol > li,
+.markdown-preview ol > li ol > li ul > li ol > li,
+.markdown-preview ul > li ul > li ul > li ol > li,
+.markdown-preview ol > li ul > li ul > li ol > li,
+.markdown-preview ul > li ol > li ol > li ul > li,
+.markdown-preview ol > li ol > li ol > li ul > li,
+.markdown-preview ul > li ul > li ol > li ul > li,
+.markdown-preview ol > li ul > li ol > li ul > li,
+.markdown-preview ul > li ol > li ul > li ul > li,
+.markdown-preview ol > li ol > li ul > li ul > li,
+.markdown-preview ul > li ul > li ul > li ul > li,
+.markdown-preview ol > li ul > li ul > li ul > li {
+  line-height: 1.1;
+}
+.markdown-preview ul > li ol > li h5,
+.markdown-preview ol > li ol > li h5,
+.markdown-preview ul > li ul > li h5,
+.markdown-preview ol > li ul > li h5 {
+  margin-top: 0px;
+}
+.markdown-preview ul > li ol > li pre,
+.markdown-preview ol > li ol > li pre,
+.markdown-preview ul > li ul > li pre,
+.markdown-preview ol > li ul > li pre {
+  margin-bottom: 4px;
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li {
+  margin-bottom: -8px;
+  font-weight: 100;
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li strong,
+.markdown-preview .REY_SECTION_TYPE1 ol > li strong {
+  font-family: 'Quartist';
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li ol > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li ol > li,
+.markdown-preview .REY_SECTION_TYPE1 ul > li ul > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+}
+.markdown-preview .REY_SECTION_TYPE2 {
+  line-height: 28px;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li {
+  margin-bottom: -8px;
+  font-weight: 100;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li strong,
+.markdown-preview .REY_SECTION_TYPE2 ol > li strong {
+  font-family: 'Quartist';
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li ol > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li ol > li,
+.markdown-preview .REY_SECTION_TYPE2 ul > li ul > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul,
+.markdown-preview .REY_SECTION_TYPE2 li {
+  margin-bottom: 32px;
+}
+.markdown-preview a {
+  font-style: italic;
+}
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3 {
+  text-align: center;
+}
+.markdown-preview h2 {
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
+}
+.markdown-preview h4 {
+  margin-top: 1em;
+  margin-bottom: 0.15em;
+}
+.markdown-preview h5 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.markdown-preview blockquote {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 90%;
+}
+.markdown-preview code {
+  font-family: 'AudioLink Mono Bold REY', 'Lotion', 'Emoji REY', monospace;
+  font-size: 90%;
+  font-style: normal;
+}
+.markdown-preview pre {
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.markdown-preview pre > code {
+  font-size: 16px;
+}
+.markdown-preview .REY_SMALLER_CODE {
+  font-size: 0.7em;
+}
+.markdown-preview .REY_SMALLER_CODE > pre > code {
+  font-size: 0.95em;
+  line-height: 100%;
+}
+.markdown-preview pre {
+  page-break-inside: auto;
+  /* REYNEP MOD */
+}
+.markdown-preview img {
+  -prince-image-resolution: 150dpi;
+  /* set an explicit DPI */
+}
+.markdown-preview img.makeSmall_NoFlex {
+  -prince-image-resolution: 160dpi;
+  /* set an explicit DPI */
+}
+.markdown-preview img.makeSmall {
+  -prince-image-resolution: 160dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 15px;
+}
+.markdown-preview img.makeSmaller {
+  -prince-image-resolution: 180dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 20px;
+}
+.markdown-preview img.makeSmallest {
+  -prince-image-resolution: 200dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 20px;
+}
+.markdown-preview .REY_DocTitle {
+  text-align: center;
+  font-size: 30px;
+  background: linear-gradient(145deg, #ff7f00, #8e44ad);
+  /* Orange to Purple Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  margin: 0;
+  font-weight: bold;
+}
+.markdown-preview .REY_IMG_CONTAINER {
+  font-size: 85%;
+  line-height: 125%;
+}
+.markdown-preview .REY_TITLE_SUB1 {
+  margin-top: -1.25em;
+  font-size: 110%;
+  line-height: 100%;
+  font-family: 'Neuton ExtraLight';
+  font-style: italic;
+}
+.markdown-preview .REY_TITLE_SUB2 {
+  margin-top: 0em;
+  font-size: 110%;
+  line-height: 100%;
+  font-family: 'Neuton ExtraLight';
+  font-style: italic;
+}
+.markdown-preview .REY_PAGEBREAK {
+  margin-bottom: 300px;
+  page-break-before: always;
+}
+.markdown-preview .REY_TITLE {
+  margin-top: -36px;
+}
+.markdown-preview .REY_TITLEV2 {
+  margin-top: -36px;
+}
+.markdown-preview .REY_TITLEV2 h1,
+.markdown-preview .REY_TITLEV2 h2 {
+  margin-bottom: -20px;
+}
+.markdown-preview .REY_PAGE_START {
+  margin-top: -60px;
+}
+.markdown-preview .REY_NOSHOW_MD {
+  display: none;
+}
+.markdown-preview .REY_NOSHOW_PDF {
+  display: block;
+}
+.markdown-preview .REY_BR2_NEGATIVE {
+  margin-top: -50px;
+}
+.markdown-preview .REY_BR3_NEGATIVE {
+  margin-top: -40px;
+}
+.markdown-preview .REY_BR3_NEGATIVE_WEIRD {
+  margin-top: -40px;
+}
+.markdown-preview .REY_BR4_NEGATIVE {
+  margin-top: -30px;
+}
+.markdown-preview .REY_BR5_NEGATIVE {
+  margin-top: -10px;
+}
+.markdown-preview .REY_BR1_POSITIVE_PDF {
+  margin-top: 0;
+}
+.markdown-preview.prince {
+  color: black !important;
+  font-size: 15px;
+  font-weight: 100;
+}
+.markdown-preview.prince .REY_PAGEBREAK {
+  margin-bottom: 0px;
+  margin-top: -28px;
+}
+.markdown-preview.prince .REY_TITLEV2 {
+  margin-top: -60px;
+}
+.markdown-preview.prince .REY_TITLEV2 h1,
+.markdown-preview.prince .REY_TITLEV2 h2 {
+  margin-bottom: -18px;
+}
+.markdown-preview.prince .REY_TITLE_SUB2 {
+  margin-top: -10px;
+}
+.markdown-preview.prince .REY_BR1_POSITIVE_PDF {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_BR2_NEGATIVE {
+  margin-top: -30px;
+}
+.markdown-preview.prince .REY_BR3_NEGATIVE {
+  margin-top: -20px;
+}
+.markdown-preview.prince .REY_BR3_NEGATIVE_WEIRD {
+  margin-top: -50px;
+}
+.markdown-preview.prince .REY_BR4_NEGATIVE {
+  margin-top: -15px;
+}
+.markdown-preview.prince .REY_BR5_NEGATIVE {
+  margin-top: -10px;
+}
+.markdown-preview.prince .REY_PAGE_STARTS_WITH_H2 {
+  margin-top: -50px;
+}
+.markdown-preview.prince .REY_PAGE_STARTS_WITH_H1 {
+  margin-top: -65px;
+}
+.markdown-preview.prince .REY_NOSHOW_MD {
+  display: block !important;
+}
+.markdown-preview.prince .REY_NOSHOW_PDF {
+  display: none  !important;
+}
+.markdown-preview.prince h1,
+.markdown-preview.prince h2 {
+  text-align: center;
+}
+.markdown-preview.prince h3 {
+  margin-top: -2.5px;
+}
+.markdown-preview.prince h6 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview.prince .REY_BLOCK_GAP {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_PDF_MORE_HEIGHT {
+  margin-top: -70pt;
+}
+.markdown-preview.prince .REY_PDF_MORE_HEIGHT2 {
+  margin-top: -30pt;
+}
+.markdown-preview.prince .REY_HR > hr {
+  display: none !important;
+}
+.markdown-preview.prince .REY_HR {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_SMALLER_CODE > pre > code {
+  font-size: 1em;
+  line-height: 100%;
+}
+.markdown-preview.prince a {
+  font-style: italic;
+  text-decoration: none;
+  color: #08c;
+}
+.markdown-preview.prince a:hover {
+  text-decoration: underline;
+  color: #00a3f5;
+}
+.markdown-preview.prince ul > li,
+.markdown-preview.prince ol > li {
+  margin-bottom: 5px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE1 ul > li,
+.markdown-preview.prince .REY_SECTION_TYPE1 ol > li {
+  margin-bottom: -3px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 {
+  line-height: 18px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 ul > li,
+.markdown-preview.prince .REY_SECTION_TYPE2 ol > li {
+  margin-bottom: -5px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 ul,
+.markdown-preview.prince .REY_SECTION_TYPE2 li {
+  margin-bottom: 10px;
+}
+.markdown-preview.prince ul > li ol > li,
+.markdown-preview.prince ol > li ol > li,
+.markdown-preview.prince ul > li ul > li,
+.markdown-preview.prince ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'Fira Sans Condensed Light Italic', 'Emoji REY', monospace;
+  font-size: 92.5%;
+}
+.markdown-preview.prince pre {
+  max-width: 100%;
+  /* Prevent overflow */
+}
+.markdown-preview.prince img {
+  max-width: 104%;
+  width: - 104%;
+  margin-left: -2%;
+  display: flex;
+}
+.markdown-preview.prince pre {
+  line-height: 110%;
+  margin-bottom: 0px;
+}
+.markdown-preview.prince pre > code {
+  font-size: 11px;
+  white-space: pre-wrap;
+  /* Enable word wrap */
+  word-wrap: break-word;
+  /* Break words that exceed the width */
+  word-break: normal;
+  overflow-wrap: break-word;
+  /* Prevent overflow */
+}
+/**
+MarkDown File Top part:-
+---
+id: "amVK_Docs"
+class: "DocumentClass1"
+---
+*/
+.REY_Class1 {
+  font-size: 22px;
+  font-family: 'Neuton';
+  font-weight: 200;
+  line-height: 28px;
+}
+.REY_Class1 em {
+  font-weight: 400;
+}
+.REY_Class1 ul > li,
+.REY_Class1 ol > li {
+  margin-bottom: 0px;
+  font-style: italic;
+  font-weight: normal;
+}
+.REY_Class1 h1,
+.REY_Class1 h2 {
+  margin-bottom: 0px;
+}
+.REY_Class1 h1 {
+  margin-top: 20px;
+}
+.REY_Class1 h2 {
+  margin-top: 20px;
+}
+.REY_Class1.prince {
+  font-size: 15px !important;
+  font-family: 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 200 !important;
+  line-height: 17px;
+}
+.REY_Class2.prince {
+  font-size: 15px !important;
+  font-family: 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 200 !important;
+  line-height: 17px;
+}
+.REY_Class3.prince {
+  font-size: 15px !important;
+  font-family: 'Quartist', 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 100 !important;
+  line-height: 17px;
+  color: black !important;
+}
+.REY_Class3.prince strong {
+  font-family: 'Neuton Bold' !important;
+}
+.REY_Class4.prince {
+  font-size: 14px !important;
+  font-family: 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 100 !important;
+  line-height: 16px;
+  color: black !important;
+}
+.REY_Class4.prince strong {
+  font-size: 13px !important;
+  font-family: 'AudioLink Mono' !important;
+  font-weight: 700 !important;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.075em 0.3em;
+}
+/**
+@page { 
+    size: A4;
+
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-outside: 1.5cm;
+    margin-inside: 1.5cm;
+
+    prince-image-resolution: 300dpi;
+
+    @bottom-center {
+        content: counter(page);
+        margin: 0;
+        margin-top: -1.3cm;
+        padding: 0;
+    }
+}
+*/
+@page {
+  size: A4;
+  margin-top: 0.5cm;
+  margin-bottom: 0cm;
+  margin-outside: 1cm;
+  margin-inside: 1cm;
+  prince-image-resolution: 300dpi;
+  @bottom-center {
+    content: counter(page);
+    margin: 0;
+    margin-top: -1.3cm;
+    padding: 0;
+  }
+}
+/**
+    https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css?id=local-style
+*/
+/** I think this part means like.... Specific to only when CREATING THE PDF. But not like specific to PRINCE-XML */
+@media print {
+  color: black !important;
+}
+/** I think this part means like.... Specific to only when CREATING THE PDF. But yes like specific to PRINCE-XML */
+.prince {
+  color: black !important;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="blender-1">Blender 1 </h1>
+<ul>
+<li>
+<h4>🟨 Part I : The Basics <code>🛠️ 28-60days</code></h4>
+<ol>
+<li>
+<p>Guru - <strong>🍩 Donut</strong> - <code>📺 5h</code> <code>🛠️ 14-28days</code> <code>🎯(7/10)</code> - <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z">🔗</a></p>
+<ul>
+<li>Alternative #1: <strong>CG Fast Track [v3.6]</strong> - <code>📺 4h22m</code> <code>🛠️ 7-10days</code> <code>🎯(4/10)</code> - <a href="https://youtube.com/playlist?list=PL8eKBkZzqDiVvueu0ikzF1jVQWrgxma0U">🔗</a>
+<ul>
+<li><code>+</code> UI Scaling</li>
+<li><code>+</code> Emojis in EDIT &amp; makes you focus, if you get distracted easily</li>
+<li><code>-</code> in <strong>v4.0</strong> he showed <kbd>CTRL</kbd><kbd>+</kbd><kbd>C</kbd>, <kbd>CTRL</kbd><kbd>+</kbd><kbd>V</kbd> instead of <kbd>SHIFT</kbd><kbd>+</kbd><kbd>D</kbd>, I don't like that</li>
+<li><code>-</code> in <strong>v4.0</strong>, he tried to be 'cool' by following some AI Script probably. liiiike who tf says "Box Modelling Technique"</li>
+<li><code>-</code> <strong>v4.0</strong> edit seemed worse than <strong>v3.6</strong>. Like the stickers</li>
+<li><code>-</code> Lacks Enthusiasm</li>
+<li>Blender 2.8 <a href="https://youtube.com/playlist?list=PL8eKBkZzqDiW_w4GtQTIGGiNM-l6XQxUT">🔗</a></li>
+<li>Blender 2.9 <a href="https://youtube.com/playlist?list=PL8eKBkZzqDiU-qcoaghCz04sMitC1yx6k">🔗</a></li>
+<li>Blender 4.0 <a href="https://youtube.com/playlist?list=PL8eKBkZzqDiV2xca_7QVNdG8LGBfZBCkI">🔗</a></li>
+</ul>
+</li>
+<li>Alternative #2: <strong>Azusa Tojo</strong> - RamenBowl - <code>📺 35m</code> <code>🛠️ 1-2days</code> <code>🎯(8/10)</code> - 🔗 <a href="https://www.youtube.com/watch?v=-kpjaEU8cPU">EN</a> <a href="https://www.youtube.com/watch?v=SjiQnsVfv8U">JP</a>
+<ul>
+<li>Altho, i believe, DonutSeries is kinda needed before diving into this 💁‍♀️</li>
+<li>&amp; also, this one is part of <strong>Part II : The Break</strong></li>
+</ul>
+</li>
+<li>More Alternatives:
+<ul>
+<li>CG Cookie (2/10) <a href="https://youtube.com/playlist?list=PL3GeP3YLZn5hhfaGRSmRia0OwPPMfJu0V">🔗</a> - Lacks Everything!</li>
+<li>Crossmind (3/10) <a href="https://youtube.com/watch?v=e-fetDXDXX8&amp;list=PLgO2ChD7acqH5S3fCO1GbAJC55NeVaCCp">🔗</a> - Lacks Enthusiasm!</li>
+<li>Ryan (4/10) <a href="https://youtube.com/playlist?list=PLsGl9GczcgBumq6fLmmR1ZYYn4EDkIg5B">🔗</a> - Lacks Enthusiasm</li>
+<li>iMesh 3D Models (4/10) <a href="https://www.youtube.com/playlist?list=PLVCPek9hlB-Q6lBMTfnviZkIWqItUegK2">🔗</a> - Lacks Enthusiasm<br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Guru - <strong>Chair</strong> - <code>📺 3h21m</code> <code>🛠️ 7-14days</code> <code>🎯(8/10)</code> - <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEL9UjPTLWQhLFAK7wVaRMR">🔗</a></p>
+<ul>
+<li>Extras #1:- <strong>Ryan</strong> (Chair) - <code>📺 1h24m</code> <code>🛠️ 2-3days</code> <code>🎯(5/10)</code> - <a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBuS-fJ825NWKX9ObBg_SQJ1">🔗</a>
+<ul>
+<li>But i don't recommend doing the <strong>Ryan</strong> (Chair) before <strong>Anvil</strong> &amp; <strong>Couch</strong><br>
+<br><br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Guru - <strong>Anvil</strong> - <code>📺 3h45m</code> <code>🛠️ 14-20days</code> <code>🎯(7.5/10)</code> - <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgHJVJF3T3CFUAZ6z11jKg6a">🔗</a></p>
+<ul>
+<li>
+<p>Extras #1:- <strong>Graffinity - PBR Explained</strong> - <code>📺 8m</code> <code>🛠️ 15-20m</code> <code>🎯(8/10)</code> - <a href="https://www.youtube.com/watch?v=T2K6WXdifGA">🔗</a></p>
+<ul>
+<li>could have been better 💁‍♀️</li>
+</ul>
+   <div class="REY_BR_LIST2"></div> 
+</li>
+<li>
+<p>Extras #2:- <strong>Gabbitt - PBR 2.79</strong> - <code>📺 5m</code> <code>🛠️ 10m</code> <code>🎯(7/10)</code> - <a href="https://www.youtube.com/watch?v=SvTP5_JVsX8">🔗</a></p>
+<ul>
+<li>This is (7/10) because, it's short, &amp; it's kinda the fastest intro to 2.79 Shader Nodes UI</li>
+<li>++ Guru hid his 2.79 playlist, however i found it!</li>
+</ul>
+   <div class="REY_BR_LIST2"></div> 
+</li>
+<li>
+<p>Extras #2 - Alternative:- <strong>Guru - Donut - ShaderNodes 2.79</strong> - <code>📺 39m</code> <code>🛠️ 39m</code> <code>🎯(6/10)</code> - <a href="https://www.youtube.com/watch?v=f5Gb1VK98Wc">🔗</a></p>
+<ul>
+<li>Just watch it... like taking a <strong>TeaBreak</strong>.... don't try to replicate or sm shit 💁‍♀️</li>
+<li>where did i find it?
+<ul>
+<li><a href="https://www.blenderguru.com/tutorials/blender-beginner-tutorial-series">https://www.blenderguru.com/tutorials/blender-beginner-tutorial-series</a></li>
+<li>plain old google search "blender guru 2.79 beginner tutorial"</li>
+</ul>
+  <div class="REY_BR_LIST2"></div> 
+</li>
+</ul>
+</li>
+<li>
+<p>Extras #3 - <strong>Jayanam - PBR 2.8</strong> - <code>📺 6m</code> <code>🛠️ 15m</code> <code>🎯(8/10)</code> - <a href="https://www.youtube.com/watch?v=XI-pZshRp8g">🔗</a></p>
+</li>
+<li>
+<h6>Watch <strong>all these 3 Extras {Serially}</strong> before starting Guru's Anvil Tutorial #8</h6>
+</li>
+</ul>
+ <br> 
+ <br>
+</li>
+<li>
+<p>Guru - <strong>Couch</strong> - <code>📺 2h77m</code> <code>🛠️ 7-10days</code> <code>🎯(4/10)</code> - <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgGgS-N9Ews90bDAYYLoP0NO">🔗</a></p>
+<ul>
+<li>Low points, because he didn't even bother to publicly provide the textures he used....
+<ul>
+<li>(as of 2025, april), they are paid over on Polygonn</li>
+</ul>
+</li>
+<li>Also gotta make a video on the PILLOW-SEAM-ISSUE that i (REYNEP) fixed</li>
+</ul>
+ <div class="REY_BR_LIST_LVL3"></div>
+</li>
+</ol>
+<ul>
+<li>
+<h6>Marks in every Part is based on "How good does it serve under the TOPIC of that part"</h6>
+</li>
+</ul>
+</li>
+</ul>
+<div class="REY_NOSHOW_PDF">
+<hr>
+<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+</div>
+<div class="REY_PAGEBREAK"></div>
+<div class="REY_NOSHOW_PDF">
+<hr>
+</div>
+<ul>
+<li>
+<h4>Part II : A Break</h4>
+<ol>
+<li>
+<p>🟦 <strong>Jackie Droujko</strong> - Experience   - <code>📺 21m</code> <code>🍵 idk 💁‍♀️</code> <code>🎯(9/10)</code> - <a href="https://www.youtube.com/watch?v=gOqXsxi3hJY">🔗</a></p>
+<ul>
+<li>It's like a <strong>TeaBreak</strong></li>
+<li>🟦 <strong>Critiques</strong>                  - <code>📺 2h</code> <code>🎯(8/10)</code> - <a href="https://www.youtube.com/playlist?list=PL5i0TPST7aSg4-mZSfEHCQV8m7zp2NJm7">🔗</a>
+<ul>
+<li>obviously, not telling you to watch right away, xP. Only watch when you feel drained / need a <strong>TeaBreak</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>🟦 <strong>Azusa Tojo</strong> - RamenBowl        - <code>📺 35m</code> <code>🛠️ 1-2days</code> <code>🎯(8/10)</code> - 🔗 <a href="https://www.youtube.com/watch?v=-kpjaEU8cPU">EN</a> <a href="https://www.youtube.com/watch?v=SjiQnsVfv8U">JP</a><br>
+<br></p>
+</li>
+<li>
+<p>🟦 <strong>CrashSune</strong> - Character Modelling - <code>📺 4h</code> <code>🛠️ 7-14days</code> <code>🎯(6/10)</code> - <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">🔗</a></p>
+<ul>
+<li>he's getting high marks because of the way e was talking iguess 💁‍♀️</li>
+<li>The <strong>Rigging</strong> &amp; <strong>Animation</strong> parts are not worth it
+<ul>
+<li>He doesn't even animate the character he rigs!</li>
+<li>&amp; in the rigging video, there is a really big unsolved issue.... Chest part is pinned in air! &amp; he didn't fix it!</li>
+<li><code>"He fucked up his weight painting in the torso part while fixing hair weight-painting issue"</code> - Ashmi (My 12yo sister)</li>
+</ul>
+</li>
+<li>So, Don't watch the last 3 videos in this playlist, yeeeet<br>
+<br></li>
+</ul>
+</li>
+<li>
+<p>🛠️ Tools</p>
+<ol>
+<li>📐 <a href="https://ypc.vercel.app/">https://ypc.vercel.app/</a></li>
+<li>🧵 <a href="https://www.pureref.com/"><strong>PureRef</strong></a> - Infinite Canvas to organize reference pictures</li>
+<li>♾️ <a href="https://affine.pro/"><strong>Affine</strong></a> - a really powerfull opensource MIRO alternative with, 3-People team, 10GB Workspace, for free</li>
+<li>🎞️ <strong>tev</strong>:- <a href="https://github.com/Tom94/tev">Github</a> - <strong>openEXR</strong></li>
+<li>🎞️ <strong>djv</strong>:- <a href="https://darbyjohnston.github.io/DJV/">Github</a> - <strong>openEXR</strong></li>
+<li>🖼️ <strong>Picasa3.9</strong>: <a href="https://web.archive.org/web/20160201063445/http://picasa.google.com/">InternetArchive</a></li>
+<li>📐 <strong>FolderSizeWin32</strong>: <a href="https://github.com/mrange/FolderSize">Github</a></li>
+<li>🎬 <a href="https://www.olivevideoeditor.org/"><strong>Olive</strong></a> - Node Based Video Editor (WIP)</li>
+<li>✏️ <a href="https://inkscape.org/"><strong>inkscape</strong></a> - Open-source SVG/PDF editor (Illustrator alternative). software</li>
+<li>🖌️ <a href="https://krita.org/en/"><strong>krita</strong></a><br>
+<br></li>
+</ol>
+</li>
+<li>
+<p>Share your Art</p>
+<ol>
+<li><a href="https://cara.app/explore"><strong>cara.app</strong></a></li>
+<li><a href="https://artfol.co/"><strong>artfol.co</strong></a></li>
+<li><a href="https://bsky.app/"><strong>bsky.app</strong></a></li>
+</ol>
+</li>
+<li>
+<p>🎓 Grab yourself an <strong>iPad</strong> (with SIM + Pencil + <strong>ProCreate</strong> + <strong>EasyCanvas</strong>) / <strong>Huion</strong> / <strong>Wacom</strong> ...... or start saving money to grab yourself one in a year</p>
+</li>
+<li>
+<p>📜 You can sketch up a few characters if you wanna rn (you'll need it 7days later xP 😜)<br>
+<br></p>
+</li>
+<li>
+<p>🟦 Guru      - <strong>2.5 Donut</strong>        - <code>📺 5h9m</code> <code>🍵 2-14days</code>  <code>🎯(6/10)</code> - <a href="https://www.youtube.com/watch?v=-gW6vk_OuNQ">🔗</a></p>
+</li>
+<li>
+<p>🟦 Blender   - <strong>4.4 Showreel</strong>     - <code>📺 2m</code> <code>🍵 idk 💁‍♀️</code> <code>🎯(10/10)</code>    - <a href="https://www.youtube.com/watch?v=TQElJP1AaS0">🔗</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=WhWc3b3KhnY">https://www.youtube.com/watch?v=WhWc3b3KhnY</a></p>
+</li>
+<li>
+<p>🟦 Guru      - <strong>eevee</strong>            - <code>📺 1h20m</code> <code>🍵 2-7days</code>  <code>🎯(9/10)</code> - <a href="https://www.youtube.com/watch?v=-gW6vk_OuNQ">🔗</a></p>
+</li>
+<li>
+<p>🟦 Guru      - <strong>Lighting</strong>         - <code>📺 2h03m</code> <code>🍵 7-14days</code> <code>🎯(8/10)</code> - <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgH9vCr47kSS5W8PEJBNIiwK">🔗</a></p>
+<ul>
+<li>After the 4 Tutorial Series in <strong>Part I</strong>.... this should feel like a reward xP 😜<br>
+<br></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<h5>📜</h5>
+<ul>
+<li>You don't have to finish <strong>PART II</strong> before going into <strong>PART III</strong></li>
+<li><strong>PART II</strong> is like <strong>TeaBreaks</strong> 💁‍♀️
+<ul>
+<li>So, when it doesnt feel like a <strong>reward</strong>... don't watch!!</li>
+</ul>
+</li>
+<li>So, explore into <strong>PART III</strong> &amp; come back to <strong>Part II</strong> stuffs when you need a <strong>TeaBreak</strong> / A Moment to rest</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="REY_BR_LIST_LVL3"></div>
+<br>
+<ul>
+<li>If I find a really fkin nice <strong>CharacterCreation+Animation</strong> Series out there, imma put it here</li>
+<li>Next Page had <strong>GeoNodes</strong>, <strong>Procedural Shaders</strong>, <strong>Character Creation</strong> 💁‍♀️</li>
+</ul>
+<br>
+<div class="REY_NOSHOW_PDF">
+<hr>
+<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+</div>
+<div class="REY_PAGEBREAK"></div>
+<div class="REY_NOSHOW_PDF">
+<hr>
+</div>
+<div class="REY_TITLEV2"></div>
+<h2 id="part-iii--nodes-------------7h-️-4-7days">PART III : Nodes            <code>📺 7h</code> <code>🛠️ 4-7days</code> </h2>
+<ul>
+<li>
+<h4>🟧 Shader Nodes 1       <code>📺 2h</code>  <code>🛠️ 6-12h</code></h4>
+<ul>
+<li>Ryan   - <strong>Stripes</strong>              - <code>📺 18m</code> <code>🛠️ 30-120m</code> <code>🎯(6/10)</code>  - <a href="https://www.youtube.com/watch?v=GMFHaW74Zts">🔗</a></li>
+<li>Ryan   - <strong>Potato</strong>               - <code>📺 22m</code> <code>🛠️ 30-120m</code> <code>🎯(6/10)</code>  - <a href="https://www.youtube.com/watch?v=FCXvTmNNUeU">🔗</a></li>
+<li>Ryan   - <strong>Saturn</strong>               - <code>📺 38m</code> <code>🛠️ 1-4h</code>   <code>🎯(8/10)</code>   - <a href="https://www.youtube.com/watch?v=cxS_4tpKOa4">🔗</a>
+<ul>
+<li>later on there will be resource to make this actually make as realistic as pictures captured by NASA</li>
+</ul>
+</li>
+<li>Dorian - <strong>Fresnel Effect</strong>       - <code>📺  5m</code> <code>🛠️ 10m</code>    <code>🎯(9/10)</code>   - <a href="https://www.youtube.com/watch?v=WmGrbEepFG4&amp;list=PLR0j6NckpKjxisJvlAyzerma44fJfUdg1&amp;index=1">🔗</a>
+<ul>
+<li>I have put 2 real world examples too 🤭</li>
+<li>So ryan basically hacked the <strong>Fresnel "Mask"</strong> to use as Emission 💁‍♀️ via <strong>LayerWeightNode</strong></li>
+</ul>
+</li>
+</ul>
+  <br>
+<ul>
+<li>
+<p><strong>Addon #1</strong>:- <a href="https://extensions.blender.org/add-ons/node-arrange/">Node-Arrange</a></p>
+<ul>
+<li><strong>download</strong> &amp; <strong>install from disk</strong></li>
+<li>Usage:- Any <code>NodeTree Editor</code> <kbd>-&gt;</kbd> <code>SidePanel</code> {<kbd>N</kbd>} <kbd>-&gt;</kbd> <code>Arrange</code> <kbd>-&gt;</kbd> <code>Arrange Selected</code></li>
+<li>You should kinda download &amp; install &amp; use while in the middle of the <strong>Saturn</strong> one</li>
+<li>There's a Fun Alternative out there xD 😂
+<ul>
+<li><a href="https://www.youtube.com/watch?v=QvNz3ON6e1I">https://www.youtube.com/watch?v=QvNz3ON6e1I</a></li>
+</ul>
+</li>
+<li>Tips/Shorts on Arranging nodes
+<ul>
+<li><a href="https://www.youtube.com/shorts/kt4ejV2OqI8">https://www.youtube.com/shorts/kt4ejV2OqI8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Addon #2</strong>: <a href="https://www.youtube.com/watch?v=UPzUMO_PMY0">Node-Preview</a></p>
+<ul>
+<li>if the above link doesn't work:- <a href="https://www.youtube.com/watch?v=lXrf68BOyj8">https://www.youtube.com/watch?v=lXrf68BOyj8</a><br>
+<br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>🟧 GeoMetry Nodes 1    <code>📺 2h</code> <code>🛠️ 6-12h</code></h4>
+<ol>
+<li>
+<p>Guru - <strong>GeoNodes</strong>                - <code>📺 30m</code> <code>🛠️ 1-2h</code> <code>🎯(9/10)</code>   - 🔗 <a href="https://www.youtube.com/watch?v=aO0eUnu0hO0">P1</a> <a href="https://www.youtube.com/watch?v=V10GBrmYIDM">P2</a></p>
+<ul>
+<li>You'd probably not find any better <strong>GeoNodes Introduction</strong> (for ppl who just started <strong>blender</strong>) in a short time of searching</li>
+<li>But yes, i don't like the fact that <strong>BlenderGuru probably supports Israel</strong></li>
+<li>Extras #1 - <strong>Append Material</strong> - <code>📺 2m</code> <code>🛠️ 5m</code> <code>🎯(7/10)</code>      - <a href="https://www.youtube.com/watch?v=uYPQ2yJuzR0">🔗</a>
+<ul>
+<li>Lacks Enthusiasm!</li>
+</ul>
+</li>
+<li>Once, you have reached the <strong>end of 2nd video (P2)</strong> of this one
+<ul>
+<li>Don't hesitate about <strong>ShaderNodes</strong> of the Materials 💁‍♀️ I wouldn't even recommened taking a look into it.... as of right now.... Cz, if you do so, it would be like taking a look into <strong>Calculus</strong> without understanding <strong>Graphing 2D Equations on the Cartesian Plane</strong></li>
+</ul>
+</li>
+<li>Now,
+<ul>
+<li>You should try applying this to your <strong>Donut</strong> 💁‍♀️</li>
+</ul>
+<ol>
+<li>Make a copy of your DONUT's last version/file.</li>
+<li>Take the copy inside this new GeoNodes_Project folder.</li>
+<li>Download Guru's <code>.blend</code> from GoogleDriveLink (youtube description)</li>
+<li><strong>Append Material</strong></li>
+<li>Top Left Menu -&gt; File -&gt; Append -&gt; Guru's File from GoogleDrive -&gt; Materials -&gt; Guru's GUM/Candy &amp; Sugar Shaders + GeoNodes scatter if you want to</li>
+<li>Change Materials(Donut)</li>
+<li>Optionally change sprinkles instances to sugar || or || apply the sugar materials right on the sprinkles 💁‍♀️</li>
+<li>Render &amp; Share if you wanna 😜</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<h6>📜 SpreadSheet is your Biggest Friend!</h6>
+</li>
+<li>
+<h6>📜 The Moment you feel like this is not exciting anymore, move on to the next task/part (ShaderNodes). Come back when you feel excited again 💁‍♀️</h6>
+</li>
+<li>
+<p>Guru  - <strong>Hologram</strong>                 - <code>📺 20m</code> <code>🛠️ 1-4h</code> <code>🎯(7/10)</code>   - <a href="https://www.youtube.com/watch?v=0OsgS2JpM8k">🔗</a></p>
+<ol>
+<li>When you reach the <strong>Proximity</strong> Node
+<ol>
+<li>don't get scared</li>
+<li>read the <strong>'Proximity'</strong> Note below 😉</li>
+<li>remember that, the SpreadSheet is your biggest friend.</li>
+<li>remember that, <strong>'You are one with the SpreadSheet &amp; the SpreadSheet is with you.'</strong></li>
+</ol>
+ <div class="REY_BR_LIST2"></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Guru  - <strong>LED</strong>                      - <code>📺 30m</code> <code>🛠️ 1-4h</code> <code>🎯(7/10)</code>   - <a href="https://www.youtube.com/watch?v=_TYD-CRDGXI">🔗</a></p>
+</li>
+<li>
+<p>Graffinity  - <strong>Random Number Gen</strong>  - <code>📺 5m</code>  <code>🛠️ 15m-30m``🎯(9/10)</code>   - <a href="https://www.youtube.com/watch?v=_J1aC0cXlQE">🔗</a></p>
+<ol>
+<li>Now a nice practice would be to try to combine these two 💁‍♀️</li>
+</ol>
+</li>
+</ol>
+  <div class="REY_BR_LIST2"></div>
+<ol start="7">
+<li>✨ <strong>Simon</strong>                         - <code>📺 5m</code> <code>🛠️ N/A</code> <code>🎯(5/10)</code>   - <a href="https://www.youtube.com/watch?v=kMDB7c0ZiKA">🔗</a>
+<ul>
+<li>Could have been better.... &amp; organized in lots of ways</li>
+</ul>
+</li>
+<li>✨ blendereverything - <strong>Limits</strong>    - <code>📺 12m</code> <code>🛠️ N/A</code> <code>🎯(5/10)</code>  - <a href="https://www.youtube.com/watch?v=Prqd2QFAsNY">🔗</a></li>
+</ol>
+</li>
+<li>
+<h4>Proximity (GeoNodes)</h4>
+<ul>
+<li>TODO: Add / Make Short viedo on it</li>
+<li>Don't get a heart attack by seeing <strong>Proximity</strong> Node</li>
+</ul>
+  <div class="REY_BR_LIST2"></div>
+<ul>
+<li>
+<p>The trick is rather to take the <strong>"Distance"</strong> OutputSocket of <strong>ProximityNode</strong> &amp; examining it with SpreadSheet</p>
+<ul>
+<li>Field Value = Value as per Vertex / Edge / Face</li>
+<li>So, it's like the <strong>Distance</strong> OutputSocket will have a value as per Vertex / Edge / Face</li>
+<li>If you inspect that value as per vertex / edge / face, you'd understand a heck ton better....</li>
+<li>Yes, Inspection.... Statistics isssss the key.... no other way around it 💁‍♀️</li>
+<li>(TODO:- Some Inspection Visualizers)</li>
+</ul>
+  <div class="REY_BR_LIST2"></div>
+</li>
+<li>
+<p>&amp; The other trick is to do small small tasks such as:-</p>
+<ul>
+<li>Creating your very own lil <strong>NodeGroup</strong> that takes in
+<ul>
+<li>➕ <strong>Distance</strong> from <strong>Proximity</strong> Node</li>
+<li>➕ MIN</li>
+<li>➕ MAX</li>
+<li>➖ boolean yes/no</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>Problems in (GeoNodes)</h4>
+<ul>
+<li>
+<p>Why do I feel like i can't remember anything?</p>
+<ul>
+<li>Think of nodes into categories &amp; <strong>Chunking Up</strong>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uXgKXfVMeFw">https://www.youtube.com/watch?v=uXgKXfVMeFw</a></li>
+</ul>
+</li>
+<li>I only mean the <strong>Chunking Up</strong> part of the video, for this issue.</li>
+<li>Mainly there are 5 kinds of chunks</li>
+</ul>
+  <div class="REY_BR_LIST2"></div>
+</li>
+<li>
+<p>5 Kinds of Chunks</p>
+<ul>
+<li>TODO: Inser image</li>
+</ul>
+<ol>
+<li><strong>mesh</strong>
+<ol>
+<li>mesh line</li>
+<li>grid</li>
+<li>ico sphere</li>
+<li>object info</li>
+</ol>
+</li>
+<li><strong>modifiers</strong>
+<ol>
+<li>subdivision subsurface</li>
+</ol>
+</li>
+<li>left menu <strong>tools</strong>
+<ol>
+<li>extrude</li>
+</ol>
+</li>
+<li><strong>utilities</strong>
+<ol>
+<li><strong>input</strong> nodes</li>
+<li><strong>noise</strong> &amp; texture nodes</li>
+<li><strong>mix</strong> &amp; <strong>math</strong> nodes</li>
+<li><strong>rotation</strong>, <strong>normal</strong>, <strong>euler</strong> &amp; <strong>orientation</strong> stuffs</li>
+</ol>
+</li>
+<li><strong>processors</strong>
+<ol>
+<li><strong>instance</strong> on points</li>
+<li><strong>proximity</strong></li>
+<li>geometry to points</li>
+</ol>
+ <div class="REY_BR_LIST2"></div>
+</li>
+</ol>
+</li>
+<li>
+<p>I feel like I don't understand anything....</p>
+<ul>
+<li>Gotta do the same chunking thingy here....</li>
+<li>Gotta chunk up the entire node tree into many smaller parts that you feel comfortable with</li>
+<li>Must use the spreadsheet to get comfortable with every little part
+<ul>
+<li>let it be 1 single node at first</li>
+<li>then 2</li>
+<li>then 3</li>
+<li>often times, in my mind, chunks always stay as 3/4 pieces of nodes</li>
+</ul>
+</li>
+<li>Sitting with a pen and paper, if you have to
+<ul>
+<li>writing down your thoughts about each node, while you experiment on with it and check info inside spreadsheet</li>
+<li>going one by one</li>
+<li>write down the (implicit) properties of that node, that you are able to find</li>
+<li>describing the sockets and inputs a little bit more, but in your very own language</li>
+<li>Taking the CS50 approach, imagining a Duck / or / a mech robot in front of you and talking with it, or maybe your sister/brother</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>So, How to become a GeoNodesWizard?</h4>
+<ul>
+<li>TODO: Make a short video on it</li>
+<li>The last note on Proximity ➕</li>
+<li>Thinking of nodes into categories &amp; <strong>Chunking Up</strong>
+<ul>
+<li>&amp;pp=ygUaRWRkaWUgV29vIExlc3NvbiBpbiBtZW1vcnk%3D</li>
+</ul>
+</li>
+<li>Must learn to keep nodes organized.... within Frames!
+<ul>
+<li>Also use multiple GroupInput Nodes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>So, How do you actually become a MathWizard in Shader/GeoNodes?</h4>
+<ul>
+<li>Assuming that you are not someone with a Maths background in high-school</li>
+<li>The most short / general advice would be
+<ul>
+<li>start from PreAlgebra 1 / BeastAcademy of AOPS
+<ul>
+<li><a href="https://artofproblemsolving.com/school/course/prealgebra1">https://artofproblemsolving.com/school/course/prealgebra1</a></li>
+<li><a href="https://beastacademy.com/">https://beastacademy.com/</a></li>
+<li>Eddie Woo:- <a href="https://misterwootube.com/2020/03/18/lesson-videos/">https://misterwootube.com/2020/03/18/lesson-videos/</a></li>
+</ul>
+</li>
+<li>Finish till <strong>Contest Prep</strong></li>
+</ul>
+</li>
+<li>Then moving on to CS50, MIT 6.006, 6.046, 3.091<br>
+<br></li>
+</ul>
+</li>
+<li>
+<h4>🟧 Texturing / Painting <code>📺 3h</code> <code>🛠️ 10-24h</code></h4>
+<ol>
+<li>
+<p>Tips &amp; Tricks</p>
+<ol>
+<li><strong>NodeWrangler #1</strong>:- [🔗][5_Tips_NodeWrangler1]</li>
+</ol>
+</li>
+<li>
+<p>Resources &amp; Assets</p>
+<ol>
+<li><a href="https://www.textures.com/"><strong>textures.com</strong></a></li>
+<li><a href="https://www.poliigon.com/"><strong>poliigon.com</strong></a></li>
+<li><a href="https://polyhaven.com/textures"><strong>polyhaven.com</strong></a> - Free</li>
+<li>cgtrader</li>
+<li>texturehaven</li>
+<li>(if you need help / financial aid) - Knock me (REYNEP) on GITHUB<br>
+<br></li>
+</ol>
+</li>
+<li>
+<p>Guru - <strong>Texturing</strong>             - <code>📺 1h53m</code> <code>🛠️ 4-6h</code> <code>🎯(8/10)</code>   - <a href="https://www.youtube.com/watch?v=uHCJoNEWjXo">🔗</a></p>
+</li>
+<li>
+<p>Guru - Texture <strong>Tiling</strong>        - <code>📺 22m</code> <code>🛠️ 1-2h</code> <code>🎯(7/10)</code>     - <a href="https://www.youtube.com/watch?v=-VgtSL5ZpYc">🔗</a></p>
+</li>
+<li>
+<p>Ryan - Texture <strong>Tiling</strong>        - <code>📺 06m</code> <code>🛠️ 1-2h</code> <code>🎯(5/10)</code>     - <a href="https://www.youtube.com/watch?v=o0Mc8fjSAA0">🔗</a></p>
+</li>
+<li>
+<p>Guru - <strong>Puddles</strong>               - <code>📺 30m</code> <code>🛠️ 1h30m</code> <code>🎯(7/10)</code>    - <a href="https://www.youtube.com/watch?v=TxYVMw94FXE">🔗</a></p>
+<ul>
+<li>Would have been <code>🎯(10/10)</code> Erindale/Simon was sitting right next to him &amp; addind / Showing more stuffs / explaining more<br>
+<br></li>
+</ul>
+</li>
+<li>
+<p>Tawan Sunflower - an Addon to "<strong>turn blender into photoshop</strong>"! - <code>📺 4m</code> <code>🛠️ 30m</code> <code>🎯(10/10)</code> - <a href="https://www.youtube.com/watch?v=WpwZXU6VnuA">🔗</a></p>
+</li>
+<li>
+<p>CodyGindy - <strong>painterly</strong> - <code>📺 8m</code> <code>🛠️ 2h</code> <code>🎯(10/10)</code> - <a href="https://www.youtube.com/watch?v=s8N00rjil_4">🔗</a></p>
+</li>
+</ol>
+</li>
+</ul>
+<div class="REY_NOSHOW_PDF">
+<hr>
+<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+</div>
+<div class="REY_PAGEBREAK"></div>
+<div class="REY_NOSHOW_PDF">
+<hr>
+</div>
+<h2 id="part-iv-wip">PART IV <code>wip</code> </h2>
+<ul>
+<li>
+<h4>🟨 Character Creation</h4>
+<ul>
+<li><strong>Part II</strong> - 🟦 <strong>CrashSune</strong> - <code>📺 4h</code>     <code>🛠️ 7-14days</code>  <code>🎯(6/10)</code>       - <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">🔗</a>
+<ul>
+<li>it's not a must, but you can watch if you wanna 💁‍♀️</li>
+</ul>
+</li>
+<li><strong>Daniel Kreuter</strong>              - <code>📺 18h48m</code> <code>🛠️ 14-28days</code> <code>🎯(5/10)</code>       - <a href="https://www.youtube.com/playlist?list=PLvgIVNDU-Dxi5h3JLNJMfK0t3-WsBm6Av">🔗</a>
+<ul>
+<li>5/10:- cz it's just too long.... gonna have to investigate if it's worth it or if it's just 2/3hours of stuffs</li>
+</ul>
+</li>
+<li>Kaspar - <strong>Michel</strong>             - <code>📺 7h54m</code>  <code>🛠️ 14-28days</code> <code>🎯(10/10)</code>      - <a href="https://www.youtube.com/playlist?list=PLav47HAVZMjly_fg_zoH26xawVLMiATPD">🔗</a></li>
+<li>Kaspar - <strong>Blender Studio</strong>     - <code>📺 wait</code>   <code>🛠️ 28-60days</code> <code>🎯(10/10)</code>      - <a href="https://studio.blender.org/training/stylized-character-workflow/">🔗</a>
+<ul>
+<li><strong>Julien Kasper</strong> is just really talented.... He feels really amazing</li>
+<li>This is worth it to grab, for 11.5Pounds</li>
+</ul>
+</li>
+<li>Kaspar - <strong>After Sculpting</strong>    - <code>📺 42h52m</code> <code>🛠️ 28-60days</code> <code>🎯(10/10)</code>      - <a href="https://www.youtube.com/playlist?list=PLav47HAVZMjl5VQRoVPd0481fsJNNQi9J">🔗</a>
+<ul>
+<li>This part is free on youtube</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h6>These two are simultaneously connected</h6>
+</li>
+<li>
+<h4>🟧 Sculpting</h4>
+<ul>
+<li>WIP</li>
+<li><a href="https://www.youtube.com/watch?v=ZpP2VxyjHI8">https://www.youtube.com/watch?v=ZpP2VxyjHI8</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<h2 id="part-v-wip">PART V <code>wip</code> </h2>
+<ul>
+<li>
+<h4>🟧 Rigging</h4>
+<ul>
+<li>Lewis     - <strong>Hips</strong>              - <code>📺 9m</code>     <code>🛠️ 30-60m</code>   <code>🎯(9/10)</code>      - <a href="https://www.youtube.com/watch?v=Zx2LtlZqG3g">🔗</a></li>
+<li>Doodley - <strong>Rigging is Beautiful</strong> - <code>📺 14m</code>  <code>🛠️ 30-60m</code>   <code>🎯(9/10)</code>       - <a href="https://www.youtube.com/watch?v=3RSwjZLClRc">🔗</a></li>
+<li>Polyfjord - <strong>his workflow</strong>      - <code>📺 9m</code>     <code>🛠️ 30-60m</code>   <code>🎯(9/10)</code>      - <a href="https://www.youtube.com/watch?v=BiPoPMnU2VI">🔗</a></li>
+<li>ProdCrate - <strong>Intro</strong>             - <code>📺 11m</code>    <code>🛠️ 30-60m</code>   <code>🎯(6/10)</code>      - <a href="https://www.youtube.com/watch?v=1khSuB6sER0">🔗</a></li>
+<li>SharpWind - <strong>idk</strong>               - <code>📺 38m</code>    <code>🛠️ 1-4h</code>     <code>🎯()</code>          - <a href="https://www.youtube.com/watch?v=Y2SWwZmwrwM">🔗</a>
+<hr>
+</li>
+<li>DJadik  - <strong>BlenderStudio Live</strong>  - <code>📺 24h25m</code> <code>🛠️ 7-14days</code> <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLR0j6NckpKjycgItSAWCgAkwKvr51c5lP">🔗</a></li>
+<li>Demeter - <strong>BlenderStudio Live</strong>  - <code>📺 15h04m</code> <code>🛠️ 7-14days</code> <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLR0j6NckpKjzREUgpLSyUbw-sW-6kOF2c">🔗</a>
+<hr>
+</li>
+<li>Doodley - <strong>Streams</strong>             - <code>📺</code>  <code>🛠️</code>  <code>🎯()</code>                        - <a href="https://www.youtube.com/playlist?list=PL3lBq8JvGJ9Oa3y_F7nWZ1UZtI977aopg">🔗</a></li>
+<li>Joey      - <strong>The Playlist</strong>      - <code>📺 6h20m</code>  <code>🛠️ 7-14days</code> <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLzg4_2BrWAVwkQvVPJoNaXNN4dXY0Xjkl">🔗</a></li>
+<li>CGDive    - <strong>Rigging</strong>           - <code>📺 9h50m</code>  <code>🛠️ 7-14days</code> <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLdcL5aF8ZcJsSWrFwmLsQvCIKisuyyMnU">🔗</a></li>
+<li>CGDive    - <strong>Rigify</strong>            - <code>📺 4h16m</code>  <code>🛠️ 2-7days</code>  <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLdcL5aF8ZcJuG3kKcVgQQz36E3JXzijEH">🔗</a></li>
+<li>CGDive    - <strong>Rokoko</strong>            - <code>📺 2h25m</code>  <code>🛠️ 2-7days</code>  <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLdcL5aF8ZcJvJqdjMaBlGgNPQVTU7Ug7d">🔗</a></li>
+<li>CGDive    - <strong>4.0 Rig-Updates</strong>   - <code>📺 2h13m</code>  <code>🛠️ 1-3days</code>  <code>🎯()</code>          - <a href="https://www.youtube.com/playlist?list=PLdcL5aF8ZcJvGhKyc2Zm2TjvN-psBKAcw">🔗</a></li>
+<li>CGDive    - <strong>AccuRig, Auto-Rig, Mixamo, Mocap + ETC</strong>  - <code>📺 N/A</code> <code>🛠️ N/A</code>  <code>🎯(8/10)</code> - <a href="https://www.youtube.com/playlist?list=PLdcL5aF8ZcJvGhKyc2Zm2TjvN-psBKAcw">🔗</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h6>These two are simultaneously connected too</h6>
+</li>
+</ul>
+<ul>
+<li>
+<h4>🟧 Character Animation</h4>
+<ul>
+<li>Alex      - <strong>Intro</strong>             - <code>📺 3h41m</code> <code>🛠️ 2-7days</code> <code>🎯()</code>         - <a href="https://www.youtube.com/playlist?list=PL0qE_ONqcqSUvYEYEDLQ27wJ-IIzmmMXq">🔗</a></li>
+<li>Alex      - <strong>Level 2</strong>           - <code>📺 3h36m</code> <code>🛠️ 2-7days</code> <code>🎯()</code>         - <a href="https://www.youtube.com/playlist?list=PL0qE_ONqcqSVtC2HXhKdCRXACM6HJ5gl-">🔗</a></li>
+<li>Alex      - <strong>ALL</strong>               - <code>📺 N/A</code>   <code>🛠️ N/A</code>     <code>🎯()</code>         - <a href="https://www.youtube.com/@alexonstory/videos">🔗</a></li>
+<li>Rik - <strong>BlenderStudio LiveStream</strong>- <code>📺 11h49m``🛠️ 2-7days</code> <code>🎯()</code>         - <a href="https://www.youtube.com/playlist?list=PLR0j6NckpKjxvsDVx5S913npTSI_VUUfA">🔗</a></li>
+<li>Wade      - <strong>💁‍♀️</strong>               - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/playlist?list=PLsaewSKhkd9MeYY_s_wY48UjGnE0GbutH">🔗</a></li>
+<li>RustyAnimator      - <strong>Roadmap</strong>  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=K9U_Z2rDe_Q">🔗</a></li>
+<li>MotionPlex      - <strong>Pipeline</strong>  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=JvN-t0PwLaE">🔗</a></li>
+<li><strong>Jackie Droujko</strong> - Experience   - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code> - <a href="https://www.youtube.com/watch?v=Woe37hD5av8">🔗</a></li>
+<li>Hjalti      - <strong>Workflow</strong>  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=cTx-n4OZXYE">🔗</a></li>
+<li>Hjalti      - <strong>Talk</strong>  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=eOxVdBgoehk">🔗</a></li>
+<li>Robin      - <strong>How</strong>  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=xgRnIlP3Tlg">🔗</a></li>
+<li>SharpWind      - ****  - <code>📺 N/A</code>   <code>🛠️ N/A</code> <code>🎯()</code>             - <a href="https://www.youtube.com/watch?v=JQT9sT1YuAI">🔗</a></li>
+<li>There are literally no nice free resources on Character Animation specifically in blnder, I'll throughly hunt down anything i can find... &gt;_&lt;</li>
+<li><a href="https://www.youtube.com/watch?v=AxmgdSArmHo">https://www.youtube.com/watch?v=AxmgdSArmHo</a></li>
+<li><a href="https://www.youtube.com/watch?v=K05yi9HnDsg&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=K05yi9HnDsg&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=OnpO9d-ynpA">https://www.youtube.com/watch?v=OnpO9d-ynpA</a></li>
+<li><a href="https://www.youtube.com/watch?v=zXm-mYeApQQ">https://www.youtube.com/watch?v=zXm-mYeApQQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=sy4EfjjKAmM">https://www.youtube.com/watch?v=sy4EfjjKAmM</a></li>
+<li><a href="https://www.youtube.com/watch?v=q6nh5sktCnI">https://www.youtube.com/watch?v=q6nh5sktCnI</a></li>
+<li><a href="https://www.youtube.com/watch?v=GAIZkIfXXjQ">https://www.youtube.com/watch?v=GAIZkIfXXjQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=v71G6TCw_0M">https://www.youtube.com/watch?v=v71G6TCw_0M</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLkoR6rvf_v0K-OLOuK4UNPHII2qi8zxw_">https://www.youtube.com/playlist?list=PLkoR6rvf_v0K-OLOuK4UNPHII2qi8zxw_</a></li>
+<li><a href="https://www.youtube.com/watch?v=mifGsXHitvs">https://www.youtube.com/watch?v=mifGsXHitvs</a></li>
+<li><a href="https://www.youtube.com/watch?v=AWocxbVD3CE">https://www.youtube.com/watch?v=AWocxbVD3CE</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLYRPVtOhCRnmcbRS2Su4kPgknjBIdOe8L">https://www.youtube.com/playlist?list=PLYRPVtOhCRnmcbRS2Su4kPgknjBIdOe8L</a></li>
+<li><a href="https://www.youtube.com/watch?v=WmcmJqMQfbc">https://www.youtube.com/watch?v=WmcmJqMQfbc</a></li>
+<li><a href="https://www.youtube.com/watch?v=IHy57Lrzkb4">https://www.youtube.com/watch?v=IHy57Lrzkb4</a></li>
+<li><a href="https://www.youtube.com/watch?v=eP9gH_2zRe0">https://www.youtube.com/watch?v=eP9gH_2zRe0</a></li>
+<li><a href="https://www.youtube.com/watch?v=vWLdcL05c54">https://www.youtube.com/watch?v=vWLdcL05c54</a></li>
+<li><a href="https://www.youtube.com/watch?v=tCTkkHGRpNk&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=tCTkkHGRpNk&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=adg5DlXFLNI">https://www.youtube.com/watch?v=adg5DlXFLNI</a></li>
+<li><a href="https://www.youtube.com/watch?v=ynBENQJBQbE">https://www.youtube.com/watch?v=ynBENQJBQbE</a></li>
+<li><a href="https://www.youtube.com/watch?v=yaOEsAOnq7s">https://www.youtube.com/watch?v=yaOEsAOnq7s</a></li>
+<li><a href="https://www.youtube.com/@PolyPaint">https://www.youtube.com/@PolyPaint</a></li>
+<li><a href="https://www.youtube.com/watch?v=ynBENQJBQbE">https://www.youtube.com/watch?v=ynBENQJBQbE</a></li>
+<li><a href="https://www.youtube.com/watch?v=-hxQ55HVcmM">https://www.youtube.com/watch?v=-hxQ55HVcmM</a></li>
+<li><a href="https://www.youtube.com/watch?v=fx7CCPl0m6U">https://www.youtube.com/watch?v=fx7CCPl0m6U</a></li>
+<li><a href="https://www.youtube.com/watch?v=4ICmIsQ3Xvc">https://www.youtube.com/watch?v=4ICmIsQ3Xvc</a></li>
+<li><a href="https://www.youtube.com/watch?v=AEAc_lLjOMc&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=20&amp;pp=iAQB">https://www.youtube.com/watch?v=AEAc_lLjOMc&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=20&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=RYk2H2uv2fk&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=21&amp;pp=iAQB">https://www.youtube.com/watch?v=RYk2H2uv2fk&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=21&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=imbIsNAvUpM&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=23&amp;pp=iAQB">https://www.youtube.com/watch?v=imbIsNAvUpM&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=23&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=H_b9fpRn9cE&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=24&amp;pp=iAQB">https://www.youtube.com/watch?v=H_b9fpRn9cE&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=24&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=Lmf43znKd_o&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=Lmf43znKd_o&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=4LhvcINgNxU&amp;t=967s&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=4LhvcINgNxU&amp;t=967s&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=zJRL0NI7t8o&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=zJRL0NI7t8o&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLU9rfXudQJmvqGfYcwPFLnkbg708M7IrJ">https://www.youtube.com/playlist?list=PLU9rfXudQJmvqGfYcwPFLnkbg708M7IrJ</a></li>
+</ul>
+</li>
+<li>
+<h4>🟧 PART V : Examples, Timelapses, BreakDowns</h4>
+<ul>
+<li>Lewis    - <strong>BreakDown 1</strong>             - <code>📺 3m</code> <code>🔄 2-7days</code> <code>🎯(9/10)</code>        - <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">🔗</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h4>🟦 PART VI : Another Break</h4>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
