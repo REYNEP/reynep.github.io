@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'AudioLink Mono';
+    src: url('AudioLinkMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AudioLink Mono';
+    src: url('AudioLinkMono-Demi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AudioLink Mono';
+    src: url('AudioLinkMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AudioLink Mono';
+    src: url('AudioLinkMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AudioLink Mono';
+    src: url('AudioLinkMono-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
