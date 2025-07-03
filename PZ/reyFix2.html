@@ -322,7 +322,7 @@
 }
 @font-face {
   font-family: "Emoji REY";
-  src: url("https://raw.githubusercontent.com/REYNEP/reynep.github.io/refs/heads/main/fonts/SegoeUIEmoji.woff2");
+  src: url("");
 }
 @font-face {
   font-family: "REY_FiraSansCondensedLightItalic";
@@ -337,7 +337,7 @@
     */
   font-size: 24px;
   line-height: 1.15;
-  font-family: 'CMU Serif', 'Bahnschrift', 'Emoji REY', monospace;
+  font-family: 'CMU Serif', 'Bahnschrift', monospace;
   font-stretch: condensed;
   font-weight: 400;
   /** However, background-clip is not supported by princexml */
@@ -399,7 +399,7 @@
   font-size: 90%;
 }
 .markdown-preview code {
-  font-family: 'AudioLink Mono', 'Lotion', 'Emoji REY', monospace;
+  font-family: 'AudioLink Mono', 'Lotion', monospace;
   font-weight: bold;
   font-size: 90%;
   font-style: normal;
@@ -459,7 +459,7 @@
   font-weight: normal;
   margin-top: 0.25em;
   margin-bottom: 0px;
-  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
   font-weight: 300;
   font-size: 92%;
   line-height: 1.15;
@@ -508,7 +508,7 @@
 .markdown-preview .REY_SECTION_TYPE1 ul > li ul > li,
 .markdown-preview .REY_SECTION_TYPE1 ol > li ul > li {
   margin-bottom: 0px;
-  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
 }
 .markdown-preview .REY_SECTION_TYPE2 {
   line-height: 28px;
@@ -527,7 +527,7 @@
 .markdown-preview .REY_SECTION_TYPE2 ul > li ul > li,
 .markdown-preview .REY_SECTION_TYPE2 ol > li ul > li {
   margin-bottom: 0px;
-  font-family: 'REY_FiraSansCondensedLightItalic', 'Emoji REY', monospace;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
 }
 .markdown-preview .REY_SECTION_TYPE2 ul,
 .markdown-preview .REY_SECTION_TYPE2 li {
@@ -654,6 +654,10 @@
 .markdown-preview .REY_PAGEBREAK {
   margin-bottom: 300px;
   page-break-before: always;
+}
+.markdown-preview .REY_PAGEBREAK_TEXT {
+  font-size: 50px;
+  font-family: 'Quartist';
 }
 .markdown-preview .REY_TITLE {
   margin-top: -36px;
@@ -815,7 +819,7 @@
 .markdown-preview.prince ul > li ul > li,
 .markdown-preview.prince ol > li ul > li {
   margin-bottom: 0px;
-  font-family: 'Fira Sans Condensed Light Italic', 'Emoji REY', monospace;
+  font-family: 'Fira Sans Condensed Light Italic', monospace;
   font-size: 92.5%;
 }
 .markdown-preview.prince pre {
@@ -971,9 +975,16 @@ class: "DocumentClass1"
 <h2 id="project-zomboid-reyfix2">Project Zomboid <code>reyFix2</code> </h2>
 <h3 id="️-conflicting-mods">⚔️ Conflicting Mods </h3>
 <ol>
-<li>TV &amp; Radio ReInvented <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3420581050">🔗</a></li>
-<li>Better Sorting        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159">🔗</a></li>
+<li>TV &amp; Radio ReInvented <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3420581050">🔗</a> by tealera</li>
+<li>Better Sorting        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159">🔗</a> by ChthonicKnight</li>
 </ol>
+<h3 id="-acknowledgements">🤝 Acknowledgements </h3>
+<ul>
+<li><strong>Shurutsue</strong></li>
+<li><strong>Sir Doggy Jvla</strong></li>
+<li><strong>Albion</strong></li>
+<li>from the PZMC (Project Zomboid Modding Community) Discord</li>
+</ul>
 <h3 id="️-the-bug-">🏞️ The Bug 🚨 </h3>
 <div align="center" class="REY_TITLE_SUB1" style="font-size: 80%;">
 <p>✔️ = works ; ✖️ = TV &amp; Radio ReInvented UI doesn't show</p>
@@ -1002,7 +1013,7 @@ class: "DocumentClass1"
 </ul>
 <div class="REY_NOSHOW_PDF">
 <hr>
-<div align="center" style="font-size: 50px; font-family: 'Quartist'; ">Page-Break</div>
+<div align="center" class="REY_PAGEBREAK_TEXT" style="">Page-Break</div>
 </div>
 <div class="REY_PAGEBREAK"></div>
 <div class="REY_NOSHOW_PDF">
@@ -1208,7 +1219,7 @@ Old Hosted Servers initially started without <code>TV &amp; Radio Inventory</cod
 </ul>
 <div class="REY_NOSHOW_PDF">
 <hr>
-<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+<div align="center" class="REY_PAGEBREAK_TEXT" style="">Page-Break</div>
 </div>
 <div class="REY_PAGEBREAK"></div>
 <div class="REY_NOSHOW_PDF">
@@ -1267,7 +1278,7 @@ Old Hosted Servers initially started without <code>TV &amp; Radio Inventory</cod
 </ul>
 <div class="REY_NOSHOW_PDF">
 <hr>
-<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+<div align="center" class="REY_PAGEBREAK_TEXT" style="">Page-Break</div>
 </div>
 <div class="REY_PAGEBREAK"></div>
 <div class="REY_NOSHOW_PDF">
@@ -1373,7 +1384,7 @@ Old Hosted Servers initially started without <code>TV &amp; Radio Inventory</cod
 </ul>
 <div class="REY_NOSHOW_PDF">
 <hr>
-<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+<div align="center" class="REY_PAGEBREAK_TEXT" style="">Page-Break</div>
 </div>
 <div class="REY_PAGEBREAK"></div>
 <div class="REY_NOSHOW_PDF">
@@ -1420,7 +1431,7 @@ Old Hosted Servers initially started without <code>TV &amp; Radio Inventory</cod
 <h3 id="div-classrey_br4_negative-stylefont-size50-httpsgistgithubcomreynepf40d54acd64332dfb81e52ad4f176c97-div"><div class="REY_BR4_NEGATIVE" style="font-size:50%"> *<a href="https://gist.github.com/REYNEP/f40d54acd64332dfb81e52ad4f176c97">https://gist.github.com/REYNEP/f40d54acd64332dfb81e52ad4f176c97</a> </div> </h3>
 <div class="REY_NOSHOW_PDF">
 <hr>
-<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+<div align="center" class="REY_PAGEBREAK_TEXT" style="">Page-Break</div>
 </div>
 <div class="REY_PAGEBREAK"></div>
 <div class="REY_NOSHOW_PDF">
@@ -1509,6 +1520,10 @@ Old Hosted Servers initially started without <code>TV &amp; Radio Inventory</cod
           <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#️-conflicting-mods" class="md-toc-link">
             <p>⚔️ Conflicting Mods</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#-acknowledgements" class="md-toc-link">
+            <p>🤝 Acknowledgements</p>
 
           </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
           <a href="#️-the-bug-" class="md-toc-link">
