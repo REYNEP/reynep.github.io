@@ -1,0 +1,2333 @@
+<!DOCTYPE html><html><head>
+      <title>20.mar21_BlenderEXT</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\nitro_scoop\persist\vscode\data\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#c9d1d9;text-shadow:none;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::mozselection,code[class*=language-]::selection,pre[class*=language-]::mozselection,pre[class*=language-]::selection{text-shadow:none;background:#234879}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;background:#161b22}:not(pre)>code[class*=language-]{padding:.1em .3em;border-radius:.3em;color:#c9d1d9;background:#343942}pre[data-line]{position:relative}pre[class*=language-]>code[class*=language-]{position:relative;z-index:1}.line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:#2f2a1e;box-shadow:inset 5px 0 0 #674c16;z-index:0;pointer-events:none;line-height:inherit;white-space:pre}.namespace{opacity:.7}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8b949e}.token.punctuation{color:#c9d1d9}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#79c0ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a5d6ff}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a5d6ff}.token.atrule,.token.attr-value,.token.keyword{color:#f97583}.token.function{color:#d2a8ff}.token.important,.token.regex,.token.variable{color:#79b8ff}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#c5c8c6;background-color:#1d1f21;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#9ba09d}html body strong{color:#fff}html body del{color:#9ba09d}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#ddd;text-decoration:none}html body a:hover{color:#cecece;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#9ba09d;background-color:#303337;border-left:4px solid #43484c}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#43484c;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#fff}html body table td,html body table th{border:1px solid #43484c;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#fff;background-color:#303337;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#43484c;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #43484c;border-bottom:2px solid #35393c;padding:2px 4px;background-color:#303337;border-radius:3px}@media print{html body{background-color:#1d1f21}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#9ba09d}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}html body a{text-decoration:underline}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* When you rewrite this file, before any kind of styling make sure if the PAGE Margin-top & margin bottom is okay 💁‍♀️ */
+/* Use this next time for @font-face generation:- C:\Users\REY\Desktop\Houdini_Level0\133.fonts_using */
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neuton';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Neuton/Neuton-ExtralightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-Italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-Roman.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif Extra';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-BoldSlanted.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif Extra';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-RomanSlanted.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CMU Serif Upright';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/CMUSerif/CMUSerif-UprightItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lotion';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Lotion/Lotion-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/1a2cd65ead4eec3cf48556ca8c11811f0a0afdfc/fonts/NotoSerif-Static/NotoSerif-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'AudioLink Mono';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/AudioLinkMono/AudioLinkMono-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AudioLink Mono';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/AudioLinkMono/AudioLinkMono-Demi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AudioLink Mono';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/AudioLinkMono/AudioLinkMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AudioLink Mono';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/AudioLinkMono/AudioLinkMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AudioLink Mono';
+  src: url('https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/AudioLinkMono/AudioLinkMono-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quartist";
+  src: url("https://raw.githubusercontent.com/REYNEP/reynep.github.io/2e538cfc8cca0cbcfa15a94c6dc24ed710d8117c/fonts/Quartist.ttf");
+}
+@font-face {
+  font-family: "Bahnschrift REY";
+  src: local("Bahnschrift"), url("https://media.githubusercontent.com/media/flying-whales/flying-whales/20e98b4dd0388a3fafd09acb8b07e5bd3dc701b9/Assets/Fonts/bahnschrift.ttf") format(ttf);
+}
+@font-face {
+  font-family: "Emoji REY";
+  src: url("");
+}
+@font-face {
+  font-family: "REY_FiraSansCondensedLightItalic";
+  src: local('Fira Sans Condensed Light Italic'), url("https://raw.githubusercontent.com/bBoxType/FiraSans/refs/heads/master/Fira_Sans_4_3/Fonts/Fira_Sans_TTF_4301/Condensed/Italic/FiraSansCondensed-LightItalic.ttf");
+}
+.markdown-preview {
+  padding: 2em calc(35% - 457px + 2em) !important;
+  /**
+    h1 {
+        page-break-before: always;
+    }
+    */
+  font-size: 24px;
+  line-height: 1.15;
+  font-family: 'CMU Serif', 'Bahnschrift', monospace;
+  font-stretch: condensed;
+  font-weight: 400;
+  /** However, background-clip is not supported by princexml */
+}
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6,
+.markdown-preview strong {
+  font-family: 'Quartist' !important;
+}
+.markdown-preview h1 em,
+.markdown-preview h2 em,
+.markdown-preview h3 em,
+.markdown-preview h4 em,
+.markdown-preview h5 em,
+.markdown-preview h6 em,
+.markdown-preview strong em,
+.markdown-preview h1 i,
+.markdown-preview h2 i,
+.markdown-preview h3 i,
+.markdown-preview h4 i,
+.markdown-preview h5 i,
+.markdown-preview h6 i,
+.markdown-preview strong i {
+  font-family: 'CMU Serif';
+  font-weight: 400;
+}
+.markdown-preview h6 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.markdown-preview a {
+  font-style: italic;
+}
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3 {
+  text-align: center;
+}
+.markdown-preview h2 {
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
+}
+.markdown-preview h4 {
+  margin-top: 1em;
+  margin-bottom: 0.15em;
+}
+.markdown-preview h5 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.markdown-preview blockquote {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 90%;
+}
+.markdown-preview code {
+  font-family: 'AudioLink Mono', 'Lotion', monospace;
+  font-weight: bold;
+  font-size: 90%;
+  font-style: normal;
+}
+.markdown-preview pre {
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.markdown-preview pre > code {
+  font-size: 16px;
+}
+.markdown-preview pre {
+  page-break-inside: auto;
+  /* REYNEP MOD */
+}
+.markdown-preview img {
+  -prince-image-resolution: 150dpi;
+  /* set an explicit DPI */
+}
+.markdown-preview img.makeSmall_NoFlex {
+  -prince-image-resolution: 160dpi;
+  /* set an explicit DPI */
+}
+.markdown-preview img.makeSmall {
+  -prince-image-resolution: 160dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 15px;
+}
+.markdown-preview img.makeSmaller {
+  -prince-image-resolution: 180dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 20px;
+}
+.markdown-preview img.makeSmallest {
+  -prince-image-resolution: 200dpi;
+  /* set an explicit DPI */
+  float: left;
+  margin-right: 20px;
+}
+.markdown-preview table {
+  display: inline !important;
+  width: auto !important;
+}
+.markdown-preview ul > li,
+.markdown-preview ol > li {
+  margin-bottom: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview ul > li ol > li,
+.markdown-preview ol > li ol > li,
+.markdown-preview ul > li ul > li,
+.markdown-preview ol > li ul > li {
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0.25em;
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
+  font-weight: 300;
+  font-size: 92%;
+  line-height: 1.15;
+}
+.markdown-preview ul > li ol > li ol > li ol > li,
+.markdown-preview ol > li ol > li ol > li ol > li,
+.markdown-preview ul > li ul > li ol > li ol > li,
+.markdown-preview ol > li ul > li ol > li ol > li,
+.markdown-preview ul > li ol > li ul > li ol > li,
+.markdown-preview ol > li ol > li ul > li ol > li,
+.markdown-preview ul > li ul > li ul > li ol > li,
+.markdown-preview ol > li ul > li ul > li ol > li,
+.markdown-preview ul > li ol > li ol > li ul > li,
+.markdown-preview ol > li ol > li ol > li ul > li,
+.markdown-preview ul > li ul > li ol > li ul > li,
+.markdown-preview ol > li ul > li ol > li ul > li,
+.markdown-preview ul > li ol > li ul > li ul > li,
+.markdown-preview ol > li ol > li ul > li ul > li,
+.markdown-preview ul > li ul > li ul > li ul > li,
+.markdown-preview ol > li ul > li ul > li ul > li {
+  line-height: 1.1;
+}
+.markdown-preview ul > li ol > li h5,
+.markdown-preview ol > li ol > li h5,
+.markdown-preview ul > li ul > li h5,
+.markdown-preview ol > li ul > li h5 {
+  margin-top: 0px;
+}
+.markdown-preview ul > li ol > li pre,
+.markdown-preview ol > li ol > li pre,
+.markdown-preview ul > li ul > li pre,
+.markdown-preview ol > li ul > li pre {
+  margin-bottom: 4px;
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li {
+  margin-bottom: 0px;
+  font-weight: 100;
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li strong,
+.markdown-preview .REY_SECTION_TYPE1 ol > li strong {
+  font-family: 'Quartist';
+}
+.markdown-preview .REY_SECTION_TYPE1 ul > li ol > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li ol > li,
+.markdown-preview .REY_SECTION_TYPE1 ul > li ul > li,
+.markdown-preview .REY_SECTION_TYPE1 ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
+}
+.markdown-preview .REY_SECTION_TYPE2 {
+  line-height: 28px;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li {
+  margin-bottom: -8px;
+  font-weight: 100;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li strong,
+.markdown-preview .REY_SECTION_TYPE2 ol > li strong {
+  font-family: 'Quartist';
+}
+.markdown-preview .REY_SECTION_TYPE2 ul > li ol > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li ol > li,
+.markdown-preview .REY_SECTION_TYPE2 ul > li ul > li,
+.markdown-preview .REY_SECTION_TYPE2 ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'REY_FiraSansCondensedLightItalic', monospace;
+}
+.markdown-preview .REY_SECTION_TYPE2 ul,
+.markdown-preview .REY_SECTION_TYPE2 li {
+  margin-bottom: 32px;
+}
+.markdown-preview .REY_ACADEMIA1 p {
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.markdown-preview .REY_ACADEMIA1 br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}
+.markdown-preview .REY_ACADEMIA1 ul li,
+.markdown-preview .REY_ACADEMIA1 ol li {
+  font-family: 'Noto Serif', 'Liberation Serif', 'Typography Times', 'Quivira', 'CMU Serif', 'Quartist', 'Times New Roman', 'Lotion';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.markdown-preview .REY_ACADEMIA1 ul li ol > li,
+.markdown-preview .REY_ACADEMIA1 ol li ol > li,
+.markdown-preview .REY_ACADEMIA1 ul li ul > li,
+.markdown-preview .REY_ACADEMIA1 ol li ul > li {
+  font-size: 95%;
+}
+.markdown-preview .REY_ACADEMIA1 ul p,
+.markdown-preview .REY_ACADEMIA1 ol p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.markdown-preview .REY_ACADEMIA1 ul br,
+.markdown-preview .REY_ACADEMIA1 ol br {
+  content: "";
+  margin: 0.2em;
+  display: block;
+  font-size: 24%;
+}
+.markdown-preview .REY_ACADEMIA1 .BR1 {
+  padding-bottom: 10px;
+}
+.markdown-preview .REY_ACADEMIA1 .BR2 {
+  padding-bottom: 20px;
+}
+.markdown-preview .REY_ACADEMIA1 .BR3 {
+  padding-bottom: 30px;
+}
+.markdown-preview .REY_TITLE_SECTION1 {
+  text-align: center;
+}
+.markdown-preview .REY_TITLE_SUB1 {
+  margin-top: -1.25em;
+  font-size: 110%;
+  line-height: 100%;
+  font-family: 'Neuton';
+  font-weight: 200;
+  font-style: italic;
+}
+.markdown-preview .REY_TITLE_SUB2 {
+  margin-top: 0em;
+  font-size: 110%;
+  line-height: 100%;
+  font-family: 'Neuton';
+  font-weight: 200;
+  font-style: italic;
+}
+.markdown-preview .REY_PAGE_START {
+  margin-top: -60px;
+}
+.markdown-preview .REY_NOSHOW_MD {
+  display: none;
+}
+.markdown-preview .REY_NOSHOW_PDF {
+  display: block;
+}
+.markdown-preview .REY_BR_LIST_LVL3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.markdown-preview .REY_BR_LIST3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.markdown-preview .REY_BR_LIST2 {
+  margin: 0;
+  margin-bottom: 0.75em;
+}
+.markdown-preview .REY_BR_LIST1 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+.markdown-preview .REY_BR1_NEGATIVE {
+  margin-top: -70px;
+}
+.markdown-preview .REY_BR2_NEGATIVE {
+  margin-top: -50px;
+}
+.markdown-preview .REY_BR3_NEGATIVE {
+  margin-top: -40px;
+}
+.markdown-preview .REY_BR3_NEGATIVE_WEIRD {
+  margin-top: -40px;
+}
+.markdown-preview .REY_BR4_NEGATIVE {
+  margin-top: -30px;
+}
+.markdown-preview .REY_BR4_NEGATIVE_WEIRD {
+  margin-top: -30px;
+}
+.markdown-preview .REY_BR5_NEGATIVE {
+  margin-top: -20px;
+}
+.markdown-preview .REY_BR6_NEGATIVE {
+  margin-top: -10px;
+}
+.markdown-preview .REY_BR1_POSITIVE_PDF {
+  margin-top: 0;
+}
+.markdown-preview .REY_PAGEBREAK {
+  margin-bottom: 300px;
+  page-break-before: always;
+}
+.markdown-preview .REY_PAGEBREAK_TEXT {
+  font-size: 50px;
+  font-family: 'Quartist';
+}
+.markdown-preview .REY_TITLE {
+  margin-top: -36px;
+}
+.markdown-preview .REY_TITLEV2 {
+  margin-top: -36px;
+}
+.markdown-preview .REY_TITLEV2 h1,
+.markdown-preview .REY_TITLEV2 h2 {
+  margin-bottom: -20px;
+}
+.markdown-preview .REY_TABLE_V1 {
+  font-style: normal;
+  font-family: 'Bahnschrift REY';
+  font-weight: 100;
+  font-variant: small-caps;
+}
+.markdown-preview .REY_TABLE_V2 {
+  font-size: 80%;
+}
+.markdown-preview .REY_SMALLER_CODE {
+  font-size: 0.7em;
+}
+.markdown-preview .REY_SMALLER_CODE > pre > code {
+  font-size: 0.95em;
+  line-height: 100%;
+}
+.markdown-preview .REY_IMG_CONTAINER {
+  font-size: 85%;
+  line-height: 125%;
+}
+.markdown-preview .REY_DocTitle {
+  text-align: center;
+  font-size: 30px;
+  background: linear-gradient(145deg, #ff7f00, #8e44ad);
+  /* Orange to Purple Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  margin: 0;
+  font-weight: bold;
+}
+.markdown-preview.prince {
+  color: black !important;
+  font-size: 15px;
+  font-weight: 100;
+}
+.markdown-preview.prince .REY_PAGEBREAK {
+  margin-bottom: 0px;
+  margin-top: -28px;
+}
+.markdown-preview.prince .REY_TITLEV2 {
+  margin-top: -67.5px;
+}
+.markdown-preview.prince .REY_TITLEV2 h1,
+.markdown-preview.prince .REY_TITLEV2 h2 {
+  margin-bottom: -18px;
+}
+.markdown-preview.prince .REY_TITLE_SUB2 {
+  margin-top: -10px;
+}
+.markdown-preview.prince .REY_BR1_POSITIVE_PDF {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_BR1_NEGATIVE {
+  margin-top: -40px;
+}
+.markdown-preview.prince .REY_BR2_NEGATIVE {
+  margin-top: -30px;
+}
+.markdown-preview.prince .REY_BR3_NEGATIVE {
+  margin-top: -20px;
+}
+.markdown-preview.prince .REY_BR3_NEGATIVE_WEIRD {
+  margin-top: -50px;
+}
+.markdown-preview.prince .REY_BR4_NEGATIVE {
+  margin-top: -15px;
+}
+.markdown-preview.prince .REY_BR4_NEGATIVE_WEIRD {
+  margin-top: -42.5px;
+}
+.markdown-preview.prince .REY_BR5_NEGATIVE {
+  margin-top: -10px;
+}
+.markdown-preview.prince .REY_PAGE_STARTS_WITH_H2 {
+  margin-top: -50px;
+}
+.markdown-preview.prince .REY_PAGE_STARTS_WITH_H1 {
+  margin-top: -65px;
+}
+.markdown-preview.prince .REY_NOSHOW_MD {
+  display: block !important;
+}
+.markdown-preview.prince .REY_NOSHOW_PDF {
+  display: none  !important;
+}
+.markdown-preview.prince h1,
+.markdown-preview.prince h2 {
+  text-align: center;
+}
+.markdown-preview.prince h3 {
+  margin-top: -2.5px;
+}
+.markdown-preview.prince h6 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview.prince .REY_BLOCK_GAP {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_PDF_MORE_HEIGHT {
+  margin-top: -70pt;
+}
+.markdown-preview.prince .REY_PDF_MORE_HEIGHT2 {
+  margin-top: -30pt;
+}
+.markdown-preview.prince .REY_HR > hr {
+  display: none !important;
+}
+.markdown-preview.prince .REY_HR {
+  margin-top: 50px;
+}
+.markdown-preview.prince .REY_SMALLER_CODE > pre > code {
+  font-size: 1em;
+  line-height: 100%;
+}
+.markdown-preview.prince a {
+  font-style: italic;
+  text-decoration: none;
+  color: #08c;
+}
+.markdown-preview.prince a:hover {
+  text-decoration: underline;
+  color: #00a3f5;
+}
+.markdown-preview.prince ul > li,
+.markdown-preview.prince ol > li {
+  margin-bottom: 5px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE1 ul > li,
+.markdown-preview.prince .REY_SECTION_TYPE1 ol > li {
+  margin-bottom: -3px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 {
+  line-height: 18px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 ul > li,
+.markdown-preview.prince .REY_SECTION_TYPE2 ol > li {
+  margin-bottom: -5px;
+}
+.markdown-preview.prince .REY_SECTION_TYPE2 ul,
+.markdown-preview.prince .REY_SECTION_TYPE2 li {
+  margin-bottom: 10px;
+}
+.markdown-preview.prince ul > li ol > li,
+.markdown-preview.prince ol > li ol > li,
+.markdown-preview.prince ul > li ul > li,
+.markdown-preview.prince ol > li ul > li {
+  margin-bottom: 0px;
+  font-family: 'Fira Sans Condensed Light Italic', monospace;
+  font-size: 92.5%;
+}
+.markdown-preview.prince pre {
+  max-width: 100%;
+  /* Prevent overflow */
+}
+.markdown-preview.prince img {
+  max-width: 104%;
+  width: - 104%;
+  margin-left: -2%;
+  display: flex;
+}
+.markdown-preview.prince pre {
+  line-height: 110%;
+  margin-bottom: 0px;
+}
+.markdown-preview.prince pre > code {
+  font-size: 11px;
+  white-space: pre-wrap;
+  /* Enable word wrap */
+  word-wrap: break-word;
+  /* Break words that exceed the width */
+  word-break: normal;
+  overflow-wrap: break-word;
+  /* Prevent overflow */
+}
+/**
+MarkDown File Top part:-
+---
+id: "amVK_Docs"
+class: "DocumentClass1"
+---
+*/
+.REY_Class1 {
+  font-size: 22px;
+  font-family: 'Neuton';
+  font-weight: 200;
+  line-height: 28px;
+}
+.REY_Class1 em {
+  font-weight: 400;
+}
+.REY_Class1 ul > li,
+.REY_Class1 ol > li {
+  margin-bottom: 0px;
+  font-style: italic;
+  font-weight: normal;
+}
+.REY_Class1 h1,
+.REY_Class1 h2 {
+  margin-bottom: 0px;
+}
+.REY_Class1 h1 {
+  margin-top: 20px;
+}
+.REY_Class1 h2 {
+  margin-top: 20px;
+}
+.REY_Class1.prince {
+  font-size: 15px !important;
+  font-family: 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 200 !important;
+  line-height: 17px;
+}
+.REY_Class2.prince {
+  font-size: 15px !important;
+  font-family: 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 200 !important;
+  line-height: 17px;
+}
+.REY_Class3.prince {
+  font-size: 15px !important;
+  font-family: 'Quartist', 'Neuton', 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 100 !important;
+  line-height: 17px;
+  color: black !important;
+}
+.REY_Class3.prince strong {
+  font-family: 'Neuton' !important;
+  font-weight: bold;
+}
+.REY_Class4.prince {
+  font-size: 14px !important;
+  font-family: 'CMU Serif', 'Quivira', 'Bahnschrift Light Condensed' !important;
+  font-weight: 100 !important;
+  line-height: 16px;
+  color: black !important;
+}
+.REY_Class4.prince strong {
+  font-size: 13px !important;
+  font-family: 'AudioLink Mono' !important;
+  font-weight: 700 !important;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.075em 0.3em;
+}
+/**
+@page { 
+    size: A4;
+
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-outside: 1.5cm;
+    margin-inside: 1.5cm;
+
+    prince-image-resolution: 300dpi;
+
+    @bottom-center {
+        content: counter(page);
+        margin: 0;
+        margin-top: -1.3cm;
+        padding: 0;
+    }
+}
+*/
+@page {
+  size: A4;
+  margin-top: 0.5cm;
+  margin-bottom: 0cm;
+  margin-outside: 1cm;
+  margin-inside: 1cm;
+  prince-image-resolution: 300dpi;
+  @bottom-center {
+    content: counter(page);
+    margin: 0;
+    margin-top: -1.3cm;
+    padding: 0;
+  }
+}
+/**
+    https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css?id=local-style
+*/
+/** I think this part means like.... Specific to only when CREATING THE PDF. But not like specific to PRINCE-XML */
+@media print {
+  color: black !important;
+}
+/** I think this part means like.... Specific to only when CREATING THE PDF. But yes like specific to PRINCE-XML */
+.prince {
+  color: black !important;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<ul>
+<li>
+<h4>Substance Painter</h4>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLEshDOX8PfKRfiky-qjxRGgKmclMFDhJm">https://www.youtube.com/playlist?list=PLEshDOX8PfKRfiky-qjxRGgKmclMFDhJm</a></li>
+<li><a href="https://www.youtube.com/@ProductionCrate/videos">https://www.youtube.com/@ProductionCrate/videos</a></li>
+</ul>
+</li>
+<li>
+<h4>PART IX : GeoNodes 2</h4>
+<ol>
+<li>Joey      - <strong>LEGO</strong>         - <code>📺 10m</code> <code>🛠️ 30m</code>     <code>🎯(9/10)</code>          - <a href="https://www.youtube.com/watch?v=LrEHoaq6QFE">🔗</a>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=4yrsAiTdMj4">https://www.youtube.com/watch?v=4yrsAiTdMj4</a></li>
+</ol>
+</li>
+<li>Blender   - <strong>NodeTOols</strong>    - <code>📺 25m</code> <code>🛠️ 1-2h</code>    <code>🎯(9/10)</code>          - <a href="https://www.youtube.com/watch?v=rU_j1Jw3ev4">🔗</a></li>
+<li>Tawan     - <strong>Paintings</strong>    - <code>📺 13m</code> <code>🛠️ 1h</code>      <code>🎯(8/10)</code>          - <a href="https://www.youtube.com/watch?v=1jWNeLujtV8">🔗</a></li>
+<li>MeshHouse - <strong>TerrainRoad</strong>  - <code>📺  6m</code> <code>🛠️ 6h</code>      <code>🎯(8/10)</code>          - <a href="https://www.youtube.com/watch?v=90rwEqgZ7Go">🔗</a>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=szTYXk0t09A">https://www.youtube.com/watch?v=szTYXk0t09A</a></li>
+</ol>
+</li>
+<li>Erindale  - <strong>GeoNodes</strong>     - <code>📺 52h39m</code> <code>🛠️ 28-60days</code> <code>🎯(5/10)</code>        - <a href="https://youtube.com/playlist?list=PLgO2ChD7acqHzccBuhAGw8dTPLnR1E3QB">🔗</a>
+<ul>
+<li>He could have tried to make it better....</li>
+<li>He actually did.... but sold it as Paid</li>
+</ul>
+</li>
+<li>CrossMind - <strong>GeoNodes</strong>     - <code>📺 8h43m</code>  <code>🛠️ 2-5days</code>   <code>🎯(2/10)</code>        - <a href="https://www.youtube.com/playlist?list=PLVm7O9OzjT6EIDtFGC67QxGsHkz3_RbIw">🔗</a>
+<ul>
+<li>I Don't think this is necessary anymore. + This was never a nice enough one, anyway 💁‍♀️</li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/watch?v=H6CjBimRXUQ">https://www.youtube.com/watch?v=H6CjBimRXUQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=a-4oCHe-hDE">https://www.youtube.com/watch?v=a-4oCHe-hDE</a></li>
+<li><a href="https://www.youtube.com/watch?v=xBM4BPpfbUg&amp;list=PLVm7O9OzjT6EIDtFGC67QxGsHkz3_RbIw&amp;index=1">https://www.youtube.com/watch?v=xBM4BPpfbUg&amp;list=PLVm7O9OzjT6EIDtFGC67QxGsHkz3_RbIw&amp;index=1</a></li>
+<li><a href="https://www.youtube.com/watch?v=E0XScOCuSRk">https://www.youtube.com/watch?v=E0XScOCuSRk</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLcRX9rXhXHWiaRgVPCdp8811YLsGdDeK7">https://www.youtube.com/playlist?list=PLcRX9rXhXHWiaRgVPCdp8811YLsGdDeK7</a></li>
+<li><a href="https://www.youtube.com/watch?v=hGgAEp-n0uk">https://www.youtube.com/watch?v=hGgAEp-n0uk</a></li>
+<li><a href="https://www.youtube.com/watch?v=YYBhj87YCrA">https://www.youtube.com/watch?v=YYBhj87YCrA</a></li>
+<li><a href="https://www.youtube.com/watch?v=d4k9-KF6GkI&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=d4k9-KF6GkI&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLdU0WPU8jshhjKJ43kYOSTtDf5jAygeXE">https://www.youtube.com/playlist?list=PLdU0WPU8jshhjKJ43kYOSTtDf5jAygeXE</a></li>
+<li><a href="https://www.youtube.com/watch?v=tyPbOb9P5rA&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=tyPbOb9P5rA&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=0LOaFbbTSZQ&amp;t=3s&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=0LOaFbbTSZQ&amp;t=3s&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLWEs94-H80hrNzdATK3ubBW-MGYWhCvKS">https://www.youtube.com/playlist?list=PLWEs94-H80hrNzdATK3ubBW-MGYWhCvKS</a></li>
+</ol>
+</li>
+<li>
+<h4>PART X : Procedural Shaders 2</h4>
+<ol>
+<li>Ryan - <strong>Mars</strong>                  - <code>📺 29m</code> <code>🛠️ 1-2h</code>   <code>🎯(7/10)</code>   - <a href="https://www.youtube.com/watch?v=F33VHT-r-7Y">🔗</a></li>
+<li>Ryan - <strong>Marble</strong>                - <code>📺 25m</code> <code>🛠️ 30-60m</code> <code>🎯(6/10)</code>   - <a href="https://www.youtube.com/watch?v=wTzk9T06gdw">🔗</a></li>
+<li>Ryan - <strong>BrickWall</strong>             - <code>📺 29m</code> <code>🛠️ 2-4h</code>   <code>🎯(6/10)</code>   - <a href="https://www.youtube.com/watch?v=JDYpLoJ3ZJk">🔗</a></li>
+<li>Ryan - <strong>Rustic Metal</strong>          - <code>📺 24m</code> <code>🛠️ 1-2h</code>   <code>🎯(6/10)</code>   - <a href="https://www.youtube.com/watch?v=mZDaxZFERqQ">🔗</a></li>
+<li>Ryan - <strong>Nuclear</strong>               - <code>📺 24m</code> <code>🛠️ 30-60m</code> <code>🎯(5/10)</code>   - <a href="https://www.youtube.com/watch?v=dyurprN3rrs">🔗</a></li>
+<li>Ryan - <strong>BeachBall</strong>             - <code>📺 23m</code> <code>🛠️ 1-2h</code>   <code>🎯(4/10)</code>   - <a href="https://www.youtube.com/watch?v=LW9vH_qBN6Y">🔗</a></li>
+<li>Ryan - <strong>Cookie</strong>                - <code>📺 1h</code>  <code>🛠️ 4-8h</code>   <code>🎯(4/10)</code>   - <a href="https://www.youtube.com/watch?v=EuRYKEE6BmA">🔗</a></li>
+<li>Ryan - <strong>ApplePie</strong>              - <code>📺 1.5h``🛠️ 6-12h</code>  <code>🎯(4/10)</code>   - <a href="https://www.youtube.com/watch?v=JzFoXnlHxpo">🔗</a></li>
+<li>Ryan - <strong>Asphalt</strong>               - <code>📺 27m</code> <code>🛠️ 1-2h</code>   <code>🎯(3/10)</code>   - <a href="https://www.youtube.com/watch?v=Eofg9SBcdBY">🔗</a>
+<ol>
+<li>Ducky3D:- <a href="https://www.youtube.com/watch?v=gnA9Ge9xI80">https://www.youtube.com/watch?v=gnA9Ge9xI80</a></li>
+<li>Node-Based:- <a href="https://www.youtube.com/watch?v=kdOH2P-4QN4">https://www.youtube.com/watch?v=kdOH2P-4QN4</a></li>
+</ol>
+</li>
+<li>Ryan - <strong>Spiral</strong>                - <code>📺 13m</code> <code>🛠️ 30-60m</code> <code>🎯(2/10)</code>   - <a href="https://www.youtube.com/watch?v=Qb3a27oAXjw">🔗</a>
+<ul>
+<li>I don't recommend using the workflow / used here.</li>
+<li>What I mean it. He generated this from a <strong>CheapTrick</strong> of using GradientTexture nodes @ random places....</li>
+<li>I consider this a <strong>CheapTrick</strong></li>
+<li>Our target should rather be to conprehend the mathematics behind why this Trick is workin</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<h4>PART X : Procedural Shader 3</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=iILub8RYhrQ">https://www.youtube.com/watch?v=iILub8RYhrQ</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLuLJclBWmeWX_tHxzliB-g4gPJVbQW2U3">https://www.youtube.com/playlist?list=PLuLJclBWmeWX_tHxzliB-g4gPJVbQW2U3</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLL1ON88V2OvPoxoIQcJuWu7MqspL_WDEK">https://www.youtube.com/playlist?list=PLL1ON88V2OvPoxoIQcJuWu7MqspL_WDEK</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLTmpyewWvXYD2zkuT5S5JmWTy5vI39FYO">https://www.youtube.com/playlist?list=PLTmpyewWvXYD2zkuT5S5JmWTy5vI39FYO</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLdysSH9oUqEp9rn8LgSkmJB4ROA1iMQPX">https://www.youtube.com/playlist?list=PLdysSH9oUqEp9rn8LgSkmJB4ROA1iMQPX</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLP22Ejyue-rLX7XknxV0MosImkquxj8i1">https://www.youtube.com/playlist?list=PLP22Ejyue-rLX7XknxV0MosImkquxj8i1</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4">https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL2u4l89jqQYudc9BtRYcaQNQmI1Wt83uC">https://www.youtube.com/playlist?list=PL2u4l89jqQYudc9BtRYcaQNQmI1Wt83uC</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL2u4l89jqQYudc9BtRYcaQNQmI1Wt83uC">https://www.youtube.com/playlist?list=PL2u4l89jqQYudc9BtRYcaQNQmI1Wt83uC</a></li>
+<li><a href="https://www.youtube.com/@JayAnAm/videos">https://www.youtube.com/@JayAnAm/videos</a></li>
+</ol>
+</li>
+<li>
+<h4>PART X : Simulation in Blender</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=_BAFFWPOx5U&amp;t=588s&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=_BAFFWPOx5U&amp;t=588s&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=296l9rXzUxE">https://www.youtube.com/watch?v=296l9rXzUxE</a></li>
+<li></li>
+</ol>
+</li>
+<li>
+<h4>PART X : Simulation Nodes / particleFX</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=s24HK5KQKoQ&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=s24HK5KQKoQ&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=oC6guqEK9J4&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=oC6guqEK9J4&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+</ol>
+</li>
+<li>
+<h4>PART X : More Shaders</h4>
+<ol>
+<li>
+<p>CynicatPro - <strong>The Tale of PBR</strong> - <code>📺 2h18m</code> <code>🛠️ 6-12h</code> <code>🎯(8/10)</code>  - <a href="https://www.youtube.com/playlist?list=PLlH00768JwqG4__RRtKACofTztc0Owys8">🔗</a></p>
+<ul>
+<li>Would have been a 10/10, but it's a bit old, from 2016. But yeah, even CS50 2016 was one of the best years &amp; in 4K! untill 2025x</li>
+</ul>
+</li>
+<li>
+<p>Fresnel (Korean): <a href="https://www.youtube.com/watch?v=mKX0ao5R5fE">https://www.youtube.com/watch?v=mKX0ao5R5fE</a></p>
+</li>
+<li>
+<p>IOR:- <a href="https://www.youtube.com/watch?v=dd90MtAOCyY&amp;t=109s">https://www.youtube.com/watch?v=dd90MtAOCyY&amp;t=109s</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Y0taXZDcowA&amp;pp=ygUZRnJlc25lbCBlZmZlY3Qgd2hhdCBpcyBpdA%3D%3D">https://www.youtube.com/watch?v=Y0taXZDcowA&amp;pp=ygUZRnJlc25lbCBlZmZlY3Qgd2hhdCBpcyBpdA%3D%3D</a></p>
+</li>
+<li>
+<p>Need More searches / to make a video on this topic</p>
+</li>
+<li>
+<p>Erindale  - <strong>Procedural Shaders</strong> - <code>📺 6h38m</code> <code>🛠️ 2-7days</code> <code>🎯(5/10)</code>        - <a href="https://www.youtube.com/playlist?list=PLVm7O9OzjT6Fu8aDrP3N1Ni1ATbUH926s">🔗</a></p>
+<ul>
+<li>He could have tried to make it better....</li>
+<li>He actually did.... but sold it as Paid</li>
+</ul>
+</li>
+<li>
+<p>Tawan - <strong>OkLab</strong>            - <code>📺 6m</code> <code>🛠️ 2-6h</code> <code>🎯(10/10)</code> - <a href="https://www.youtube.com/watch?v=uMheYNOdl5c">🔗</a></p>
+<ul>
+<li>This is a gem!</li>
+</ul>
+</li>
+<li>
+<p>Tawan - <strong>Toon Shader</strong>      - <code>📺 10m</code> <code>🛠️ 1h</code> <code>🎯(5/10)</code>   - <a href="https://www.youtube.com/watch?v=VE-B4yu4ysk">🔗</a></p>
+<ul>
+<li>gooooood, omg, what is this tash fkin music in the  background with horror memories, wtf.... (@1:30)</li>
+</ul>
+</li>
+<li>
+<p>Tawan - <strong>Grass</strong>            - <code>📺 25m</code> <code>🛠️ 4h</code> <code>🎯(2/10)</code>   - 🔗 <a href="https://www.youtube.com/watch?v=F7_btP0Vhzo">P1</a> <a href="https://www.youtube.com/watch?v=Uh-kkZBQEO0&amp;t=4s">P2</a></p>
+<ul>
+<li>Whatever he did right from <code>3:30</code> it's just total <strong>"Mukhosto Shit"</strong> vomitted by him</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<h4>PART X : Texturing 2</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=YIh1LSgNBR8">https://www.youtube.com/watch?v=YIh1LSgNBR8</a></li>
+<li><a href="https://www.youtube.com/watch?v=lSyTAupa5W0&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=lSyTAupa5W0&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=CNjDcH2xzzY&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=CNjDcH2xzzY&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=KVsZf-eFZ10&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=13&amp;pp=iAQB">https://www.youtube.com/watch?v=KVsZf-eFZ10&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=13&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=6oNCCWslveM&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=14&amp;pp=iAQB">https://www.youtube.com/watch?v=6oNCCWslveM&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=14&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=hAWLqRpzK6I&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=15&amp;t=148s&amp;pp=iAQB">https://www.youtube.com/watch?v=hAWLqRpzK6I&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=15&amp;t=148s&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=Aa8gf1pwb4E&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=16&amp;pp=iAQB">https://www.youtube.com/watch?v=Aa8gf1pwb4E&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=16&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=dpY-wjnEosg&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=17&amp;pp=iAQB">https://www.youtube.com/watch?v=dpY-wjnEosg&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=17&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=bR4HtqxA9tk">https://www.youtube.com/watch?v=bR4HtqxA9tk</a></li>
+<li><a href="https://www.youtube.com/watch?v=CNIa1CBJMrA&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=CNIa1CBJMrA&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+</ol>
+</li>
+<li>
+<h4>PART XI : Environment &amp; Assets</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=yBP5x87HNXE&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=27&amp;pp=iAQB">https://www.youtube.com/watch?v=yBP5x87HNXE&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=27&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=IHy57Lrzkb4&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=37&amp;t=173s&amp;pp=iAQB">https://www.youtube.com/watch?v=IHy57Lrzkb4&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=37&amp;t=173s&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=Qj1FK8n7WgY&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=31&amp;pp=iAQB">https://www.youtube.com/watch?v=Qj1FK8n7WgY&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=31&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=Y1bOokHzEAk&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=30&amp;pp=iAQB">https://www.youtube.com/watch?v=Y1bOokHzEAk&amp;list=PLL8svnS8fK0n8sENNU8CXbVn8DM2kK7ur&amp;index=30&amp;pp=iAQB</a></li>
+<li><a href="https://www.youtube.com/watch?v=_inIyoPsx-g">https://www.youtube.com/watch?v=_inIyoPsx-g</a></li>
+<li><a href="https://www.youtube.com/watch?v=qdq7E5IUMyw">https://www.youtube.com/watch?v=qdq7E5IUMyw</a></li>
+</ul>
+</li>
+<li>
+<h4>PART XII : asteroid_ill / World Building</h4>
+</li>
+<li>
+<h4>PART XIII : 3rd Break</h4>
+</li>
+<li>
+<h4>PART XIV : Hard Surface Modelling</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=f_6Wau9WExk">https://www.youtube.com/watch?v=f_6Wau9WExk</a></li>
+<li><a href="https://www.youtube.com/watch?v=WpQOPIopvog&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=WpQOPIopvog&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=hN1_qfyBg68">https://www.youtube.com/watch?v=hN1_qfyBg68</a></li>
+<li><a href="https://www.youtube.com/watch?v=6g-iv_QJOjo">https://www.youtube.com/watch?v=6g-iv_QJOjo</a></li>
+<li><a href="https://www.youtube.com/watch?v=JZ5_vME_2iI">https://www.youtube.com/watch?v=JZ5_vME_2iI</a></li>
+<li><a href="https://www.youtube.com/watch?v=lCA1AFEQ_z4">https://www.youtube.com/watch?v=lCA1AFEQ_z4</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ml2t8uxPAQU">https://www.youtube.com/watch?v=Ml2t8uxPAQU</a></li>
+<li><a href="https://www.youtube.com/watch?v=aRBHMRa6pIA">https://www.youtube.com/watch?v=aRBHMRa6pIA</a></li>
+</ul>
+</li>
+<li>
+<h4>PART XV : Ashthorp / HeavyPoly / Cars</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=d39yrffGcL4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=d39yrffGcL4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=tVNMFbf6Tp4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=tVNMFbf6Tp4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code> ,ggggggggggg,                                      ,ggggggggggg,                               
+dP"""88""""""Y8,,dPYb,                 I8          dP"""88""""""Y8,                       ,dPYb,
+Yb,  88      `8bIP'`Yb                 I8          Yb,  88      `8b                       IP'`Yb
+ `"  88      ,8PI8  8I              88888888        `"  88      ,8P                       I8  8I
+     88aaaad8P" I8  8'                 I8               88aaaad8P"                        I8  8'
+     88"""""    I8 dPgg,     ,ggggg,   I8     ,ggggg,   88""""Yb,     ,ggg,     ,gggg,gg  I8 dP 
+     88         I8dP" "8I   dP"  "Y8gggI8    dP"  "Y8ggg88     "8b   i8" "8i   dP"  "Y8I  I8dP  
+     88         I8P    I8  i8'    ,8I ,I8,  i8'    ,8I  88      `8i  I8, ,8I  i8'    ,8I  I8P   
+     88        ,d8     I8,,d8,   ,d8',d88b,,d8,   ,d8'  88       Yb, `YbadP' ,d8,   ,d8b,,d8b,_ 
+     88        88P     `Y8P"Y8888P"  8P""Y8P"Y8888P"    88        Y8888P"Y888P"Y8888P"`Y88P'"Y88
+                                                                                                
+</code></pre><ul>
+<li>
+<h4>PART IX : PhotoRealism</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=SaZOuHQROIg">https://www.youtube.com/watch?v=SaZOuHQROIg</a></li>
+<li><a href="https://www.youtube.com/watch?v=XK5weMlS47M">https://www.youtube.com/watch?v=XK5weMlS47M</a></li>
+<li><a href="https://www.youtube.com/watch?v=c3FnWQTMo9s">https://www.youtube.com/watch?v=c3FnWQTMo9s</a></li>
+<li><a href="https://www.youtube.com/watch?v=R4sOG6OPioc">https://www.youtube.com/watch?v=R4sOG6OPioc</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZdQkqXIOHh8">https://www.youtube.com/watch?v=ZdQkqXIOHh8</a></li>
+<li><a href="https://www.youtube.com/watch?v=Z8AAX-ENWvQ">https://www.youtube.com/watch?v=Z8AAX-ENWvQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=_T_3hMirhjw&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=_T_3hMirhjw&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=OBmYmdWqfPo">https://www.youtube.com/watch?v=OBmYmdWqfPo</a></li>
+<li><a href="https://www.youtube.com/watch?v=zbpiWRlH2YM">https://www.youtube.com/watch?v=zbpiWRlH2YM</a></li>
+<li><a href="https://www.youtube.com/watch?v=lUmeKcwdsQc">https://www.youtube.com/watch?v=lUmeKcwdsQc</a></li>
+<li><a href="https://www.youtube.com/watch?v=wGS0xp-XBqw">https://www.youtube.com/watch?v=wGS0xp-XBqw</a></li>
+<li><a href="https://www.youtube.com/watch?v=izkY9GGEci8">https://www.youtube.com/watch?v=izkY9GGEci8</a></li>
+<li><a href="https://www.youtube.com/watch?v=boMoTlnj9Mw">https://www.youtube.com/watch?v=boMoTlnj9Mw</a></li>
+<li><a href="https://www.youtube.com/watch?v=0OVEJVbklV0">https://www.youtube.com/watch?v=0OVEJVbklV0</a></li>
+<li><a href="https://www.youtube.com/watch?v=hAWLqRpzK6I">https://www.youtube.com/watch?v=hAWLqRpzK6I</a></li>
+<li><a href="https://www.youtube.com/watch?v=AezTszR7ZL4">https://www.youtube.com/watch?v=AezTszR7ZL4</a></li>
+<li><a href="https://www.youtube.com/watch?v=p-TEYeXQqDU">https://www.youtube.com/watch?v=p-TEYeXQqDU</a></li>
+<li><a href="https://www.youtube.com/watch?v=dQI7y7eSUGU">https://www.youtube.com/watch?v=dQI7y7eSUGU</a></li>
+<li><a href="https://www.youtube.com/watch?v=HEhqhoZvv3c">https://www.youtube.com/watch?v=HEhqhoZvv3c</a></li>
+<li><a href="https://www.youtube.com/watch?v=WreZ_VKDn4M">https://www.youtube.com/watch?v=WreZ_VKDn4M</a></li>
+<li><a href="https://www.youtube.com/watch?v=6Yphs45g4t0">https://www.youtube.com/watch?v=6Yphs45g4t0</a></li>
+<li><a href="https://www.youtube.com/watch?v=uOCT3SIr3kU">https://www.youtube.com/watch?v=uOCT3SIr3kU</a></li>
+<li><a href="https://www.youtube.com/watch?v=0xQXXoVsXsU">https://www.youtube.com/watch?v=0xQXXoVsXsU</a></li>
+<li><a href="https://www.youtube.com/watch?v=Q8aO5XIEDNI">https://www.youtube.com/watch?v=Q8aO5XIEDNI</a></li>
+<li><a href="https://www.youtube.com/watch?v=EQ149bMtKRA&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=EQ149bMtKRA&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=KpYJkB7gAXs">https://www.youtube.com/watch?v=KpYJkB7gAXs</a></li>
+<li><a href="https://www.youtube.com/watch?v=pNR7Q4rko34">https://www.youtube.com/watch?v=pNR7Q4rko34</a></li>
+<li><a href="https://www.youtube.com/watch?v=XoI2tt6IAEo">https://www.youtube.com/watch?v=XoI2tt6IAEo</a></li>
+<li><a href="https://www.youtube.com/watch?v=dpY-wjnEosg&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=dpY-wjnEosg&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=gD_AbaqzBl8&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=gD_AbaqzBl8&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+</ol>
+</li>
+<li>
+<h4>IDK</h4>
+<ol start="31">
+<li><a href="https://www.youtube.com/watch?v=EJEot0AAHHk">https://www.youtube.com/watch?v=EJEot0AAHHk</a></li>
+<li><a href="https://www.youtube.com/watch?v=uwyaXLKYw4Y">https://www.youtube.com/watch?v=uwyaXLKYw4Y</a></li>
+<li><a href="https://www.youtube.com/watch?v=IQdT5kACMQc">https://www.youtube.com/watch?v=IQdT5kACMQc</a></li>
+<li><a href="https://www.youtube.com/watch?v=1kcu7muZcbs">https://www.youtube.com/watch?v=1kcu7muZcbs</a></li>
+<li><a href="https://www.youtube.com/watch?v=xQeT7w1gB0I">https://www.youtube.com/watch?v=xQeT7w1gB0I</a></li>
+<li><a href="https://www.youtube.com/watch?v=hdMDTHKsvn8">https://www.youtube.com/watch?v=hdMDTHKsvn8</a></li>
+<li><a href="https://www.youtube.com/watch?v=uMheYNOdl5c">https://www.youtube.com/watch?v=uMheYNOdl5c</a></li>
+<li><a href="https://www.youtube.com/watch?v=tbWBIT28Zts">https://www.youtube.com/watch?v=tbWBIT28Zts</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLZ7TSA6MfgM_IX3qZslXx_QdvLLDZHZGx">https://www.youtube.com/playlist?list=PLZ7TSA6MfgM_IX3qZslXx_QdvLLDZHZGx</a></li>
+<li>SIMON:- <a href="https://www.youtube.com/playlist?list=PLJ3PVVGuIQM6jyIkl6wEoo9AtSm8yrXAn">https://www.youtube.com/playlist?list=PLJ3PVVGuIQM6jyIkl6wEoo9AtSm8yrXAn</a></li>
+<li><a href="https://www.youtube.com/watch?v=x1wZtN_GSk0">https://www.youtube.com/watch?v=x1wZtN_GSk0</a></li>
+<li><a href="https://www.youtube.com/shorts/wT8k9XCzC8I">https://www.youtube.com/shorts/wT8k9XCzC8I</a></li>
+<li><a href="https://www.blender.org/download/demo-files/">https://www.blender.org/download/demo-files/</a></li>
+</ol>
+</li>
+<li>
+<h4>PART IX : Photoshop/ClipStudio/Krita/Painting-Based Environment WorkFlows</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=tbWBIT28Zts">https://www.youtube.com/watch?v=tbWBIT28Zts</a></li>
+<li><a href="https://www.youtube.com/watch?v=hM_uhazFOl0">https://www.youtube.com/watch?v=hM_uhazFOl0</a></li>
+</ul>
+</li>
+<li>
+<h4>PART VIII : A Break : TimeLapses</h4>
+<ol>
+<li>Guru Cabin:-  <a href="https://www.youtube.com/watch?v=iFQokXmqmVQ">https://www.youtube.com/watch?v=iFQokXmqmVQ</a></li>
+<li>Guru Abandoned House:- <a href="https://www.youtube.com/watch?v=1aNnERnHRZg&amp;t=658s">https://www.youtube.com/watch?v=1aNnERnHRZg&amp;t=658s</a></li>
+<li><a href="https://www.youtube.com/watch?v=hVUmuOIP1K0">https://www.youtube.com/watch?v=hVUmuOIP1K0</a></li>
+<li><a href="https://www.youtube.com/watch?v=mP-idHLydNQ">https://www.youtube.com/watch?v=mP-idHLydNQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=7jR-5XXQp5k">https://www.youtube.com/watch?v=7jR-5XXQp5k</a></li>
+</ol>
+</li>
+<li>
+<h4>PART IX : A Break : Actual Break</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=oC97EuyKw-0">https://www.youtube.com/watch?v=oC97EuyKw-0</a></li>
+<li><a href="https://www.youtube.com/watch?v=N8KaD4UYz1w">https://www.youtube.com/watch?v=N8KaD4UYz1w</a></li>
+<li><a href="https://www.youtube.com/watch?v=WnlwxhhFYv0">https://www.youtube.com/watch?v=WnlwxhhFYv0</a></li>
+<li><a href="https://www.youtube.com/watch?v=MvWgXZ-0j_Q">https://www.youtube.com/watch?v=MvWgXZ-0j_Q</a></li>
+<li><a href="https://youtu.be/Zeb6XCvx7RQ?si=QfE1EjFtj0uGcGWS">https://youtu.be/Zeb6XCvx7RQ?si=QfE1EjFtj0uGcGWS</a></li>
+</ol>
+</li>
+<li>
+<h4>PART IX : A BREAK : CLIPS</h4>
+<ul>
+<li><a href="https://youtube.com/clip/Ugkx6bdgaj9QoV4vxPgGM-31ahZiaavsxkRk?si=fjRJ0yQkZNWCo_0U">https://youtube.com/clip/Ugkx6bdgaj9QoV4vxPgGM-31ahZiaavsxkRk?si=fjRJ0yQkZNWCo_0U</a></li>
+</ul>
+</li>
+<li>
+<h4>Tips &amp; Tricks : Eevee</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=-gW6vk_OuNQ">https://www.youtube.com/watch?v=-gW6vk_OuNQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=6R4pnPwCA3U">https://www.youtube.com/watch?v=6R4pnPwCA3U</a></li>
+<li><a href="https://www.youtube.com/watch?v=i2PNdLhW5dw">https://www.youtube.com/watch?v=i2PNdLhW5dw</a></li>
+<li><a href="https://www.youtube.com/watch?v=wGS0xp-XBqw">https://www.youtube.com/watch?v=wGS0xp-XBqw</a></li>
+</ul>
+</li>
+<li>
+<h4>Tips &amp; Tricks</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=NnzHQQ2PvVw">https://www.youtube.com/watch?v=NnzHQQ2PvVw</a></li>
+<li><a href="https://www.youtube.com/shorts/lHMwNK6qbCA">https://www.youtube.com/shorts/lHMwNK6qbCA</a></li>
+<li></li>
+</ol>
+</li>
+<li>
+<h4>Part IX : VFX Intro</h4>
+<ol>
+<li>blendereverything - Everything Blender Can do (7/10)
+<ol>
+<li><a href="https://www.youtube.com/watch?v=gHBnw46GvGM">https://www.youtube.com/watch?v=gHBnw46GvGM</a></li>
+</ol>
+</li>
+<li>Jacob Zirkle - His Workflow (7/10 )
+<ol>
+<li><a href="https://www.youtube.com/watch?v=biAZ-HIsujA&amp;list=PL4c2BDDupIBZULlZJBKRjH0HmOZLqjEch&amp;index=1">https://www.youtube.com/watch?v=biAZ-HIsujA&amp;list=PL4c2BDDupIBZULlZJBKRjH0HmOZLqjEch&amp;index=1</a></li>
+</ol>
+</li>
+<li><a href="https://www.youtube.com/watch?v=w6YPbidAAzQ">https://www.youtube.com/watch?v=w6YPbidAAzQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=IuMHvY8JM-g">https://www.youtube.com/watch?v=IuMHvY8JM-g</a></li>
+<li><a href="https://www.youtube.com/watch?v=yA6cCI7C3xg">https://www.youtube.com/watch?v=yA6cCI7C3xg</a></li>
+<li><a href="https://www.youtube.com/watch?v=SMlt0T-3QRQ&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=SMlt0T-3QRQ&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=xQ8qaTCHoNE">https://www.youtube.com/watch?v=xQ8qaTCHoNE</a></li>
+<li><a href="https://www.youtube.com/watch?v=4nRlg0XEPk8">https://www.youtube.com/watch?v=4nRlg0XEPk8</a></li>
+<li><a href="https://www.youtube.com/watch?v=G2SacOKhJto">https://www.youtube.com/watch?v=G2SacOKhJto</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0LADxPpmXN4yi83JZ-NVsO6Xi7fxOSha">https://www.youtube.com/playlist?list=PL0LADxPpmXN4yi83JZ-NVsO6Xi7fxOSha</a></li>
+<li><a href="https://www.youtube.com/watch?v=uFMH6oGGGtk">https://www.youtube.com/watch?v=uFMH6oGGGtk</a></li>
+<li><a href="https://www.youtube.com/watch?v=-1cLxHMLex0">https://www.youtube.com/watch?v=-1cLxHMLex0</a></li>
+<li><a href="https://www.youtube.com/watch?v=jkO30CXQzos&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=jkO30CXQzos&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL4c2BDDupIBZULlZJBKRjH0HmOZLqjEch">https://www.youtube.com/playlist?list=PL4c2BDDupIBZULlZJBKRjH0HmOZLqjEch</a></li>
+<li><a href="https://www.youtube.com/watch?v=hM_uhazFOl0&amp;t=285s">https://www.youtube.com/watch?v=hM_uhazFOl0&amp;t=285s</a></li>
+<li><a href="https://www.youtube.com/watch?v=uFMH6oGGGtk">https://www.youtube.com/watch?v=uFMH6oGGGtk</a></li>
+<li><a href="https://www.youtube.com/watch?v=JSxeuEZNOrU">https://www.youtube.com/watch?v=JSxeuEZNOrU</a></li>
+<li><a href="https://www.youtube.com/watch?v=IvyfdxkABKU">https://www.youtube.com/watch?v=IvyfdxkABKU</a></li>
+</ol>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RxD6H3ri8RI">https://www.youtube.com/watch?v=RxD6H3ri8RI</a></li>
+</ul>
+</li>
+<li>
+<h4>PART X : Blender Video Editor</h4>
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBs0r5xcKL7KvrmGoRuro8RV">https://www.youtube.com/playlist?list=PLsGl9GczcgBs0r5xcKL7KvrmGoRuro8RV</a></li>
+</ol>
+</li>
+<li>
+<h4>PART X : Blender Physics</h4>
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBukpLjtl2rWC_R5RDRxP7Wh">https://www.youtube.com/playlist?list=PLsGl9GczcgBukpLjtl2rWC_R5RDRxP7Wh</a></li>
+</ol>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>      ,gg,                                                                                  
+     i8""8i                         ,dPYb,              I8                                  
+     `8,,8'                         IP'`Yb              I8                                  
+      `88'                          I8  8I           88888888 gg                            
+      dP"8,                         I8  8'              I8    ""                            
+     dP' `8a    ,gggg,  gg      gg  I8 dP  gg,gggg,     I8    gg    ,ggg,,ggg,     ,gggg,gg 
+    dP'   `Yb  dP"  "Yb I8      8I  I8dP   I8P"  "Yb    I8    88   ,8" "8P" "8,   dP"  "Y8I 
+_ ,dP'     I8 i8'       I8,    ,8I  I8P    I8'    ,8i  ,I8,   88   I8   8I   8I  i8'    ,8I 
+"888,,____,dP,d8,_    _,d8b,  ,d8b,,d8b,_ ,I8 _  ,d8' ,d88b,_,88,_,dP   8I   Yb,,d8,   ,d8I 
+a8P"Y88888P" P""Y8888PP8P'"Y88P"`Y88P'"Y88PI8 YY88888P8P""Y88P""Y88P'   8I   `Y8P"Y8888P"888
+                                           I8                                          ,d8I'
+                                           I8                                        ,dP'8I 
+                                           I8                                       ,8"  8I 
+                                           I8                                       I8   8I 
+                                           I8                                       `8, ,8I 
+                                           I8                                        `Y8P"  
+                                                                                                
+</code></pre><ul>
+<li>
+<h4>PART X : Sculpting</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sYKpwDCfQpA">https://www.youtube.com/watch?v=sYKpwDCfQpA</a></li>
+<li><a href="https://www.youtube.com/watch?v=yApJx_uM7TM">https://www.youtube.com/watch?v=yApJx_uM7TM</a></li>
+<li><a href="https://www.youtube.com/watch?v=Koq0ucKB34A">https://www.youtube.com/watch?v=Koq0ucKB34A</a></li>
+<li><a href="https://www.youtube.com/watch?v=2hRSMm6-HSk">https://www.youtube.com/watch?v=2hRSMm6-HSk</a></li>
+<li><a href="https://www.youtube.com/watch?v=NlwyvAfVpK0">https://www.youtube.com/watch?v=NlwyvAfVpK0</a></li>
+<li><a href="https://www.youtube.com/watch?v=AF9j77500bM">https://www.youtube.com/watch?v=AF9j77500bM</a></li>
+<li><a href="https://www.youtube.com/watch?v=L5Q7MED7o_8">https://www.youtube.com/watch?v=L5Q7MED7o_8</a></li>
+<li><a href="https://www.youtube.com/watch?v=zgEeXksiidA">https://www.youtube.com/watch?v=zgEeXksiidA</a></li>
+<li><a href="https://www.youtube.com/watch?v=fkl82zaJKYQ">https://www.youtube.com/watch?v=fkl82zaJKYQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=Nm41bNWEQug&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=Nm41bNWEQug&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=N-6rLJr8jIg">https://www.youtube.com/watch?v=N-6rLJr8jIg</a></li>
+<li><a href="https://www.youtube.com/watch?v=Vhn5X4PPr2U">https://www.youtube.com/watch?v=Vhn5X4PPr2U</a></li>
+<li><a href="https://www.youtube.com/watch?v=bwqvzK3qjys">https://www.youtube.com/watch?v=bwqvzK3qjys</a></li>
+<li></li>
+</ul>
+</li>
+<li>
+<h4>#NPR / TOON STYLE</h4>
+<ul>
+<li><a href="https://x.com/rose_moth">https://x.com/rose_moth</a> (Cherylynn Lima)</li>
+<li><a href="https://www.youtube.com/watch?v=IoIwVWmdqL4">https://www.youtube.com/watch?v=IoIwVWmdqL4</a></li>
+<li><a href="https://www.youtube.com/watch?v=Uus6CuLPZog&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=Uus6CuLPZog&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=TU-GzyHPQh4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=TU-GzyHPQh4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=PBMAlu-g990&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=PBMAlu-g990&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=PG319ec_2hQ&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=PG319ec_2hQ&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=iqW8D2sEm5E&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=iqW8D2sEm5E&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=xIIlRbhuymU&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=xIIlRbhuymU&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=vp3KnXxHwBc&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=vp3KnXxHwBc&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=cO4BDrdUHc0&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D">https://www.youtube.com/watch?v=cO4BDrdUHc0&amp;pp=ygUOR2VvbWV0cnkgbm9kZXM%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=cnQu1kMs49s">https://www.youtube.com/watch?v=cnQu1kMs49s</a></li>
+<li><a href="https://www.youtube.com/watch?v=dxOnpuBKNsQ">https://www.youtube.com/watch?v=dxOnpuBKNsQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=-z_dW4W9H_w&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=-z_dW4W9H_w&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=6fAvQrxASZ8">https://www.youtube.com/watch?v=6fAvQrxASZ8</a></li>
+<li><a href="https://www.youtube.com/watch?v=TkUwgHo5GUg&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=TkUwgHo5GUg&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=rGYGUgFxi9M">https://www.youtube.com/watch?v=rGYGUgFxi9M</a></li>
+<li><a href="https://www.youtube.com/watch?v=lONw5EMrzfk">https://www.youtube.com/watch?v=lONw5EMrzfk</a></li>
+<li><a href="https://www.youtube.com/watch?v=6RveA8qlSsA">https://www.youtube.com/watch?v=6RveA8qlSsA</a></li>
+<li><a href="https://www.youtube.com/watch?v=Cd2SS6U6dGY">https://www.youtube.com/watch?v=Cd2SS6U6dGY</a></li>
+<li><a href="https://www.youtube.com/watch?v=S6vXg9SOfC0&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=S6vXg9SOfC0&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=v89v1cJIWJg">https://www.youtube.com/watch?v=v89v1cJIWJg</a></li>
+<li><a href="https://www.youtube.com/watch?v=Csy6Vd33cYI">https://www.youtube.com/watch?v=Csy6Vd33cYI</a></li>
+<li><a href="https://www.youtube.com/watch?v=cF_1TYlqtEI">https://www.youtube.com/watch?v=cF_1TYlqtEI</a></li>
+<li><a href="https://www.youtube.com/watch?v=25kwDu3OPmM">https://www.youtube.com/watch?v=25kwDu3OPmM</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBv0Ibi5fnmyt-sztyOQTQMX">https://www.youtube.com/playlist?list=PLsGl9GczcgBv0Ibi5fnmyt-sztyOQTQMX</a></li>
+<li><a href="https://www.youtube.com/watch?v=8sFf1K8_0oQ">https://www.youtube.com/watch?v=8sFf1K8_0oQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=5Idffj0gjIs">https://www.youtube.com/watch?v=5Idffj0gjIs</a></li>
+<li><a href="https://www.youtube.com/watch?v=AtetvOEcZt8&amp;list=PLzg4_2BrWAVwLdL4OCqNR882C49gtojHt&amp;index=2">https://www.youtube.com/watch?v=AtetvOEcZt8&amp;list=PLzg4_2BrWAVwLdL4OCqNR882C49gtojHt&amp;index=2</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLP22Ejyue-rLX7XknxV0MosImkquxj8i1">https://www.youtube.com/playlist?list=PLP22Ejyue-rLX7XknxV0MosImkquxj8i1</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLHrClDFEqk45ye6Elx3B9_VEBoKy-A7N1">https://www.youtube.com/playlist?list=PLHrClDFEqk45ye6Elx3B9_VEBoKy-A7N1</a></li>
+<li><a href="https://www.youtube.com/watch?v=XyjRu38DK9M">https://www.youtube.com/watch?v=XyjRu38DK9M</a></li>
+<li><a href="https://www.youtube.com/watch?v=_qZ51VLE3AA&amp;pp=ygUOQmxlbmRlciBTaGFkZXI%3D">https://www.youtube.com/watch?v=_qZ51VLE3AA&amp;pp=ygUOQmxlbmRlciBTaGFkZXI%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=cO4BDrdUHc0">https://www.youtube.com/watch?v=cO4BDrdUHc0</a></li>
+<li><a href="https://www.youtube.com/watch?v=WmcmJqMQfbc">https://www.youtube.com/watch?v=WmcmJqMQfbc</a></li>
+<li><a href="https://www.youtube.com/watch?v=mZ-bUpQEJNk">https://www.youtube.com/watch?v=mZ-bUpQEJNk</a></li>
+<li><a href="https://www.youtube.com/watch?v=azdiPXjQgXQ">https://www.youtube.com/watch?v=azdiPXjQgXQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=KrNo5A89yY8">https://www.youtube.com/watch?v=KrNo5A89yY8</a></li>
+<li><a href="https://www.youtube.com/watch?v=vSJ5lT_ma-E">https://www.youtube.com/watch?v=vSJ5lT_ma-E</a></li>
+<li><a href="https://www.youtube.com/watch?v=WpwZXU6VnuA&amp;t=13s">https://www.youtube.com/watch?v=WpwZXU6VnuA&amp;t=13s</a></li>
+<li><a href="https://www.youtube.com/watch?v=6fAvQrxASZ8">https://www.youtube.com/watch?v=6fAvQrxASZ8</a></li>
+<li><a href="https://www.youtube.com/watch?v=Xu0KMOdkXgk">https://www.youtube.com/watch?v=Xu0KMOdkXgk</a></li>
+<li><a href="https://www.youtube.com/watch?v=pWwC2ZgvvtI">https://www.youtube.com/watch?v=pWwC2ZgvvtI</a></li>
+<li><a href="https://www.youtube.com/watch?v=t0kDRaGOn7E">https://www.youtube.com/watch?v=t0kDRaGOn7E</a></li>
+<li><a href="https://www.youtube.com/watch?v=-urA3hqzF30&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=-urA3hqzF30&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=i3l0crOwtMw">https://www.youtube.com/watch?v=i3l0crOwtMw</a></li>
+<li><a href="https://www.youtube.com/watch?v=0ATh_Vc2SAQ">https://www.youtube.com/watch?v=0ATh_Vc2SAQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=WnUtXTjJRk8">https://www.youtube.com/watch?v=WnUtXTjJRk8</a></li>
+<li><a href="https://www.youtube.com/watch?v=k3tMgOFaHs4">https://www.youtube.com/watch?v=k3tMgOFaHs4</a></li>
+<li><a href="https://www.youtube.com/watch?v=_V6-hyMu0mk">https://www.youtube.com/watch?v=_V6-hyMu0mk</a></li>
+<li><a href="https://www.youtube.com/watch?v=icphVX7QTo4">https://www.youtube.com/watch?v=icphVX7QTo4</a></li>
+<li><a href="https://www.youtube.com/watch?v=_HO4HK1uBJc">https://www.youtube.com/watch?v=_HO4HK1uBJc</a></li>
+<li><a href="https://www.youtube.com/watch?v=SYAuYF_zCNI&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=SYAuYF_zCNI&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=aj4_VLZM_GA&amp;t=216s">https://www.youtube.com/watch?v=aj4_VLZM_GA&amp;t=216s</a></li>
+<li><a href="https://www.youtube.com/watch?v=FPs0UXxy1uM">https://www.youtube.com/watch?v=FPs0UXxy1uM</a></li>
+<li><a href="https://www.youtube.com/shorts/brHK1rnJJss">https://www.youtube.com/shorts/brHK1rnJJss</a></li>
+<li><a href="https://www.youtube.com/watch?v=ogs7OTQBjwU">https://www.youtube.com/watch?v=ogs7OTQBjwU</a></li>
+<li><a href="https://www.youtube.com/watch?v=llnm4x7Zf30">https://www.youtube.com/watch?v=llnm4x7Zf30</a></li>
+<li><a href="https://www.youtube.com/watch?v=XyjRu38DK9M&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=XyjRu38DK9M&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+</ul>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code> ,ggg,         gg           ,ggggggggggg,                                                                              
+dP""Y8a        88          dP"""88""""""Y8,                                                                         8I 
+Yb, `88        88          Yb,  88      `8b                                                                         8I 
+ `"  88        88           `"  88      ,8P                                                                         8I 
+     88        88               88aaaad8P"                                                                          8I 
+     88        88   ,ggg,,ggg,  88""""",gggggg,    ,ggggg,    ,gggg,   ,ggg,     ,g,       ,g,      ,ggg,     ,gggg,8I 
+     88        88  ,8" "8P" "8, 88     dP""""8I   dP"  "Y8gggdP"  "Yb i8" "8i   ,8'8,     ,8'8,    i8" "8i   dP"  "Y8I 
+     88        88  I8   8I   8I 88    ,8'    8I  i8'    ,8I i8'       I8, ,8I  ,8'  Yb   ,8'  Yb   I8, ,8I  i8'    ,8I 
+     Y8b,____,d88,,dP   8I   Yb,88   ,dP     Y8,,d8,   ,d8',d8,_    _ `YbadP' ,8'_   8) ,8'_   8)  `YbadP' ,d8,   ,d8b,
+      "Y888888P"Y88P'   8I   `Y888   8P      `Y8P"Y8888P"  P""Y8888PP888P"Y888P' "YY8P8PP' "YY8P8P888P"Y888P"Y8888P"`Y8
+                                                                                                                       
+</code></pre><ul>
+<li>
+<h4>Unprocessed - Promising</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=p0OTZOEQeJc&amp;pp=ygULQmxlbmRlciBJT1LSBwkJhgkBhyohjO8%3D">https://www.youtube.com/watch?v=p0OTZOEQeJc&amp;pp=ygULQmxlbmRlciBJT1LSBwkJhgkBhyohjO8%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=5naMFeWTBeY">https://www.youtube.com/watch?v=5naMFeWTBeY</a></li>
+<li><a href="https://www.youtube.com/watch?v=BS8ufPdSeV0&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=BS8ufPdSeV0&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=UGh6aoM8P6w&amp;pp=ygUZYmxlbmRlciBsYXllciB3ZWlnaHQgbm9kZQ%3D%3D">https://www.youtube.com/watch?v=UGh6aoM8P6w&amp;pp=ygUZYmxlbmRlciBsYXllciB3ZWlnaHQgbm9kZQ%3D%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=TspmCxSpJS4">https://www.youtube.com/watch?v=TspmCxSpJS4</a></li>
+<li><a href="https://www.youtube.com/watch?v=I_y0RyMoL5w&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=I_y0RyMoL5w&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=WKb3OYi6UMk">https://www.youtube.com/watch?v=WKb3OYi6UMk</a></li>
+<li><a href="https://www.youtube.com/watch?v=MoXYDblltg4">https://www.youtube.com/watch?v=MoXYDblltg4</a></li>
+<li><a href="https://www.youtube.com/watch?v=mHUs3q-GqtM">https://www.youtube.com/watch?v=mHUs3q-GqtM</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLdU0WPU8jshipQL65BNLf_i5kKS9HX0Jm">https://www.youtube.com/playlist?list=PLdU0WPU8jshipQL65BNLf_i5kKS9HX0Jm</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLmRFYLlxqAdPQi6UeINnr-VXOscRrgGI4">https://www.youtube.com/playlist?list=PLmRFYLlxqAdPQi6UeINnr-VXOscRrgGI4</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL5D3mjgMwt0FPuv6DR1vgA56uGq4Efxiu">https://www.youtube.com/playlist?list=PL5D3mjgMwt0FPuv6DR1vgA56uGq4Efxiu</a></li>
+<li><a href="https://www.youtube.com/watch?v=HDURGTLNu2Q">https://www.youtube.com/watch?v=HDURGTLNu2Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=mboMae99d_I">https://www.youtube.com/watch?v=mboMae99d_I</a></li>
+<li><a href="https://www.youtube.com/watch?v=1E7JHf5iI4o">https://www.youtube.com/watch?v=1E7JHf5iI4o</a></li>
+<li><a href="https://www.youtube.com/watch?v=HQNOHjfDwOw">https://www.youtube.com/watch?v=HQNOHjfDwOw</a></li>
+<li><a href="https://www.youtube.com/watch?v=UwU2QG0zd60">https://www.youtube.com/watch?v=UwU2QG0zd60</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLav47HAVZMjkl_99u2vD-OEm86R_21Bf3">https://www.youtube.com/playlist?list=PLav47HAVZMjkl_99u2vD-OEm86R_21Bf3</a></li>
+<li><a href="https://www.youtube.com/watch?v=R-w0LFgebKs">https://www.youtube.com/watch?v=R-w0LFgebKs</a></li>
+<li><a href="https://www.youtube.com/watch?v=xL6qf6WBois">https://www.youtube.com/watch?v=xL6qf6WBois</a></li>
+<li><a href="https://www.youtube.com/watch?v=zRAqbGwqVik">https://www.youtube.com/watch?v=zRAqbGwqVik</a></li>
+<li><a href="https://www.youtube.com/watch?v=Q-nu3SOcvOg">https://www.youtube.com/watch?v=Q-nu3SOcvOg</a></li>
+<li><a href="https://www.youtube.com/@CGDive/playlists">https://www.youtube.com/@CGDive/playlists</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLav47HAVZMjmCnUdsF3WQr6EJy--nqQAE">https://www.youtube.com/playlist?list=PLav47HAVZMjmCnUdsF3WQr6EJy--nqQAE</a></li>
+<li><a href="https://www.youtube.com/watch?v=nISHVJQAwD4">https://www.youtube.com/watch?v=nISHVJQAwD4</a></li>
+<li><a href="https://www.youtube.com/watch?v=NYAxqfVBJF0">https://www.youtube.com/watch?v=NYAxqfVBJF0</a></li>
+<li><a href="https://www.youtube.com/watch?v=tE1peGgIh98&amp;pp=0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=tE1peGgIh98&amp;pp=0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=LyJTsmvyZko">https://www.youtube.com/watch?v=LyJTsmvyZko</a></li>
+<li><a href="https://coloso.global/en/products/illustrator-simzart-us">https://coloso.global/en/products/illustrator-simzart-us</a></li>
+<li><a href="https://www.youtube.com/watch?v=ufRygCrYsx4&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=ufRygCrYsx4&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=FQNY87pPwxM">https://www.youtube.com/watch?v=FQNY87pPwxM</a></li>
+<li><a href="https://www.youtube.com/watch?v=Shs9LcbnmFc">https://www.youtube.com/watch?v=Shs9LcbnmFc</a></li>
+<li><a href="https://www.youtube.com/watch?v=uvmwfTim-NE">https://www.youtube.com/watch?v=uvmwfTim-NE</a></li>
+<li><a href="https://www.youtube.com/watch?v=LyJTsmvyZko">https://www.youtube.com/watch?v=LyJTsmvyZko</a></li>
+<li><a href="https://www.youtube.com/watch?v=85Vxb7Ff9zY">https://www.youtube.com/watch?v=85Vxb7Ff9zY</a></li>
+<li><a href="https://www.youtube.com/watch?v=NEG9lafbzvI">https://www.youtube.com/watch?v=NEG9lafbzvI</a></li>
+<li><a href="https://www.youtube.com/watch?v=f6xCTAk8Lww">https://www.youtube.com/watch?v=f6xCTAk8Lww</a></li>
+<li><a href="https://www.youtube.com/watch?v=-syj6kFf6e4">https://www.youtube.com/watch?v=-syj6kFf6e4</a></li>
+<li><a href="https://www.youtube.com/watch?v=ABQuDLvcevY">https://www.youtube.com/watch?v=ABQuDLvcevY</a></li>
+<li><a href="https://www.youtube.com/watch?v=3bw2SnKQhwA">https://www.youtube.com/watch?v=3bw2SnKQhwA</a></li>
+<li><a href="https://www.youtube.com/watch?v=2BVSa7E-4T8&amp;t=117s">https://www.youtube.com/watch?v=2BVSa7E-4T8&amp;t=117s</a></li>
+<li><a href="https://www.youtube.com/watch?v=wGS0xp-XBqw">https://www.youtube.com/watch?v=wGS0xp-XBqw</a></li>
+<li><a href="https://www.youtube.com/watch?v=TO0OLl5jXW0">https://www.youtube.com/watch?v=TO0OLl5jXW0</a></li>
+<li><a href="https://www.youtube.com/watch?v=34pqDXd1CTU">https://www.youtube.com/watch?v=34pqDXd1CTU</a></li>
+<li><a href="https://www.youtube.com/watch?v=eQjQfmjDXXA">https://www.youtube.com/watch?v=eQjQfmjDXXA</a></li>
+<li><a href="https://www.youtube.com/watch?v=-vFxf3FDfvs">https://www.youtube.com/watch?v=-vFxf3FDfvs</a></li>
+<li><a href="https://www.youtube.com/watch?v=aMRRNC1J6tU">https://www.youtube.com/watch?v=aMRRNC1J6tU</a></li>
+<li><a href="https://www.youtube.com/watch?v=P_QQHlC-QuM&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=P_QQHlC-QuM&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=8KKx_YIpsfc">https://www.youtube.com/watch?v=8KKx_YIpsfc</a></li>
+<li><a href="https://www.youtube.com/watch?v=52sTppv7Y-E">https://www.youtube.com/watch?v=52sTppv7Y-E</a></li>
+<li><a href="https://www.youtube.com/watch?v=NQLdrXndnQU">https://www.youtube.com/watch?v=NQLdrXndnQU</a></li>
+<li><a href="https://www.youtube.com/watch?v=cmjGBfHmOhA">https://www.youtube.com/watch?v=cmjGBfHmOhA</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZikVc2uR_GY">https://www.youtube.com/watch?v=ZikVc2uR_GY</a></li>
+<li><a href="https://www.youtube.com/watch?v=bRQ6i1b4eWc&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=bRQ6i1b4eWc&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/shorts/GZgoNMzZCgA">https://www.youtube.com/shorts/GZgoNMzZCgA</a></li>
+<li><a href="https://www.youtube.com/watch?v=0vdJyt1C2Tk">https://www.youtube.com/watch?v=0vdJyt1C2Tk</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL84DpbdmgOzi4cGbDMoxPvafrzCFKrExb">https://www.youtube.com/playlist?list=PL84DpbdmgOzi4cGbDMoxPvafrzCFKrExb</a></li>
+<li><a href="https://www.youtube.com/watch?v=HQi2BqlQtnI&amp;pp=ygUldHJhbnNsYXRpbmcgMi43OSB0byAyLjggYmxlbmRlciBub2Rlcw%3D%3D">https://www.youtube.com/watch?v=HQi2BqlQtnI&amp;pp=ygUldHJhbnNsYXRpbmcgMi43OSB0byAyLjggYmxlbmRlciBub2Rlcw%3D%3D</a></li>
+<li><a href="https://www.youtube.com/shorts/B4mESU9xNaI">https://www.youtube.com/shorts/B4mESU9xNaI</a></li>
+<li><a href="https://www.youtube.com/watch?v=lPEPdA1pdvQ">https://www.youtube.com/watch?v=lPEPdA1pdvQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=9ITJgW9hVrE">https://www.youtube.com/watch?v=9ITJgW9hVrE</a></li>
+<li><a href="https://www.youtube.com/watch?v=UMyZK-5Rm1E">https://www.youtube.com/watch?v=UMyZK-5Rm1E</a></li>
+<li><a href="https://www.youtube.com/watch?v=BRZWxbtAH18">https://www.youtube.com/watch?v=BRZWxbtAH18</a></li>
+<li><a href="https://www.youtube.com/watch?v=kQ_shl2g4rg">https://www.youtube.com/watch?v=kQ_shl2g4rg</a></li>
+<li><a href="https://www.youtube.com/watch?v=EJFNHac6fuU">https://www.youtube.com/watch?v=EJFNHac6fuU</a></li>
+<li><a href="https://www.youtube.com/watch?v=DeHasEMCzcc">https://www.youtube.com/watch?v=DeHasEMCzcc</a></li>
+<li><a href="https://www.youtube.com/watch?v=Qisr2dAAV8Q">https://www.youtube.com/watch?v=Qisr2dAAV8Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=pjEGlXqF9U4">https://www.youtube.com/watch?v=pjEGlXqF9U4</a></li>
+<li><a href="https://www.youtube.com/watch?v=iCmr9DUnSQE">https://www.youtube.com/watch?v=iCmr9DUnSQE</a></li>
+<li><a href="https://www.youtube.com/watch?v=40-D9TWiqGw">https://www.youtube.com/watch?v=40-D9TWiqGw</a></li>
+<li><a href="https://www.youtube.com/watch?v=nQrlGhSIFjI">https://www.youtube.com/watch?v=nQrlGhSIFjI</a></li>
+<li><a href="https://www.youtube.com/watch?v=UjJ7rqwQGdE">https://www.youtube.com/watch?v=UjJ7rqwQGdE</a></li>
+<li><a href="https://www.youtube.com/watch?v=WF1nUFDd33I">https://www.youtube.com/watch?v=WF1nUFDd33I</a></li>
+<li><a href="https://www.youtube.com/watch?v=rUfLLmQ_ldc">https://www.youtube.com/watch?v=rUfLLmQ_ldc</a></li>
+<li><a href="https://www.youtube.com/watch?v=evwUXSqbysQ">https://www.youtube.com/watch?v=evwUXSqbysQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=vZhFpOWaCAs">https://www.youtube.com/watch?v=vZhFpOWaCAs</a></li>
+<li><a href="https://www.youtube.com/watch?v=CrOboutVHH8">https://www.youtube.com/watch?v=CrOboutVHH8</a></li>
+<li><a href="https://www.youtube.com/watch?v=a7qyW1G350g">https://www.youtube.com/watch?v=a7qyW1G350g</a></li>
+<li><a href="https://www.youtube.com/watch?v=8P5yPHxFLAg">https://www.youtube.com/watch?v=8P5yPHxFLAg</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLwl7A-YdGlCH2NC5wmQHBlO7XSxJGcm51">https://www.youtube.com/playlist?list=PLwl7A-YdGlCH2NC5wmQHBlO7XSxJGcm51</a></li>
+<li><a href="https://www.youtube.com/watch?v=vzIVn3G1Z2U">https://www.youtube.com/watch?v=vzIVn3G1Z2U</a></li>
+<li><a href="https://www.youtube.com/watch?v=dKo0rWXVAlc">https://www.youtube.com/watch?v=dKo0rWXVAlc</a></li>
+<li><a href="https://www.youtube.com/watch?v=cmjGBfHmOhA">https://www.youtube.com/watch?v=cmjGBfHmOhA</a></li>
+<li><a href="https://www.youtube.com/watch?v=BBXdIYUAi8w">https://www.youtube.com/watch?v=BBXdIYUAi8w</a></li>
+<li><a href="https://www.youtube.com/watch?v=0aPr51sDkxE">https://www.youtube.com/watch?v=0aPr51sDkxE</a></li>
+<li><a href="https://www.youtube.com/watch?v=iY2gESjcktg">https://www.youtube.com/watch?v=iY2gESjcktg</a></li>
+<li><a href="https://www.youtube.com/watch?v=1i6woUR4iQA">https://www.youtube.com/watch?v=1i6woUR4iQA</a></li>
+<li><a href="https://www.youtube.com/watch?v=siOpzOuj-l4">https://www.youtube.com/watch?v=siOpzOuj-l4</a></li>
+<li><a href="https://www.youtube.com/watch?v=lo4DVDMJOJI">https://www.youtube.com/watch?v=lo4DVDMJOJI</a></li>
+<li><a href="https://www.youtube.com/watch?v=AxmgdSArmHo">https://www.youtube.com/watch?v=AxmgdSArmHo</a></li>
+<li><a href="https://www.youtube.com/watch?v=8cCk8h9Eotk">https://www.youtube.com/watch?v=8cCk8h9Eotk</a></li>
+<li><a href="https://www.youtube.com/watch?v=XcJyW5iBKlU">https://www.youtube.com/watch?v=XcJyW5iBKlU</a></li>
+<li><a href="https://www.youtube.com/watch?v=AguPCHZuF88">https://www.youtube.com/watch?v=AguPCHZuF88</a></li>
+<li><a href="https://www.youtube.com/watch?v=rrZiSwXoBVA">https://www.youtube.com/watch?v=rrZiSwXoBVA</a></li>
+<li><a href="https://www.youtube.com/watch?v=iygJy9fLrWE">https://www.youtube.com/watch?v=iygJy9fLrWE</a></li>
+<li><a href="https://www.youtube.com/watch?v=bKLgs8CtcyI">https://www.youtube.com/watch?v=bKLgs8CtcyI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Jhc0dzImJI8">https://www.youtube.com/watch?v=Jhc0dzImJI8</a></li>
+<li><a href="https://www.youtube.com/watch?v=qQgK7gYbvco">https://www.youtube.com/watch?v=qQgK7gYbvco</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLMDIokDTwYr2P7NJkiEPbezEZsgW9Yr_N">https://www.youtube.com/playlist?list=PLMDIokDTwYr2P7NJkiEPbezEZsgW9Yr_N</a></li>
+<li><a href="https://www.youtube.com/shorts/qPQwPV2MNeE">https://www.youtube.com/shorts/qPQwPV2MNeE</a></li>
+<li><a href="https://www.youtube.com/watch?v=T1U0QWJr3WI">https://www.youtube.com/watch?v=T1U0QWJr3WI</a></li>
+<li><a href="https://www.youtube.com/watch?v=7Y5L6nicXFs">https://www.youtube.com/watch?v=7Y5L6nicXFs</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0WgCOFFlmqJmGLTgPANSGTaZpdEa89jt">https://www.youtube.com/playlist?list=PL0WgCOFFlmqJmGLTgPANSGTaZpdEa89jt</a></li>
+<li><a href="https://www.youtube.com/@maxhayart/videos">https://www.youtube.com/@maxhayart/videos</a></li>
+<li><a href="https://www.youtube.com/watch?v=4nblUEcGFvw">https://www.youtube.com/watch?v=4nblUEcGFvw</a></li>
+<li><a href="https://www.youtube.com/watch?v=2CG-ZN0JSdA">https://www.youtube.com/watch?v=2CG-ZN0JSdA</a></li>
+<li><a href="https://www.youtube.com/results?search_query=translating+2.79+to+2.8+blender+nodes">https://www.youtube.com/results?search_query=translating+2.79+to+2.8+blender+nodes</a></li>
+<li><a href="https://www.youtube.com/watch?v=qnogMszouJI">https://www.youtube.com/watch?v=qnogMszouJI</a></li>
+<li><a href="https://www.youtube.com/watch?v=NgdCen-cRZ0">https://www.youtube.com/watch?v=NgdCen-cRZ0</a></li>
+<li><a href="https://www.youtube.com/watch?v=6sz2K1OMkGA">https://www.youtube.com/watch?v=6sz2K1OMkGA</a></li>
+<li><a href="https://www.youtube.com/watch?v=-Pib2gMDpTA">https://www.youtube.com/watch?v=-Pib2gMDpTA</a></li>
+<li><a href="https://www.youtube.com/watch?v=JcK9nu4UO7w">https://www.youtube.com/watch?v=JcK9nu4UO7w</a></li>
+<li><a href="https://www.youtube.com/watch?v=crFpqgjAi4A">https://www.youtube.com/watch?v=crFpqgjAi4A</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLJ0HXjIk24E8mKcsJ2PsV0rFn6viykLnD">https://www.youtube.com/playlist?list=PLJ0HXjIk24E8mKcsJ2PsV0rFn6viykLnD</a></li>
+<li><a href="https://www.youtube.com/watch?v=G8-GdNgTBxw">https://www.youtube.com/watch?v=G8-GdNgTBxw</a></li>
+<li><a href="https://www.youtube.com/watch?v=si7UAgvBd4Y">https://www.youtube.com/watch?v=si7UAgvBd4Y</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLQrHHkWWNWfOCOdMuYwlaia_zFu8kFPER">https://www.youtube.com/playlist?list=PLQrHHkWWNWfOCOdMuYwlaia_zFu8kFPER</a></li>
+<li><a href="https://www.youtube.com/watch?v=lPEPdA1pdvQ">https://www.youtube.com/watch?v=lPEPdA1pdvQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=lONw5EMrzfk">https://www.youtube.com/watch?v=lONw5EMrzfk</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLjCi_4568d3EUxmLWzJnKFVdN8OqZSOA4">https://www.youtube.com/playlist?list=PLjCi_4568d3EUxmLWzJnKFVdN8OqZSOA4</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLndvTk6JOzUdgiEawLqGBKmJbH_Ijt9IV">https://www.youtube.com/playlist?list=PLndvTk6JOzUdgiEawLqGBKmJbH_Ijt9IV</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLIsEkSjZmz1od0xFFvaUWZytPBQhlePiP">https://www.youtube.com/playlist?list=PLIsEkSjZmz1od0xFFvaUWZytPBQhlePiP</a></li>
+<li><a href="https://www.youtube.com/watch?v=fxAgoYM7YOA">https://www.youtube.com/watch?v=fxAgoYM7YOA</a></li>
+<li><a href="https://www.youtube.com/watch?v=WI7eUwbi0Qo">https://www.youtube.com/watch?v=WI7eUwbi0Qo</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLybXPPxX5z_HP4vk7N0xvBRKhwXaBjZia">https://www.youtube.com/playlist?list=PLybXPPxX5z_HP4vk7N0xvBRKhwXaBjZia</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLNShHVjao84c685Bj7k_R9BDWFckeDP9x">https://www.youtube.com/playlist?list=PLNShHVjao84c685Bj7k_R9BDWFckeDP9x</a></li>
+<li><a href="https://www.youtube.com/watch?v=N6jN3f2VScg">https://www.youtube.com/watch?v=N6jN3f2VScg</a></li>
+<li><a href="https://www.youtube.com/watch?v=4Uy2SzB-Kuk">https://www.youtube.com/watch?v=4Uy2SzB-Kuk</a></li>
+<li><a href="https://www.youtube.com/watch?v=XNMq8mt_ISI">https://www.youtube.com/watch?v=XNMq8mt_ISI</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLQrHHkWWNWfOCOdMuYwlaia_zFu8kFPER">https://www.youtube.com/playlist?list=PLQrHHkWWNWfOCOdMuYwlaia_zFu8kFPER</a></li>
+<li><a href="https://www.youtube.com/watch?v=vuiS9Ypanu8">https://www.youtube.com/watch?v=vuiS9Ypanu8</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLmZJsrmeWQJM3naXtCvI-43_dNHbmogkE">https://www.youtube.com/playlist?list=PLmZJsrmeWQJM3naXtCvI-43_dNHbmogkE</a></li>
+<li><a href="https://www.youtube.com/watch?v=qaYuQeXP8c0">https://www.youtube.com/watch?v=qaYuQeXP8c0</a></li>
+<li><a href="https://www.youtube.com/watch?v=wNypSMwfZYQ">https://www.youtube.com/watch?v=wNypSMwfZYQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=0v3fXERTktI">https://www.youtube.com/watch?v=0v3fXERTktI</a></li>
+<li><a href="https://www.youtube.com/watch?v=dpbmbXWdlJM">https://www.youtube.com/watch?v=dpbmbXWdlJM</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLb9JkL6I_7ExG-RbcdohpwCmR8o83IxNy">https://www.youtube.com/playlist?list=PLb9JkL6I_7ExG-RbcdohpwCmR8o83IxNy</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0LADxPpmXN4z_8SbWr_uui6Y-zW5mL0A">https://www.youtube.com/playlist?list=PL0LADxPpmXN4z_8SbWr_uui6Y-zW5mL0A</a></li>
+<li><a href="https://www.youtube.com/watch?v=WCDivomGuV4">https://www.youtube.com/watch?v=WCDivomGuV4</a></li>
+<li><a href="https://www.youtube.com/watch?v=5HivjKiUmVs">https://www.youtube.com/watch?v=5HivjKiUmVs</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0t8o5_UDu0EVLHDjeO98y3V-JH0FWqVE">https://www.youtube.com/playlist?list=PL0t8o5_UDu0EVLHDjeO98y3V-JH0FWqVE</a></li>
+<li><a href="https://www.youtube.com/@BlenderVitals">https://www.youtube.com/@BlenderVitals</a></li>
+</ul>
+</li>
+<li>
+<h4>Music</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bB7Ymvywm4s">https://www.youtube.com/watch?v=bB7Ymvywm4s</a></li>
+<li><a href="https://www.youtube.com/watch?v=bUnRHfROyHY">https://www.youtube.com/watch?v=bUnRHfROyHY</a></li>
+<li><a href="https://www.youtube.com/watch?v=KVmtUWJmbNs">https://www.youtube.com/watch?v=KVmtUWJmbNs</a></li>
+<li><a href="https://www.youtube.com/watch?v=F7mOQPzWQ7M">https://www.youtube.com/watch?v=F7mOQPzWQ7M</a></li>
+<li><a href="https://www.youtube.com/watch?v=q-74HTjRbuY">https://www.youtube.com/watch?v=q-74HTjRbuY</a></li>
+<li><a href="https://www.youtube.com/watch?v=mAc4YFqqjrc">https://www.youtube.com/watch?v=mAc4YFqqjrc</a></li>
+<li><a href="https://www.youtube.com/watch?v=MWPYhebILb4">https://www.youtube.com/watch?v=MWPYhebILb4</a></li>
+<li><a href="https://www.youtube.com/watch?v=97Mj6pXYMd8">https://www.youtube.com/watch?v=97Mj6pXYMd8</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLR0j6NckpKjwSg4uVJCI5U4RLAq2Vcmph">https://www.youtube.com/playlist?list=PLR0j6NckpKjwSg4uVJCI5U4RLAq2Vcmph</a></li>
+<li></li>
+</ul>
+</li>
+<li>
+<h4>Short Films</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=uVzT6D-yhZg&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=uVzT6D-yhZg&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+</ul>
+</li>
+<li>
+<h4>Hardest Task of All time on the path of learning - Confronting .... well.... tales like these ones</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=S7lz2KFwQb4&amp;t=1171s">https://www.youtube.com/watch?v=S7lz2KFwQb4&amp;t=1171s</a></li>
+<li><a href="https://www.youtube.com/watch?v=RX0uI9d02QE&amp;pp=0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=RX0uI9d02QE&amp;pp=0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=N08LnQ77hGs">https://www.youtube.com/watch?v=N08LnQ77hGs</a></li>
+<li><a href="https://www.youtube.com/watch?v=KiF3UUzgCws">https://www.youtube.com/watch?v=KiF3UUzgCws</a></li>
+<li><a href="https://www.youtube.com/watch?v=2WxV1cMTIPE">https://www.youtube.com/watch?v=2WxV1cMTIPE</a></li>
+<li><a href="https://www.youtube.com/watch?v=WO5l2Siz8uU">https://www.youtube.com/watch?v=WO5l2Siz8uU</a></li>
+<li><a href="https://www.youtube.com/watch?v=D6N_0QChktI">https://www.youtube.com/watch?v=D6N_0QChktI</a></li>
+<li><a href="https://www.youtube.com/watch?v=yYtWqBfllu4">https://www.youtube.com/watch?v=yYtWqBfllu4</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZoVLS-Wxr1s">https://www.youtube.com/watch?v=ZoVLS-Wxr1s</a></li>
+<li><a href="https://www.youtube.com/watch?v=6FI0CV7M-W8&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=6FI0CV7M-W8&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=QrwqA7_0xJY">https://www.youtube.com/watch?v=QrwqA7_0xJY</a></li>
+<li><a href="https://www.youtube.com/watch?v=q41i0wpX4qc">https://www.youtube.com/watch?v=q41i0wpX4qc</a></li>
+</ol>
+</li>
+<li>
+<h4>Extras</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IQY5kj_eYQk">https://www.youtube.com/watch?v=IQY5kj_eYQk</a></li>
+<li><a href="https://www.youtube.com/watch?v=hL4IfoQzSSE">https://www.youtube.com/watch?v=hL4IfoQzSSE</a></li>
+<li><a href="https://www.youtube.com/watch?v=RX0uI9d02QE&amp;pp=0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=RX0uI9d02QE&amp;pp=0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=VBjKKgctvx4">https://www.youtube.com/watch?v=VBjKKgctvx4</a></li>
+<li><a href="https://www.youtube.com/watch?v=EPIdMwuMK-M">https://www.youtube.com/watch?v=EPIdMwuMK-M</a></li>
+<li><a href="https://www.youtube.com/watch?v=iJn0WcoE1m4">https://www.youtube.com/watch?v=iJn0WcoE1m4</a></li>
+<li><a href="https://www.youtube.com/watch?v=z3FzGpnfiS4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n">https://www.youtube.com/watch?v=z3FzGpnfiS4&amp;pp=ygUPQmxlbmRlciBTaGFkaW5n</a></li>
+<li><a href="https://www.youtube.com/watch?v=ANdLOY4rW04&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=ANdLOY4rW04&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=cE-Bbdspu_8">https://www.youtube.com/watch?v=cE-Bbdspu_8</a></li>
+<li><a href="https://www.youtube.com/watch?v=cESaIUWoCJQ">https://www.youtube.com/watch?v=cESaIUWoCJQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=wbBtuXCh4zU">https://www.youtube.com/watch?v=wbBtuXCh4zU</a></li>
+<li><a href="https://www.youtube.com/watch?v=5a5O8yQpQu8">https://www.youtube.com/watch?v=5a5O8yQpQu8</a></li>
+<li><a href="https://www.youtube.com/watch?v=EFmxPMdBqmU&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=EFmxPMdBqmU&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=vzR_XkXXGZA">https://www.youtube.com/watch?v=vzR_XkXXGZA</a></li>
+<li><a href="https://www.youtube.com/watch?v=t7ozOgMESaE&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=t7ozOgMESaE&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=JLVEJsVg8xQ">https://www.youtube.com/watch?v=JLVEJsVg8xQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=l0u1jiNYs-c">https://www.youtube.com/watch?v=l0u1jiNYs-c</a></li>
+<li><a href="https://www.youtube.com/watch?v=c0YINYT4Ozw">https://www.youtube.com/watch?v=c0YINYT4Ozw</a></li>
+<li><a href="https://www.youtube.com/watch?v=kdwFLGjcAdg&amp;pp=0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=kdwFLGjcAdg&amp;pp=0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=Zijf7xLJvvA">https://www.youtube.com/watch?v=Zijf7xLJvvA</a></li>
+<li><a href="https://www.youtube.com/watch?v=vzR_XkXXGZA">https://www.youtube.com/watch?v=vzR_XkXXGZA</a></li>
+<li><a href="https://www.youtube.com/watch?v=brvugRQVDLM">https://www.youtube.com/watch?v=brvugRQVDLM</a></li>
+<li><a href="https://www.youtube.com/watch?v=PTcLfV1phUk&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=PTcLfV1phUk&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=u2XssY2Ir7I">https://www.youtube.com/watch?v=u2XssY2Ir7I</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZAqIoDhornk">https://www.youtube.com/watch?v=ZAqIoDhornk</a></li>
+<li><a href="https://www.youtube.com/watch?v=uqKNux8-pto&amp;t=1s">https://www.youtube.com/watch?v=uqKNux8-pto&amp;t=1s</a></li>
+<li><a href="https://www.youtube.com/watch?v=tGN5C1patUk&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=tGN5C1patUk&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=HLriofI-wyY">https://www.youtube.com/watch?v=HLriofI-wyY</a></li>
+<li><a href="https://www.youtube.com/watch?v=e5g8eYKEhMw&amp;pp=0gcJCYYJAYcqIYzv">https://www.youtube.com/watch?v=e5g8eYKEhMw&amp;pp=0gcJCYYJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=EE9AETSoPHw">https://www.youtube.com/watch?v=EE9AETSoPHw</a></li>
+<li><a href="https://www.youtube.com/watch?v=UJnz6U4BU0A">https://www.youtube.com/watch?v=UJnz6U4BU0A</a></li>
+<li><a href="https://www.youtube.com/watch?v=fK0areQa7-Q">https://www.youtube.com/watch?v=fK0areQa7-Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=8skhP1U6FNE">https://www.youtube.com/watch?v=8skhP1U6FNE</a></li>
+</ul>
+</li>
+<li>
+<h4>PAID SHITS</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ROXbs_yrpZA">https://www.youtube.com/watch?v=ROXbs_yrpZA</a></li>
+</ul>
+</li>
+<li>
+<h4>UnProcessed</h4>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLuI7vfZQrW0VAB9Yn1LpiraPSwB-3cfm6">https://www.youtube.com/playlist?list=PLuI7vfZQrW0VAB9Yn1LpiraPSwB-3cfm6</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLuI7vfZQrW0Xb3BijY5pm-xn9JB07MKn6">https://www.youtube.com/playlist?list=PLuI7vfZQrW0Xb3BijY5pm-xn9JB07MKn6</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLiEg8ELxXA2M4u1txU1l2OKFtshRBG4Mh">https://www.youtube.com/playlist?list=PLiEg8ELxXA2M4u1txU1l2OKFtshRBG4Mh</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL_v4_vPAtUlHeOEkE6Nwe15HKX93JixOQ">https://www.youtube.com/playlist?list=PL_v4_vPAtUlHeOEkE6Nwe15HKX93JixOQ</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLEEA5sNkFZYML2XyrlQacbMqo1cN6vFj7">https://www.youtube.com/playlist?list=PLEEA5sNkFZYML2XyrlQacbMqo1cN6vFj7</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLZpDYt0cyiusDdsgdb9FgfT7onV7th8mJ">https://www.youtube.com/playlist?list=PLZpDYt0cyiusDdsgdb9FgfT7onV7th8mJ</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLZpDYt0cyiuuj-n8FyKfKRicJMenbQA7b">https://www.youtube.com/playlist?list=PLZpDYt0cyiuuj-n8FyKfKRicJMenbQA7b</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLkxXQ3ugQK2N2PPxmeOivCT4tP4ne_V1y">https://www.youtube.com/playlist?list=PLkxXQ3ugQK2N2PPxmeOivCT4tP4ne_V1y</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vsmEcCMDX-dpBceuv_GJFcB">https://www.youtube.com/playlist?list=PLn3ukorJv4vsmEcCMDX-dpBceuv_GJFcB</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL9xScGQMBBBxPoXYV8id_T2EN87RfdqNC">https://www.youtube.com/playlist?list=PL9xScGQMBBBxPoXYV8id_T2EN87RfdqNC</a></li>
+<li><a href="https://www.youtube.com/watch?v=h0x4yPKfirU">https://www.youtube.com/watch?v=h0x4yPKfirU</a></li>
+<li><a href="https://www.youtube.com/watch?v=PMiB8OjR-yY">https://www.youtube.com/watch?v=PMiB8OjR-yY</a></li>
+<li><a href="https://www.youtube.com/watch?v=oysCSbhXYBo">https://www.youtube.com/watch?v=oysCSbhXYBo</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ut-KWitOwGI">https://www.youtube.com/watch?v=Ut-KWitOwGI</a></li>
+<li><a href="https://www.youtube.com/watch?v=peFFpk3dV6k">https://www.youtube.com/watch?v=peFFpk3dV6k</a></li>
+<li><a href="https://www.youtube.com/watch?v=6-7y7J-89ik">https://www.youtube.com/watch?v=6-7y7J-89ik</a></li>
+<li><a href="https://www.youtube.com/watch?v=AEd4pE5nQ-Q">https://www.youtube.com/watch?v=AEd4pE5nQ-Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=6sz2K1OMkGA">https://www.youtube.com/watch?v=6sz2K1OMkGA</a></li>
+<li><a href="https://www.youtube.com/watch?v=eUf9VltV4Cc">https://www.youtube.com/watch?v=eUf9VltV4Cc</a></li>
+<li><a href="https://www.youtube.com/watch?v=jIALwXReG3E">https://www.youtube.com/watch?v=jIALwXReG3E</a></li>
+<li><a href="https://www.youtube.com/watch?v=k4NTf0hMjtY">https://www.youtube.com/watch?v=k4NTf0hMjtY</a></li>
+<li><a href="https://www.youtube.com/watch?v=y5CUrH2XjqQ">https://www.youtube.com/watch?v=y5CUrH2XjqQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=S8rBPvlgEVU">https://www.youtube.com/watch?v=S8rBPvlgEVU</a></li>
+<li><a href="https://www.youtube.com/watch?v=DkbUnJlx1IE">https://www.youtube.com/watch?v=DkbUnJlx1IE</a></li>
+<li><a href="https://www.youtube.com/watch?v=pEqui-XVYkE">https://www.youtube.com/watch?v=pEqui-XVYkE</a></li>
+<li><a href="https://www.youtube.com/watch?v=J6pdDaYI6qc">https://www.youtube.com/watch?v=J6pdDaYI6qc</a></li>
+<li><a href="https://www.youtube.com/watch?v=AlRPLdA_BLw">https://www.youtube.com/watch?v=AlRPLdA_BLw</a></li>
+<li><a href="https://www.youtube.com/watch?v=bAswwNpfe0U">https://www.youtube.com/watch?v=bAswwNpfe0U</a></li>
+<li><a href="https://www.youtube.com/watch?v=Jj64tu5TFE8">https://www.youtube.com/watch?v=Jj64tu5TFE8</a></li>
+<li><a href="https://www.youtube.com/watch?v=o5hSMSVtGnU">https://www.youtube.com/watch?v=o5hSMSVtGnU</a></li>
+<li><a href="https://www.youtube.com/watch?v=WjS_zNQNVlw">https://www.youtube.com/watch?v=WjS_zNQNVlw</a></li>
+<li><a href="https://www.youtube.com/watch?v=DeHIPCFtSzA">https://www.youtube.com/watch?v=DeHIPCFtSzA</a></li>
+<li><a href="https://www.youtube.com/watch?v=V_iSQexIiPY">https://www.youtube.com/watch?v=V_iSQexIiPY</a></li>
+<li><a href="https://www.youtube.com/watch?v=mq4HMlefgDw">https://www.youtube.com/watch?v=mq4HMlefgDw</a></li>
+<li><a href="https://www.youtube.com/watch?v=N10fxBy_Jqs">https://www.youtube.com/watch?v=N10fxBy_Jqs</a></li>
+<li><a href="https://www.youtube.com/watch?v=GUc4D1UQLDA">https://www.youtube.com/watch?v=GUc4D1UQLDA</a></li>
+<li><a href="https://www.youtube.com/watch?v=TbrbF38_wUg">https://www.youtube.com/watch?v=TbrbF38_wUg</a></li>
+<li><a href="https://www.youtube.com/watch?v=I_y0RyMoL5w">https://www.youtube.com/watch?v=I_y0RyMoL5w</a></li>
+<li><a href="https://www.youtube.com/watch?v=5ZAP551qz_0">https://www.youtube.com/watch?v=5ZAP551qz_0</a></li>
+<li><a href="https://www.youtube.com/shorts/YRJRxs1lKuE">https://www.youtube.com/shorts/YRJRxs1lKuE</a></li>
+<li><a href="https://www.youtube.com/watch?v=GItohAbyzCM">https://www.youtube.com/watch?v=GItohAbyzCM</a></li>
+<li><a href="https://www.youtube.com/watch?v=9pwtDYQbWpg">https://www.youtube.com/watch?v=9pwtDYQbWpg</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ne2JF8BogCw">https://www.youtube.com/watch?v=Ne2JF8BogCw</a></li>
+<li><a href="https://www.youtube.com/watch?v=ldGH734EnRE">https://www.youtube.com/watch?v=ldGH734EnRE</a></li>
+<li><a href="https://www.youtube.com/watch?v=H6KwTmsShXk">https://www.youtube.com/watch?v=H6KwTmsShXk</a></li>
+<li><a href="https://www.youtube.com/watch?v=uFMH6oGGGtk">https://www.youtube.com/watch?v=uFMH6oGGGtk</a></li>
+<li><a href="https://www.youtube.com/watch?v=2DhLnl_-4RY">https://www.youtube.com/watch?v=2DhLnl_-4RY</a></li>
+<li><a href="https://www.youtube.com/watch?v=yP6Yy_8RWiE">https://www.youtube.com/watch?v=yP6Yy_8RWiE</a></li>
+<li><a href="https://www.youtube.com/watch?v=wBkfNccFmXY">https://www.youtube.com/watch?v=wBkfNccFmXY</a></li>
+<li><a href="https://www.youtube.com/watch?v=uV_gVKd2J6c">https://www.youtube.com/watch?v=uV_gVKd2J6c</a></li>
+<li><a href="https://www.youtube.com/watch?v=xLWh9hsX-eo">https://www.youtube.com/watch?v=xLWh9hsX-eo</a></li>
+<li><a href="https://www.youtube.com/watch?v=hbACsi4Ts8U">https://www.youtube.com/watch?v=hbACsi4Ts8U</a></li>
+<li><a href="https://www.youtube.com/watch?v=_dU3DONwSzU">https://www.youtube.com/watch?v=_dU3DONwSzU</a></li>
+<li><a href="https://www.youtube.com/watch?v=yo9DjfnyemM">https://www.youtube.com/watch?v=yo9DjfnyemM</a></li>
+<li><a href="https://www.youtube.com/watch?v=wX0-mn0l2EY">https://www.youtube.com/watch?v=wX0-mn0l2EY</a></li>
+<li><a href="https://www.youtube.com/watch?v=zKYr3Ca-xqg">https://www.youtube.com/watch?v=zKYr3Ca-xqg</a></li>
+<li><a href="https://www.youtube.com/watch?v=_hA3y45P4Ow">https://www.youtube.com/watch?v=_hA3y45P4Ow</a></li>
+<li><a href="https://www.youtube.com/watch?v=tRuhttgHTS4">https://www.youtube.com/watch?v=tRuhttgHTS4</a></li>
+<li><a href="https://www.youtube.com/watch?v=haeU271brVM">https://www.youtube.com/watch?v=haeU271brVM</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ai-OosefzIg">https://www.youtube.com/watch?v=Ai-OosefzIg</a></li>
+<li><a href="https://www.youtube.com/watch?v=j9hyjPcXYjc">https://www.youtube.com/watch?v=j9hyjPcXYjc</a></li>
+<li><a href="https://www.youtube.com/watch?v=AgsFXwvg14Q">https://www.youtube.com/watch?v=AgsFXwvg14Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=NZ2cNuv758g">https://www.youtube.com/watch?v=NZ2cNuv758g</a></li>
+<li><a href="https://www.youtube.com/watch?v=zqC1jg8y_NM">https://www.youtube.com/watch?v=zqC1jg8y_NM</a></li>
+<li><a href="https://www.youtube.com/watch?v=A0H-jdqE93w">https://www.youtube.com/watch?v=A0H-jdqE93w</a></li>
+<li><a href="https://www.youtube.com/watch?v=8cCk8h9Eotk">https://www.youtube.com/watch?v=8cCk8h9Eotk</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZyChddyTrY8">https://www.youtube.com/watch?v=ZyChddyTrY8</a></li>
+<li><a href="https://www.youtube.com/watch?v=u38o_dOzd0w">https://www.youtube.com/watch?v=u38o_dOzd0w</a></li>
+<li><a href="https://www.youtube.com/watch?v=MZskE3qd3g8">https://www.youtube.com/watch?v=MZskE3qd3g8</a></li>
+<li><a href="https://www.youtube.com/watch?v=ONu14y5xqqA">https://www.youtube.com/watch?v=ONu14y5xqqA</a></li>
+<li><a href="https://www.youtube.com/watch?v=IEQ7IVPwwQk">https://www.youtube.com/watch?v=IEQ7IVPwwQk</a></li>
+<li><a href="https://www.youtube.com/watch?v=IVA2Lwt5IBk">https://www.youtube.com/watch?v=IVA2Lwt5IBk</a></li>
+<li><a href="https://www.youtube.com/watch?v=nQrlGhSIFjI">https://www.youtube.com/watch?v=nQrlGhSIFjI</a></li>
+<li><a href="https://www.youtube.com/watch?v=bUnRHfROyHY">https://www.youtube.com/watch?v=bUnRHfROyHY</a></li>
+<li><a href="https://www.youtube.com/watch?v=oBtayXSLW44">https://www.youtube.com/watch?v=oBtayXSLW44</a></li>
+<li><a href="https://www.youtube.com/watch?v=idcFMhoSdIc">https://www.youtube.com/watch?v=idcFMhoSdIc</a></li>
+<li><a href="https://www.youtube.com/watch?v=AVKG7uFFI3s">https://www.youtube.com/watch?v=AVKG7uFFI3s</a></li>
+<li><a href="https://www.youtube.com/watch?v=isMOTRJ-EIU">https://www.youtube.com/watch?v=isMOTRJ-EIU</a></li>
+<li><a href="https://www.youtube.com/watch?v=N10fxBy_Jqs">https://www.youtube.com/watch?v=N10fxBy_Jqs</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ml2t8uxPAQU">https://www.youtube.com/watch?v=Ml2t8uxPAQU</a></li>
+<li><a href="https://www.youtube.com/watch?v=5naMFeWTBeY">https://www.youtube.com/watch?v=5naMFeWTBeY</a></li>
+<li><a href="https://www.youtube.com/watch?v=khblXafu7iA">https://www.youtube.com/watch?v=khblXafu7iA</a></li>
+<li><a href="https://www.youtube.com/watch?v=4l86JpmqdbM">https://www.youtube.com/watch?v=4l86JpmqdbM</a></li>
+<li><a href="https://www.youtube.com/watch?v=0nqrl-9s_JM">https://www.youtube.com/watch?v=0nqrl-9s_JM</a></li>
+<li><a href="https://www.youtube.com/watch?v=h0x4yPKfirU">https://www.youtube.com/watch?v=h0x4yPKfirU</a></li>
+<li><a href="https://www.youtube.com/watch?v=l_JAk9xGMvk">https://www.youtube.com/watch?v=l_JAk9xGMvk</a></li>
+<li><a href="https://www.youtube.com/watch?v=LPCdpTcNXyM">https://www.youtube.com/watch?v=LPCdpTcNXyM</a></li>
+<li><a href="https://www.youtube.com/watch?v=x3-1dFHa3qg">https://www.youtube.com/watch?v=x3-1dFHa3qg</a></li>
+<li><a href="https://www.youtube.com/watch?v=UkU0-QeWUcU">https://www.youtube.com/watch?v=UkU0-QeWUcU</a></li>
+<li><a href="https://www.youtube.com/watch?v=jDEijCwz6to">https://www.youtube.com/watch?v=jDEijCwz6to</a></li>
+<li><a href="https://www.youtube.com/watch?v=Q7Zat6GOz3M">https://www.youtube.com/watch?v=Q7Zat6GOz3M</a></li>
+<li><a href="https://www.youtube.com/watch?v=gZ4Fd_DsLXg">https://www.youtube.com/watch?v=gZ4Fd_DsLXg</a></li>
+<li><a href="https://www.youtube.com/watch?v=sSpQDKmtzT8">https://www.youtube.com/watch?v=sSpQDKmtzT8</a></li>
+<li><a href="https://www.youtube.com/results?search_query=%22PBR%22+Blender">https://www.youtube.com/results?search_query="PBR"+Blender</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0WgCOFFlmqJmGLTgPANSGTaZpdEa89jt">https://www.youtube.com/playlist?list=PL0WgCOFFlmqJmGLTgPANSGTaZpdEa89jt</a></li>
+<li><a href="https://www.youtube.com/watch?v=sSpQDKmtzT8">https://www.youtube.com/watch?v=sSpQDKmtzT8</a></li>
+<li><a href="https://www.youtube.com/watch?v=MeW_Cy1TqRc">https://www.youtube.com/watch?v=MeW_Cy1TqRc</a></li>
+<li><a href="https://www.youtube.com/watch?v=EDDODMP8j84">https://www.youtube.com/watch?v=EDDODMP8j84</a></li>
+<li><a href="https://www.youtube.com/watch?v=iP3_WOl4aco">https://www.youtube.com/watch?v=iP3_WOl4aco</a></li>
+<li><a href="https://www.youtube.com/watch?v=XcJyW5iBKlU">https://www.youtube.com/watch?v=XcJyW5iBKlU</a></li>
+<li><a href="https://www.youtube.com/watch?v=ITVwjJW210c">https://www.youtube.com/watch?v=ITVwjJW210c</a></li>
+<li><a href="https://www.youtube.com/watch?v=Hyhew7kuhgA">https://www.youtube.com/watch?v=Hyhew7kuhgA</a></li>
+<li><a href="https://www.youtube.com/watch?v=JJV8l6MaXxA">https://www.youtube.com/watch?v=JJV8l6MaXxA</a></li>
+<li><a href="https://www.youtube.com/watch?v=eHkKCmnpluc">https://www.youtube.com/watch?v=eHkKCmnpluc</a></li>
+<li><a href="https://www.youtube.com/watch?v=KK6JLIxdB3A">https://www.youtube.com/watch?v=KK6JLIxdB3A</a></li>
+<li><a href="https://www.youtube.com/watch?v=gG7ZoP3fd1w">https://www.youtube.com/watch?v=gG7ZoP3fd1w</a></li>
+<li><a href="https://www.youtube.com/watch?v=l8xrSgyfEHs">https://www.youtube.com/watch?v=l8xrSgyfEHs</a></li>
+<li><a href="https://www.youtube.com/watch?v=Yx9TvvnxCAM">https://www.youtube.com/watch?v=Yx9TvvnxCAM</a></li>
+<li><a href="https://www.youtube.com/watch?v=Zxl38NpPWdo">https://www.youtube.com/watch?v=Zxl38NpPWdo</a></li>
+<li><a href="https://www.youtube.com/watch?v=jFE6KhNKg8A">https://www.youtube.com/watch?v=jFE6KhNKg8A</a></li>
+<li><a href="https://www.youtube.com/watch?v=QfOYcBZxzcg">https://www.youtube.com/watch?v=QfOYcBZxzcg</a></li>
+<li><a href="https://www.youtube.com/watch?v=cYMM8nphppk">https://www.youtube.com/watch?v=cYMM8nphppk</a></li>
+<li><a href="https://www.youtube.com/watch?v=XleO7DBm1Us">https://www.youtube.com/watch?v=XleO7DBm1Us</a></li>
+<li><a href="https://www.youtube.com/watch?v=5L90xw-IhDY">https://www.youtube.com/watch?v=5L90xw-IhDY</a></li>
+<li><a href="https://www.youtube.com/watch?v=MGioVd8TtPQ">https://www.youtube.com/watch?v=MGioVd8TtPQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=7hq92JvHq2g">https://www.youtube.com/watch?v=7hq92JvHq2g</a></li>
+<li><a href="https://www.youtube.com/watch?v=WddDP-8HUGQ">https://www.youtube.com/watch?v=WddDP-8HUGQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=0O3YGO9TYvM">https://www.youtube.com/watch?v=0O3YGO9TYvM</a></li>
+<li><a href="https://www.youtube.com/watch?v=YO2qEOi8ERU">https://www.youtube.com/watch?v=YO2qEOi8ERU</a></li>
+<li><a href="https://www.youtube.com/watch?v=PPlI-U2FJhU">https://www.youtube.com/watch?v=PPlI-U2FJhU</a></li>
+<li><a href="https://www.youtube.com/watch?v=QbxtY4nHMuQ">https://www.youtube.com/watch?v=QbxtY4nHMuQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=9kq72GpvsT0">https://www.youtube.com/watch?v=9kq72GpvsT0</a></li>
+<li><a href="https://www.youtube.com/watch?v=9TdDmA1F2qc">https://www.youtube.com/watch?v=9TdDmA1F2qc</a></li>
+<li><a href="https://www.youtube.com/watch?v=g18vfgAMSig">https://www.youtube.com/watch?v=g18vfgAMSig</a></li>
+<li><a href="https://www.youtube.com/watch?v=h-RAp9SJu9E">https://www.youtube.com/watch?v=h-RAp9SJu9E</a></li>
+<li><a href="https://www.youtube.com/watch?v=WJZTI3SSVBU">https://www.youtube.com/watch?v=WJZTI3SSVBU</a></li>
+<li><a href="https://www.youtube.com/watch?v=3NrsSdEUSWI">https://www.youtube.com/watch?v=3NrsSdEUSWI</a></li>
+<li><a href="https://www.youtube.com/watch?v=hWZFzAwFyQc">https://www.youtube.com/watch?v=hWZFzAwFyQc</a></li>
+<li><a href="https://www.youtube.com/watch?v=xkOVHcqHexM">https://www.youtube.com/watch?v=xkOVHcqHexM</a></li>
+<li><a href="https://www.youtube.com/watch?v=8hcm8Dd4y6U">https://www.youtube.com/watch?v=8hcm8Dd4y6U</a></li>
+<li><a href="https://www.youtube.com/watch?v=u-29qop62S4">https://www.youtube.com/watch?v=u-29qop62S4</a></li>
+<li><a href="https://www.youtube.com/watch?v=YYBhj87YCrA">https://www.youtube.com/watch?v=YYBhj87YCrA</a></li>
+<li><a href="https://www.youtube.com/watch?v=0LOaFbbTSZQ">https://www.youtube.com/watch?v=0LOaFbbTSZQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=6ucnZ_ByfNU">https://www.youtube.com/watch?v=6ucnZ_ByfNU</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLld3Jxp-nC0D2qyl9XHlI-8mXjpnaKIBe">https://www.youtube.com/playlist?list=PLld3Jxp-nC0D2qyl9XHlI-8mXjpnaKIBe</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBsxNhJOVoOwHQDHys1IWLk5">https://www.youtube.com/playlist?list=PLsGl9GczcgBsxNhJOVoOwHQDHys1IWLk5</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLaBnq4aQIyqjEDmRDklopxanBC2LD5Smv">https://www.youtube.com/playlist?list=PLaBnq4aQIyqjEDmRDklopxanBC2LD5Smv</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLYjDeW9Aw0jajsHUG4uXFMy-CplZzPIpv">https://www.youtube.com/playlist?list=PLYjDeW9Aw0jajsHUG4uXFMy-CplZzPIpv</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLunr0YiKm4r77va1_ZwerADwIuc88gTU8">https://www.youtube.com/playlist?list=PLunr0YiKm4r77va1_ZwerADwIuc88gTU8</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL9TcNr_PxvUYgt1ERnBlcKJndg7Gm7tVj">https://www.youtube.com/playlist?list=PL9TcNr_PxvUYgt1ERnBlcKJndg7Gm7tVj</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLoTRsQY2aZe66FaTXyF5fU93-jrRtBCv0">https://www.youtube.com/playlist?list=PLoTRsQY2aZe66FaTXyF5fU93-jrRtBCv0</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLzg4_2BrWAVzK4ORuEHz0RoE7Va3w6fBf">https://www.youtube.com/playlist?list=PLzg4_2BrWAVzK4ORuEHz0RoE7Va3w6fBf</a></li>
+</ul>
+</li>
+<li>
+<h4>bad Titles</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=-aJahfHZpzg">https://www.youtube.com/watch?v=-aJahfHZpzg</a></li>
+<li><a href="https://www.youtube.com/watch?v=XytiZObyYAA">https://www.youtube.com/watch?v=XytiZObyYAA</a></li>
+<li><a href="https://www.youtube.com/watch?v=cdm-e6Z8Vww">https://www.youtube.com/watch?v=cdm-e6Z8Vww</a></li>
+<li><a href="https://www.youtube.com/watch?v=NEG9lafbzvI">https://www.youtube.com/watch?v=NEG9lafbzvI</a></li>
+<li><a href="https://www.youtube.com/watch?v=ti2Sy-d9kDE">https://www.youtube.com/watch?v=ti2Sy-d9kDE</a></li>
+<li><a href="https://www.youtube.com/watch?v=iY2gESjcktg">https://www.youtube.com/watch?v=iY2gESjcktg</a></li>
+<li><a href="https://www.youtube.com/watch?v=RQJwR6povJo">https://www.youtube.com/watch?v=RQJwR6povJo</a></li>
+<li><a href="https://www.youtube.com/watch?v=EaVG_KOKRnA">https://www.youtube.com/watch?v=EaVG_KOKRnA</a></li>
+<li><a href="https://www.youtube.com/watch?v=I4mdMMu-3fc">https://www.youtube.com/watch?v=I4mdMMu-3fc</a></li>
+</ul>
+</li>
+<li>
+<h4>Other Blender Guides / RoadMaps</h4>
+<ul>
+<li><a href="https://github.com/agmmnn/awesome-blender/tree/master">https://github.com/agmmnn/awesome-blender/tree/master</a></li>
+<li><a href="https://github.com/mikeroyal/Blender-Guide">https://github.com/mikeroyal/Blender-Guide</a></li>
+<li><a href="https://gist.github.com/yadoogi/06841c66fa7d688d9e69e576e0095546">https://gist.github.com/yadoogi/06841c66fa7d688d9e69e576e0095546</a></li>
+<li><a href="https://www.reddit.com/r/blenderhelp/comments/1g77ay9/what_sources_did_you_learn_blender_from/">https://www.reddit.com/r/blenderhelp/comments/1g77ay9/what_sources_did_you_learn_blender_from/</a></li>
+<li><a href="https://www.google.com/search?q=blender+guide+github">https://www.google.com/search?q=blender+guide+github</a></li>
+<li><a href="https://github.com/Apress/Introduction-to-Blender-3.0">https://github.com/Apress/Introduction-to-Blender-3.0</a></li>
+<li><a href="https://www.reddit.com/r/blender/comments/101z60g/a_roadmap_for_learning_blender3d/">https://www.reddit.com/r/blender/comments/101z60g/a_roadmap_for_learning_blender3d/</a></li>
+<li><a href="https://github.com/Flurdeh/Youtube-Resources">https://github.com/Flurdeh/Youtube-Resources</a></li>
+</ul>
+</li>
+</ul>
+<div class="REY_NOSHOW_PDF">
+<hr>
+<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+</div>
+<div class="REY_PAGEBREAK"></div>
+<div class="REY_NOSHOW_PDF">
+<hr>
+</div>
+<ul>
+<li>
+<h4>Lighting</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=y6WKm62mhIo">https://www.youtube.com/watch?v=y6WKm62mhIo</a></li>
+<li><a href="https://www.youtube.com/watch?v=jrCtpmdAhF0">https://www.youtube.com/watch?v=jrCtpmdAhF0</a></li>
+<li><a href="https://www.youtube.com/watch?v=fIRAWqkqEZg">https://www.youtube.com/watch?v=fIRAWqkqEZg</a></li>
+<li><a href="https://www.youtube.com/watch?v=XcJyW5iBKlU">https://www.youtube.com/watch?v=XcJyW5iBKlU</a></li>
+<li><a href="https://www.youtube.com/watch?v=oI1AI6dd2UM">https://www.youtube.com/watch?v=oI1AI6dd2UM</a></li>
+</ul>
+</li>
+<li>
+<h4>PART V : Procedural Planets</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=GnOUoMi8ATU">https://www.youtube.com/watch?v=GnOUoMi8ATU</a></li>
+<li>Alaskan FX - Procedural Planets (9/10) <a href="https://www.youtube.com/watch?v=2oV48DAvwYg">🔗</a></li>
+<li>Alankan FX - Awesome Coating Effects (9/10) <a href="https://www.youtube.com/watch?v=PT8GKf-2mdg">🔗</a></li>
+<li><a href="https://www.youtube.com/watch?v=OOpCrTjeezY">https://www.youtube.com/watch?v=OOpCrTjeezY</a></li>
+<li><a href="https://www.youtube.com/watch?v=0YZzHn0iz8U">https://www.youtube.com/watch?v=0YZzHn0iz8U</a></li>
+<li><a href="https://www.youtube.com/watch?v=OOpCrTjeezY">https://www.youtube.com/watch?v=OOpCrTjeezY</a></li>
+</ul>
+</li>
+<li>
+<h4>PART VI : ArchViz / Interior</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=DJRBv917CI0">https://www.youtube.com/watch?v=DJRBv917CI0</a></li>
+<li><a href="https://www.youtube.com/watch?v=iFQokXmqmVQ">https://www.youtube.com/watch?v=iFQokXmqmVQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=wrzSrjAY69c">https://www.youtube.com/watch?v=wrzSrjAY69c</a></li>
+<li><a href="https://www.youtube.com/watch?v=h3PIlhh9ruw">https://www.youtube.com/watch?v=h3PIlhh9ruw</a></li>
+<li><a href="https://www.youtube.com/watch?v=2VNztZdfGZY">https://www.youtube.com/watch?v=2VNztZdfGZY</a></li>
+<li><a href="https://www.youtube.com/watch?v=KyXRBu7gn2o">https://www.youtube.com/watch?v=KyXRBu7gn2o</a></li>
+<li><a href="https://www.youtube.com/watch?v=eQjQfmjDXXA">https://www.youtube.com/watch?v=eQjQfmjDXXA</a></li>
+<li><a href="https://www.youtube.com/watch?v=Or9bMxAuICc">https://www.youtube.com/watch?v=Or9bMxAuICc</a></li>
+<li><a href="https://www.youtube.com/watch?v=nb6rSMAooDs">https://www.youtube.com/watch?v=nb6rSMAooDs</a></li>
+<li><a href="https://www.youtube.com/watch?v=bfYjsHLbqxo">https://www.youtube.com/watch?v=bfYjsHLbqxo</a></li>
+<li>Ryan - <strong>Modifiers</strong> (7/10) <a href="https://www.youtube.com/watch?v=F_f-O-W9lMU">🔗</a></li>
+<li><a href="https://www.youtube.com/watch?v=DJRBv917CI0">https://www.youtube.com/watch?v=DJRBv917CI0</a></li>
+<li><a href="https://www.youtube.com/watch?v=h3PIlhh9ruw">https://www.youtube.com/watch?v=h3PIlhh9ruw</a></li>
+<li><a href="https://www.youtube.com/watch?v=KyXRBu7gn2o&amp;pp=ygUUQmxlbmRlciBHdXJ1IEtpdGNoZW4%3D">https://www.youtube.com/watch?v=KyXRBu7gn2o&amp;pp=ygUUQmxlbmRlciBHdXJ1IEtpdGNoZW4%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=2VNztZdfGZY&amp;pp=ygURQmxlbmRlciBHdXJ1IGFyY2g%3D">https://www.youtube.com/watch?v=2VNztZdfGZY&amp;pp=ygURQmxlbmRlciBHdXJ1IGFyY2g%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=p5q_P8WQegQ&amp;pp=ygURQmxlbmRlciBHdXJ1IGFyY2g%3D">https://www.youtube.com/watch?v=p5q_P8WQegQ&amp;pp=ygURQmxlbmRlciBHdXJ1IGFyY2g%3D</a></li>
+<li><a href="https://www.youtube.com/watch?v=IgmwZlFi2ZM">https://www.youtube.com/watch?v=IgmwZlFi2ZM</a></li>
+<li>Oliver Higgins - for beginners (7/10) <a href="https://www.youtube.com/watch?v=2oV48DAvwYg">🔗</a></li>
+<li><a href="https://www.youtube.com/watch?v=e-Ql-bMa9So">https://www.youtube.com/watch?v=e-Ql-bMa9So</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ">https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ</a></li>
+<li><a href="https://www.youtube.com/watch?v=VMGomSAAtQs">https://www.youtube.com/watch?v=VMGomSAAtQs</a></li>
+</ul>
+</li>
+<li>
+<h4>PART IV : Intermediate</h4>
+<ul>
+<li>BLender Guru Intermediate:- <a href="https://www.youtube.com/playlist?list=PL09MNnEXmFViHopxfqA-Y8Skzsp70del9">https://www.youtube.com/playlist?list=PL09MNnEXmFViHopxfqA-Y8Skzsp70del9</a></li>
+<li>Scatterred Stuffs:- <a href="https://www.youtube.com/playlist?list=PLjWxxbKfL8hPJGQaptGY07foE15IFRhWa">https://www.youtube.com/playlist?list=PLjWxxbKfL8hPJGQaptGY07foE15IFRhWa</a></li>
+<li>Shaders Intermediate:- <a href="https://www.youtube.com/playlist?list=PLo9iIHcZ22D2YQSUKhn_rlHRWGDsiJeVi">https://www.youtube.com/playlist?list=PLo9iIHcZ22D2YQSUKhn_rlHRWGDsiJeVi</a></li>
+<li>Ryan (lighthouse):- <a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBsz6NUIlUutFDLEepT4MBed">https://www.youtube.com/playlist?list=PLsGl9GczcgBsz6NUIlUutFDLEepT4MBed</a></li>
+</ul>
+</li>
+<li>
+<h4>Abandoned House</h4>
+<ul>
+<li>Guru:- <a href="https://www.youtube.com/watch?v=1aNnERnHRZg">https://www.youtube.com/watch?v=1aNnERnHRZg</a></li>
+<li>SharpWind:- <a href="https://www.youtube.com/playlist?list=PLWLnt-JoyA9RGyGrn51eKWRhUhcamJXNe">https://www.youtube.com/playlist?list=PLWLnt-JoyA9RGyGrn51eKWRhUhcamJXNe</a></li>
+</ul>
+</li>
+<li>
+<h4>HARD SURFACE MODELLING</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Ml2t8uxPAQU">https://www.youtube.com/watch?v=Ml2t8uxPAQU</a></li>
+</ul>
+</li>
+<li>
+<h4>Hard Surface Modelling</h4>
+<ol>
+<li>Basics:- <a href="https://www.youtube.com/playlist?list=PLybXPPxX5z_EtuNPf_k00XPnsX79lbypr">https://www.youtube.com/playlist?list=PLybXPPxX5z_EtuNPf_k00XPnsX79lbypr</a></li>
+<li>Basics 2:- <a href="https://www.youtube.com/playlist?list=PLnmie0xWI8TsY9JTZl0Hj_PhKI_tONRKY">https://www.youtube.com/playlist?list=PLnmie0xWI8TsY9JTZl0Hj_PhKI_tONRKY</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLYVR0A4acpNaFiTL-qmxH8fm4DJxqq-vp">https://www.youtube.com/playlist?list=PLYVR0A4acpNaFiTL-qmxH8fm4DJxqq-vp</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx">https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx</a></li>
+<li>Car 1:- <a href="https://www.youtube.com/playlist?list=PLjKj7c74gph4FVP8fZG4CbwcNOTmc-QaD">https://www.youtube.com/playlist?list=PLjKj7c74gph4FVP8fZG4CbwcNOTmc-QaD</a></li>
+<li>Car 2:- <a href="https://www.youtube.com/playlist?list=PLB0V2I1AyCRoOvmPdzqoa3C6Hk6dB_8r1">https://www.youtube.com/playlist?list=PLB0V2I1AyCRoOvmPdzqoa3C6Hk6dB_8r1</a></li>
+<li>Car 3:- <a href="https://www.youtube.com/playlist?list=PLzlZDwOppS3rJMotP-yle3lvRjfvmzsDU">https://www.youtube.com/playlist?list=PLzlZDwOppS3rJMotP-yle3lvRjfvmzsDU</a></li>
+<li>Car 4:- <a href="https://www.youtube.com/playlist?list=PLseDnt9pzqOOXWDNE4cgjyEBirIgBurcx">https://www.youtube.com/playlist?list=PLseDnt9pzqOOXWDNE4cgjyEBirIgBurcx</a></li>
+<li>Car 5:- <a href="https://www.youtube.com/playlist?list=PLBpw-5dRMObf09HM4F1vR2_hIBkYyFvhT">https://www.youtube.com/playlist?list=PLBpw-5dRMObf09HM4F1vR2_hIBkYyFvhT</a></li>
+<li><a href="https://youtube.com/playlist?list=PLJrcFnBj2iIhITiNpcgiJBEdpmB3zuxU1">https://youtube.com/playlist?list=PLJrcFnBj2iIhITiNpcgiJBEdpmB3zuxU1</a></li>
+<li>Gleb:- <a href="https://www.youtube.com/playlist?list=PL2aDImegRwZHQsA5_N4DpaOQmUXaIsBdN">https://www.youtube.com/playlist?list=PL2aDImegRwZHQsA5_N4DpaOQmUXaIsBdN</a></li>
+<li>Hard Surface Topology:-  <a href="https://www.youtube.com/playlist?list=PLUvyxmcPpgfCDxHC7uxVh5Z16ftKgYuPu">https://www.youtube.com/playlist?list=PLUvyxmcPpgfCDxHC7uxVh5Z16ftKgYuPu</a></li>
+<li>Another Hard Surface:-   <a href="https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx">https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx</a></li>
+<li>Precision Modelling:- <a href="https://www.youtube.com/playlist?list=PL6Fiih6ItYsXzUbBNz7-IvV7UJYHZzCdF">https://www.youtube.com/playlist?list=PL6Fiih6ItYsXzUbBNz7-IvV7UJYHZzCdF</a></li>
+<li>archi:- <a href="https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ">https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ</a></li>
+<li>car interior (old):- <a href="https://www.youtube.com/playlist?list=PLychN_jT2t4HKU-D7x_KaOiHM8ltl4PfH">https://www.youtube.com/playlist?list=PLychN_jT2t4HKU-D7x_KaOiHM8ltl4PfH</a></li>
+</ol>
+</li>
+<li>
+<h4>Channel Reviews</h4>
+<ul>
+<li>BlenderInferno - (1/10)
+<ul>
+<li>He's mostly scamming people, like this video, it's like 360p uploaded as 1080p
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hsO03X1Op7k">https://www.youtube.com/watch?v=hsO03X1Op7k</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4>PLANE</h4>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBsYUx6rLdosxLZwiX_Txxn7">https://www.youtube.com/playlist?list=PLsGl9GczcgBsYUx6rLdosxLZwiX_Txxn7</a></li>
+<li>Baril3D:- <a href="https://www.youtube.com/playlist?list=PL-cp5_3SPrcikoHASauYCZa_hDUhY70HU">https://www.youtube.com/playlist?list=PL-cp5_3SPrcikoHASauYCZa_hDUhY70HU</a></li>
+</ul>
+</li>
+<li>
+<h4>SHOE</h4>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLubcXtWveuJzVYX7AfW7rrmQl_mMRSBDZ">https://www.youtube.com/playlist?list=PLubcXtWveuJzVYX7AfW7rrmQl_mMRSBDZ</a></li>
+</ul>
+</li>
+<li>
+<h4>Forcing LOW-POLY</h4>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBvQtGGp_kViqhCWC8b893TT">https://www.youtube.com/playlist?list=PLsGl9GczcgBvQtGGp_kViqhCWC8b893TT</a></li>
+</ul>
+</li>
+<li>
+<h4>FOOD</h4>
+<ul>
+<li>Ryad - Sushi:- <a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBtRzO0iuyHf8E2xD7yDEhz8">https://www.youtube.com/playlist?list=PLsGl9GczcgBtRzO0iuyHf8E2xD7yDEhz8</a></li>
+</ul>
+</li>
+<li>
+<h4>LightHouse</h4>
+<ul>
+<li>Ryan:- <a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBsz6NUIlUutFDLEepT4MBed">https://www.youtube.com/playlist?list=PLsGl9GczcgBsz6NUIlUutFDLEepT4MBed</a></li>
+</ul>
+</li>
+<li>
+<h4>Rocky Mountains</h4>
+<ul>
+<li>Ryan:- <a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBvvt_OK9CwuWGCMLXMSm1RC">https://www.youtube.com/playlist?list=PLsGl9GczcgBvvt_OK9CwuWGCMLXMSm1RC</a></li>
+</ul>
+</li>
+<li>
+<h4>PART VIII : Mastering Noise</h4>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=LjsRKfkBi_A">https://www.youtube.com/watch?v=LjsRKfkBi_A</a></li>
+<li><a href="https://www.youtube.com/watch?v=iILub8RYhrQ">https://www.youtube.com/watch?v=iILub8RYhrQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=-VJW5SImAvo">https://www.youtube.com/watch?v=-VJW5SImAvo</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk">https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4">https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4</a></li>
+</ol>
+</li>
+<li>
+<h4>PART V : Environment / Thingies Animation</h4>
+<ol>
+<li>Crossmind - Animated Content Creation (0/10) [🔗][2001]
+<ul>
+<li>The Theme of the Art is bad / horrific (yeah cz it's horror obviously 💁‍♀️)</li>
+<li>The indian voice... dyaaaaamn....</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<h4>PART V : SIMULATION NODES</h4>
+<ol>
+<li>Alankan FX - Collision Simulations in Geometry Nodes Blender 3.5 (8/10) <a href="https://www.youtube.com/watch?v=Cm2juuIXhM4">🔗</a></li>
+</ol>
+</li>
+<li>
+<h4>PART IV : Interior Modelling</h4>
+<ol>
+<li>Noel3D - Bedroom (1/10) <a href="https://www.youtube.com/playlist?list=PLgO2ChD7acqGG21gwtZaNryQ9-fGVd7Ls">🔗</a>
+<ul>
+<li>The way he talks is just pure garbage.... But it is smth more like Silently Followable</li>
+<li><a href="https://www.youtube.com/playlist?list=PLS1VCoaQMz_BcmMhcLFZzG7yYzfq0q-Is">https://www.youtube.com/playlist?list=PLS1VCoaQMz_BcmMhcLFZzG7yYzfq0q-Is</a></li>
+</ul>
+</li>
+<li>Architecture Topics (2/10) [🔗][4002]
+<ul>
+<li>AI Generated Voice.... WTF</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<h4>Part VIII : Unreal Engine</h4>
+<ol>
+<li>Unreal Creations - Arch Viz Course (5/10) <a href="https://www.youtube.com/playlist?list=PLanrpg_GQiXgx6ws2z-lyf05GAJMh1hTo">🔗</a></li>
+<li><a href="https://x.com/BeyondExtent/status/1917655825323094164">https://x.com/BeyondExtent/status/1917655825323094164</a></li>
+<li><a href="https://www.youtube.com/watch?v=clr_aUuCkV8">https://www.youtube.com/watch?v=clr_aUuCkV8</a></li>
+<li><a href="https://www.youtube.com/watch?v=O-2viBhLTqI">https://www.youtube.com/watch?v=O-2viBhLTqI</a></li>
+<li><a href="https://www.youtube.com/watch?v=smluafHtCeY">https://www.youtube.com/watch?v=smluafHtCeY</a></li>
+<li><a href="https://www.youtube.com/watch?v=0m60QbT85Tc">https://www.youtube.com/watch?v=0m60QbT85Tc</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ctx1TP0XDUM">https://www.youtube.com/watch?v=Ctx1TP0XDUM</a></li>
+<li><a href="https://www.youtube.com/watch?v=P7_yTkFAfns">https://www.youtube.com/watch?v=P7_yTkFAfns</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLaERQcjU_kY-W1arvTwGNLQAtYWtHA53M">https://www.youtube.com/playlist?list=PLaERQcjU_kY-W1arvTwGNLQAtYWtHA53M</a></li>
+<li><a href="https://www.youtube.com/watch?v=54aHEk6AAbM">https://www.youtube.com/watch?v=54aHEk6AAbM</a></li>
+<li><a href="https://www.youtube.com/watch?v=gcft7kF3lYk">https://www.youtube.com/watch?v=gcft7kF3lYk</a></li>
+<li><a href="https://www.youtube.com/watch?v=aMgB018o71U">https://www.youtube.com/watch?v=aMgB018o71U</a></li>
+<li><a href="https://www.youtube.com/watch?v=_eK26atXTds">https://www.youtube.com/watch?v=_eK26atXTds</a></li>
+<li><a href="https://www.youtube.com/watch?v=xkx4-UejRFI">https://www.youtube.com/watch?v=xkx4-UejRFI</a></li>
+<li><a href="https://www.youtube.com/watch?v=UUQg76_ArgA">https://www.youtube.com/watch?v=UUQg76_ArgA</a></li>
+<li><a href="https://www.youtube.com/watch?v=nyFzPaWAzeQ">https://www.youtube.com/watch?v=nyFzPaWAzeQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=5DYLy7eNv04">https://www.youtube.com/watch?v=5DYLy7eNv04</a></li>
+<li><a href="https://www.youtube.com/watch?v=jlKNOirh66E&amp;pp=0gcJCYQJAYcqIYzv">https://www.youtube.com/watch?v=jlKNOirh66E&amp;pp=0gcJCYQJAYcqIYzv</a></li>
+<li><a href="https://www.youtube.com/watch?v=yorTG9at90g">https://www.youtube.com/watch?v=yorTG9at90g</a></li>
+<li><a href="https://www.youtube.com/watch?v=L9d--sCmGS4">https://www.youtube.com/watch?v=L9d--sCmGS4</a></li>
+</ol>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=TBMf-hXC9DM">https://www.youtube.com/watch?v=TBMf-hXC9DM</a></li>
+<li><a href="https://www.youtube.com/watch?v=LpRGFkk3b0k">https://www.youtube.com/watch?v=LpRGFkk3b0k</a></li>
+</ul>
+</li>
+<li>
+<h4>PART X : Faltu Tutorials</h4>
+<ol>
+<li>ReScan - (0/10) <a href="https://www.youtube.com/playlist?list=PLwto8LyjTm84lyl0lalavfo6AVEWlvjIS">🔗</a>
+<ul>
+<li>what is he even doing? Reviewing his screen record? what's the purpose of this?</li>
+<li>more like "ReScam"</li>
+</ul>
+</li>
+<li>CGBoost - GeoNodes (4/10)
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ILPex8f-CYM">https://www.youtube.com/watch?v=ILPex8f-CYM</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/watch?v=cQ0qtcSymDI&amp;t=2s">https://www.youtube.com/watch?v=cQ0qtcSymDI&amp;t=2s</a></li>
+<li><a href="https://www.youtube.com/watch?v=2hRSMm6-HSk">https://www.youtube.com/watch?v=2hRSMm6-HSk</a></li>
+<li><a href="https://www.youtube.com/watch?v=_tbtTbh3ow0">https://www.youtube.com/watch?v=_tbtTbh3ow0</a></li>
+<li><a href="https://www.youtube.com/watch?v=K8LVFNVLlYc">https://www.youtube.com/watch?v=K8LVFNVLlYc</a></li>
+<li><a href="https://www.youtube.com/@sealishproductions/videos">https://www.youtube.com/@sealishproductions/videos</a></li>
+</ol>
+</li>
+<li>
+<h4>PART XX : Don't just stare at these, Try to do what they did!</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=aj4_VLZM_GA">https://www.youtube.com/watch?v=aj4_VLZM_GA</a></li>
+<li><a href="https://www.youtube.com/watch?v=QuHeCoW5ZCk">https://www.youtube.com/watch?v=QuHeCoW5ZCk</a></li>
+<li><a href="https://www.youtube.com/watch?v=0v3fXERTktI">https://www.youtube.com/watch?v=0v3fXERTktI</a></li>
+<li><a href="https://www.youtube.com/watch?v=Vz_GxPMActM">https://www.youtube.com/watch?v=Vz_GxPMActM</a></li>
+<li><a href="https://www.youtube.com/watch?v=6ggBcfWhikA">https://www.youtube.com/watch?v=6ggBcfWhikA</a></li>
+<li><a href="https://www.youtube.com/watch?v=iPd-TQnLyS8">https://www.youtube.com/watch?v=iPd-TQnLyS8</a></li>
+<li><a href="https://www.youtube.com/watch?v=aZwWT1l44Ss">https://www.youtube.com/watch?v=aZwWT1l44Ss</a></li>
+</ul>
+</li>
+<li>
+<p>Sketches &amp; Painting</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=XS5-9oVJgmU">https://www.youtube.com/watch?v=XS5-9oVJgmU</a></li>
+</ul>
+</li>
+<li>
+<p>Houdini</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=0PcESj5m4tk">https://www.youtube.com/watch?v=0PcESj5m4tk</a></li>
+</ul>
+</li>
+</ul>
+<div class="REY_NOSHOW_PDF">
+<hr>
+<div align="center" style="font-size: 50px; font-family: 'Iosevka Curly'; ">Page-Break</div>
+</div>
+<div class="REY_PAGEBREAK"></div>
+<div class="REY_NOSHOW_PDF">
+<hr>
+</div>
+<ol>
+<li>
+<p>Character Modelling Intro:-</p>
+<ol>
+<li><a href="https://www.youtube.com/@CherylynnLima/videos">https://www.youtube.com/@CherylynnLima/videos</a></li>
+<li><a href="https://www.youtube.com/watch?v=1Npof3WuxYM">https://www.youtube.com/watch?v=1Npof3WuxYM</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1">https://www.youtube.com/playlist?list=PLcaQc6eQjXCxWXmn5jxE_GTOft9ZxChu1</a>
+<ol>
+<li>Rigging:- <a href="https://www.youtube.com/watch?v=mnP54h3x6_Y">https://www.youtube.com/watch?v=mnP54h3x6_Y</a></li>
+<li>Animation (Gabbit):-
+<ol>
+<li>Guide/Intro:- <a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vuJVY3cjDJyt9bK6D-xACO3">https://www.youtube.com/playlist?list=PLn3ukorJv4vuJVY3cjDJyt9bK6D-xACO3</a></li>
+<li>Gettint into it for real:- <a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vtPM1YTFCfb2sNwDiEYStgL">https://www.youtube.com/playlist?list=PLn3ukorJv4vtPM1YTFCfb2sNwDiEYStgL</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="https://www.youtube.com/playlist?list=PLvgIVNDU-Dxi5h3JLNJMfK0t3-WsBm6Av">https://www.youtube.com/playlist?list=PLvgIVNDU-Dxi5h3JLNJMfK0t3-WsBm6Av</a></li>
+<li>Lacruzo:- <a href="https://www.youtube.com/watch?v=-XYryP_GU8o&amp;t=2s">https://www.youtube.com/watch?v=-XYryP_GU8o&amp;t=2s</a>
+<ol>
+<li><a href="https://youtu.be/1Npof3WuxYM?si=CdRaLmXQK12Qqd4t">https://youtu.be/1Npof3WuxYM?si=CdRaLmXQK12Qqd4t</a></li>
+</ol>
+</li>
+<li><a href="https://www.youtube.com/@abbeybricks/videos">https://www.youtube.com/@abbeybricks/videos</a></li>
+<li>Supanasu TimeLapses:- <a href="https://www.youtube.com/@supanasu484/videos">https://www.youtube.com/@supanasu484/videos</a></li>
+<li>Extended 20-30hours TOMCAT:- <a href="https://www.youtube.com/playlist?list=PLok698dKQ_Hj10eKx73qPJRktkB1r8SN5">https://www.youtube.com/playlist?list=PLok698dKQ_Hj10eKx73qPJRktkB1r8SN5</a>
+<ol>
+<li>For those who like TheVoice</li>
+</ol>
+</li>
+<li>Rabbit (from GrantAbbit):- <a href="https://www.youtube.com/watch?v=iMar3keWaUo">https://www.youtube.com/watch?v=iMar3keWaUo</a></li>
+<li>LowPoly WorkFlow1 (2minute):- <a href="https://www.youtube.com/watch?v=7s7uSx18DUc">https://www.youtube.com/watch?v=7s7uSx18DUc</a></li>
+<li><a href="https://www.youtube.com/@adiidiin/videos">https://www.youtube.com/@adiidiin/videos</a>
+<ol>
+<li>NoVoice1:- <a href="https://www.youtube.com/watch?v=Df1ksDObsco">https://www.youtube.com/watch?v=Df1ksDObsco</a></li>
+<li>Actual Sculpting playlist:- <a href="https://www.youtube.com/playlist?list=PL35yaVpATLCRqBleqrIoBb6jQOVGGmgDl">https://www.youtube.com/playlist?list=PL35yaVpATLCRqBleqrIoBb6jQOVGGmgDl</a></li>
+<li>Voice + Modelling instead of Sculpting:- <a href="https://www.youtube.com/watch?v=pqMhbMFrFWw">https://www.youtube.com/watch?v=pqMhbMFrFWw</a></li>
+<li>NoVoice2:- <a href="https://www.youtube.com/watch?v=MBJlTSq_qT8">https://www.youtube.com/watch?v=MBJlTSq_qT8</a></li>
+<li>NoVoice3:- <a href="https://www.youtube.com/watch?v=dENbuTAzMDA">https://www.youtube.com/watch?v=dENbuTAzMDA</a></li>
+<li>Sherlock Speed:- <a href="https://www.youtube.com/watch?v=O1aKPZdRJ0o">https://www.youtube.com/watch?v=O1aKPZdRJ0o</a></li>
+<li>Remus Lupin Speed:- <a href="https://www.youtube.com/watch?v=7PVMulGEr1U">https://www.youtube.com/watch?v=7PVMulGEr1U</a></li>
+<li>Sirius Black Speed:- <a href="https://www.youtube.com/playlist?list=PL35yaVpATLCR1VQK08XDldsYJigmxtyvu">https://www.youtube.com/playlist?list=PL35yaVpATLCR1VQK08XDldsYJigmxtyvu</a></li>
+</ol>
+</li>
+<li>GAbbit:- <a href="https://www.youtube.com/watch?v=MDaDsmRUUpk">https://www.youtube.com/watch?v=MDaDsmRUUpk</a>
+<ol>
+<li>Modelling/Sculpting:- <a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vu5kHgF2-EQbGWhgSLw2Yl9">https://www.youtube.com/playlist?list=PLn3ukorJv4vu5kHgF2-EQbGWhgSLw2Yl9</a></li>
+<li>Wolverine:- <a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vsxuh1AYvark-qtWWaOJSS7">https://www.youtube.com/playlist?list=PLn3ukorJv4vsxuh1AYvark-qtWWaOJSS7</a></li>
+<li>Extras:- <a href="https://www.youtube.com/playlist?list=PLn3ukorJv4vv_lym4wyKulT2CDNVFGgrn">https://www.youtube.com/playlist?list=PLn3ukorJv4vv_lym4wyKulT2CDNVFGgrn</a></li>
+<li></li>
+</ol>
+</li>
+<li>CrossMind:- <a href="https://www.youtube.com/playlist?list=PLgO2ChD7acqFl3vtixa673FwCf2OfcCqK">https://www.youtube.com/playlist?list=PLgO2ChD7acqFl3vtixa673FwCf2OfcCqK</a></li>
+<li>Game Engine Character Details:- <a href="https://www.youtube.com/watch?v=75ujnFHAaHQ">https://www.youtube.com/watch?v=75ujnFHAaHQ</a></li>
+<li></li>
+</ol>
+</li>
+<li>
+<p>Character Animation Tutorials:-</p>
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PLwv43wkNGxP230lPFcW5t9Yu9AtShPU_Z">https://www.youtube.com/playlist?list=PLwv43wkNGxP230lPFcW5t9Yu9AtShPU_Z</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLlV0HYg1k1bZnzXQn7vaUBfZcXdKH07hC">https://www.youtube.com/playlist?list=PLlV0HYg1k1bZnzXQn7vaUBfZcXdKH07hC</a></li>
+<li>CrashSune:- <a href="https://www.youtube.com/playlist?list=PLcaQc6eQjXCxFhrsFWWemTkxAWwAmbxzi">https://www.youtube.com/playlist?list=PLcaQc6eQjXCxFhrsFWWemTkxAWwAmbxzi</a></li>
+<li><a href="https://www.youtube.com/watch?v=zhktftWbumE&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u">https://www.youtube.com/watch?v=zhktftWbumE&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u</a></li>
+<li><a href="https://www.youtube.com/watch?v=QqBxR1QuemQ&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u">https://www.youtube.com/watch?v=QqBxR1QuemQ&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u</a></li>
+<li><a href="https://www.youtube.com/watch?v=sy4EfjjKAmM&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u">https://www.youtube.com/watch?v=sy4EfjjKAmM&amp;pp=ygUbYmxlbmRlciBjaGFyYWN0ZXIgYW5pbWF0aW9u</a></li>
+</ol>
+</li>
+<li>
+<p><a href="https://coloso.jp/products/conceptartist-fujitarian-jp">https://coloso.jp/products/conceptartist-fujitarian-jp</a></p>
+</li>
+<li>
+<p><a href="https://coloso.jp/products/3dcgartist-nagafujiriku-jp">https://coloso.jp/products/3dcgartist-nagafujiriku-jp</a></p>
+</li>
+<li>
+<p><a href="https://www.artstation.com/marketplace/p/6VgGa/cinematic-blender-tutorial-home-at-last">https://www.artstation.com/marketplace/p/6VgGa/cinematic-blender-tutorial-home-at-last</a></p>
+</li>
+<li>
+<p><a href="https://www.artstation.com/marketplace/p/ReD6r/concept-art-for-games-n-movies-in-blender-blend-files">https://www.artstation.com/marketplace/p/ReD6r/concept-art-for-games-n-movies-in-blender-blend-files</a></p>
+</li>
+<li>
+<p><a href="https://coloso.global/en/products/blenderartist-anteater-us">https://coloso.global/en/products/blenderartist-anteater-us</a></p>
+</li>
+<li>
+<p><a href="https://href.li/?http://www.vfxgrace.com/product/tutorial-bundle/">https://href.li/?http://www.vfxgrace.com/product/tutorial-bundle/</a></p>
+</li>
+<li>
+<p><strong>PBR/Textures:-</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLTnU_m2IZe9N1rmg2j0fAdWDjpUj1ZO9W">https://www.youtube.com/playlist?list=PLTnU_m2IZe9N1rmg2j0fAdWDjpUj1ZO9W</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLlH00768JwqG4__RRtKACofTztc0Owys8">https://www.youtube.com/playlist?list=PLlH00768JwqG4__RRtKACofTztc0Owys8</a></li>
+</ul>
+<ol>
+<li><strong>Interior 1:-</strong> <a href="https://youtube.com/playlist?list=PLS1VCoaQMz_BcmMhcLFZzG7yYzfq0q-Is">https://youtube.com/playlist?list=PLS1VCoaQMz_BcmMhcLFZzG7yYzfq0q-Is</a></li>
+<li><strong>Interior 2:-</strong> <a href="https://www.youtube.com/playlist?list=PL2lJYQQ0WxTTBlsLgm6dtqiNyxtdQL_VS">https://www.youtube.com/playlist?list=PL2lJYQQ0WxTTBlsLgm6dtqiNyxtdQL_VS</a></li>
+<li>Abandoned House 1:- <a href="https://youtube.com/playlist?list=PLWLnt-JoyA9RGyGrn51eKWRhUhcamJXNe">https://youtube.com/playlist?list=PLWLnt-JoyA9RGyGrn51eKWRhUhcamJXNe</a></li>
+<li>Abandoned House 2:- <a href="https://www.youtube.com/watch?v=1aNnERnHRZg">https://www.youtube.com/watch?v=1aNnERnHRZg</a></li>
+</ol>
+<ul>
+<li>Texture Tiling:- <a href="https://www.youtube.com/watch?v=-VgtSL5ZpYc&amp;list=PLO1LZN-G_8YMf4d0OfZzELvrWJ_D2EWt-&amp;index=1&amp;pp=iAQB">https://www.youtube.com/watch?v=-VgtSL5ZpYc&amp;list=PLO1LZN-G_8YMf4d0OfZzELvrWJ_D2EWt-&amp;index=1&amp;pp=iAQB</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Geometry Nodes:-</strong></p>
+<ol>
+<li><strong>CrossMind</strong>:- <a href="https://youtube.com/playlist?list=PLgO2ChD7acqHzccBuhAGw8dTPLnR1E3QB">https://youtube.com/playlist?list=PLgO2ChD7acqHzccBuhAGw8dTPLnR1E3QB</a></li>
+</ol>
+</li>
+<li>
+<p>**Hard Surface Modelling:- **</p>
+<ol>
+<li>Basics:- <a href="https://www.youtube.com/playlist?list=PLybXPPxX5z_EtuNPf_k00XPnsX79lbypr">https://www.youtube.com/playlist?list=PLybXPPxX5z_EtuNPf_k00XPnsX79lbypr</a></li>
+<li>Basics 2:- <a href="https://www.youtube.com/playlist?list=PLnmie0xWI8TsY9JTZl0Hj_PhKI_tONRKY">https://www.youtube.com/playlist?list=PLnmie0xWI8TsY9JTZl0Hj_PhKI_tONRKY</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLYVR0A4acpNaFiTL-qmxH8fm4DJxqq-vp">https://www.youtube.com/playlist?list=PLYVR0A4acpNaFiTL-qmxH8fm4DJxqq-vp</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx">https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx</a></li>
+<li>Car 1:- <a href="https://www.youtube.com/playlist?list=PLjKj7c74gph4FVP8fZG4CbwcNOTmc-QaD">https://www.youtube.com/playlist?list=PLjKj7c74gph4FVP8fZG4CbwcNOTmc-QaD</a></li>
+<li>Car 2:- <a href="https://www.youtube.com/playlist?list=PLB0V2I1AyCRoOvmPdzqoa3C6Hk6dB_8r1">https://www.youtube.com/playlist?list=PLB0V2I1AyCRoOvmPdzqoa3C6Hk6dB_8r1</a></li>
+<li>Car 3:- <a href="https://www.youtube.com/playlist?list=PLzlZDwOppS3rJMotP-yle3lvRjfvmzsDU">https://www.youtube.com/playlist?list=PLzlZDwOppS3rJMotP-yle3lvRjfvmzsDU</a></li>
+<li>Car 4:- <a href="https://www.youtube.com/playlist?list=PLseDnt9pzqOOXWDNE4cgjyEBirIgBurcx">https://www.youtube.com/playlist?list=PLseDnt9pzqOOXWDNE4cgjyEBirIgBurcx</a></li>
+<li>Car 5:- <a href="https://www.youtube.com/playlist?list=PLBpw-5dRMObf09HM4F1vR2_hIBkYyFvhT">https://www.youtube.com/playlist?list=PLBpw-5dRMObf09HM4F1vR2_hIBkYyFvhT</a></li>
+<li><a href="https://youtube.com/playlist?list=PLJrcFnBj2iIhITiNpcgiJBEdpmB3zuxU1">https://youtube.com/playlist?list=PLJrcFnBj2iIhITiNpcgiJBEdpmB3zuxU1</a></li>
+<li>Gleb:- <a href="https://www.youtube.com/playlist?list=PL2aDImegRwZHQsA5_N4DpaOQmUXaIsBdN">https://www.youtube.com/playlist?list=PL2aDImegRwZHQsA5_N4DpaOQmUXaIsBdN</a></li>
+<li>Hard Surface Topology:-  <a href="https://www.youtube.com/playlist?list=PLUvyxmcPpgfCDxHC7uxVh5Z16ftKgYuPu">https://www.youtube.com/playlist?list=PLUvyxmcPpgfCDxHC7uxVh5Z16ftKgYuPu</a></li>
+<li>Another Hard Surface:-   <a href="https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx">https://www.youtube.com/playlist?list=PLx1O3Ycwby3tfgNpOqU2InsIR8FPH9iGx</a></li>
+<li>Precision Modelling:- <a href="https://www.youtube.com/playlist?list=PL6Fiih6ItYsXzUbBNz7-IvV7UJYHZzCdF">https://www.youtube.com/playlist?list=PL6Fiih6ItYsXzUbBNz7-IvV7UJYHZzCdF</a></li>
+<li>archi:- <a href="https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ">https://www.youtube.com/playlist?list=PL0LADxPpmXN4cdyX_Kg1Tmfj5fj_eVziZ</a></li>
+<li>car interior (old):- <a href="https://www.youtube.com/playlist?list=PLychN_jT2t4HKU-D7x_KaOiHM8ltl4PfH">https://www.youtube.com/playlist?list=PLychN_jT2t4HKU-D7x_KaOiHM8ltl4PfH</a></li>
+</ol>
+</li>
+<li>
+<p>The Real Deal:-</p>
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PL-cp5_3SPrcikoHASauYCZa_hDUhY70HU">https://www.youtube.com/playlist?list=PL-cp5_3SPrcikoHASauYCZa_hDUhY70HU</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLubcXtWveuJzVYX7AfW7rrmQl_mMRSBDZ">https://www.youtube.com/playlist?list=PLubcXtWveuJzVYX7AfW7rrmQl_mMRSBDZ</a></li>
+</ol>
+</li>
+<li>
+<p><strong>Shading:- Procedurals:-</strong></p>
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk">https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk</a></li>
+<li>Procedural Planets:- <a href="https://www.youtube.com/watch?v=2oV48DAvwYg">https://www.youtube.com/watch?v=2oV48DAvwYg</a></li>
+<li>Blender Inferno:- <a href="https://www.youtube.com/watch?v=hsO03X1Op7k">https://www.youtube.com/watch?v=hsO03X1Op7k</a></li>
+</ol>
+</li>
+<li>
+<p><strong>Scatterred stuffs:-</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLjWxxbKfL8hPJGQaptGY07foE15IFRhWa">https://www.youtube.com/playlist?list=PLjWxxbKfL8hPJGQaptGY07foE15IFRhWa</a></li>
+</ul>
+</li>
+<li>
+<p><strong>BlenderGuru (Intermediate):-</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL09MNnEXmFViHopxfqA-Y8Skzsp70del9">https://www.youtube.com/playlist?list=PL09MNnEXmFViHopxfqA-Y8Skzsp70del9</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Shader (intermediate):-</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLo9iIHcZ22D2YQSUKhn_rlHRWGDsiJeVi">https://www.youtube.com/playlist?list=PLo9iIHcZ22D2YQSUKhn_rlHRWGDsiJeVi</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Mastering Noise:-</strong></p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=LjsRKfkBi_A">https://www.youtube.com/watch?v=LjsRKfkBi_A</a></li>
+<li><a href="https://www.youtube.com/watch?v=-VJW5SImAvo">https://www.youtube.com/watch?v=-VJW5SImAvo</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk">https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4">https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4</a></li>
+</ol>
+</li>
+<li>
+<p>Animated Content</p>
+<ol>
+<li>INTRO:- <a href="https://www.youtube.com/watch?v=1hvhy133AyY&amp;list=PLgO2ChD7acqGG21gwtZaNryQ9-fGVd7Ls">https://www.youtube.com/watch?v=1hvhy133AyY&amp;list=PLgO2ChD7acqGG21gwtZaNryQ9-fGVd7Ls</a></li>
+</ol>
+</li>
+<li>
+<p>Unreal Engine:- <a href="https://www.youtube.com/playlist?list=PLanrpg_GQiXgx6ws2z-lyf05GAJMh1hTo">https://www.youtube.com/playlist?list=PLanrpg_GQiXgx6ws2z-lyf05GAJMh1hTo</a></p>
+</li>
+<li>
+<p>Blender:- <a href="https://www.youtube.com/watch?v=gHBnw46GvGM">https://www.youtube.com/watch?v=gHBnw46GvGM</a></p>
+</li>
+<li>
+<p>CG Boost (GeoNodes) (4/10):- <a href="https://www.youtube.com/watch?v=ILPex8f-CYM">https://www.youtube.com/watch?v=ILPex8f-CYM</a></p>
+</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
